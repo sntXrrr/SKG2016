@@ -1,0 +1,117 @@
+/*
+
+	layout
+
+	defines the styling and working of the page layout
+
+*/
+
+/* generic page-wide wrapper used for any sectioned content block, it's what we use to get a band of color */
+
+/* the basic wrapper actually doesn't do a whole lot... */
+.wrapper {
+	margin: 0;
+	padding: 0;
+	background-color: $white;
+
+	> .grid {
+		max-width: em($max-site-width,12px);
+	}
+}
+
+	/* voor kleur, check ook de states .is-branded en .is-dark in _states.scss */
+
+	// main color band
+	.wrapper--branded {
+		background-color: $brand-color;
+	}
+
+	.wrapper--tinted {
+		background-color: $gray-lightest;
+	}
+
+	/* homepage stuff */
+	.wrapper--home {
+		@extend .wrapper--tinted;
+		background-repeat: repeat-Y;
+		background-position: left bottom;
+	}
+
+	@include media-query(M) {
+	    .wrapper--home {
+	        background-color: $gray-lightest;
+	        background-image: -o-linear-gradient(right, $gray-lightest 0%, $gray-lightest 24.9%, $white 24.9%, $white 25.1%, $gray-lightest 25.1%, $gray-lightest 49.9%, $white 49.9%, $white 50.1%, $gray-lightest 50.1%, $gray-lightest 74.9%, $white 74.9%, $white 75.1%, $gray-lightest 75.1%, $gray-lightest 100%);
+	        background-image: -moz-linear-gradient(right, $gray-lightest 0%, $gray-lightest 24.9%, $white 24.9%, $white 25.1%, $gray-lightest 25.1%, $gray-lightest 49.9%, $white 49.9%, $white 50.1%, $gray-lightest 50.1%, $gray-lightest 74.9%, $white 74.9%, $white 75.1%, $gray-lightest 75.1%, $gray-lightest 100%);
+	        background-image: -webkit-linear-gradient(right, $gray-lightest 0%, $gray-lightest 24.9%, $white 24.9%, $white 25.1%, $gray-lightest 25.1%, $gray-lightest 49.9%, $white 49.9%, $white 50.1%, $gray-lightest 50.1%, $gray-lightest 74.9%, $white 74.9%, $white 75.1%, $gray-lightest 75.1%, $gray-lightest 100%);
+	        background-image: -ms-linear-gradient(right, $gray-lightest 0%, $gray-lightest 24.9%, $white 24.9%, $white 25.1%, $gray-lightest 25.1%, $gray-lightest 49.9%, $white 49.9%, $white 50.1%, $gray-lightest 50.1%, $gray-lightest 74.9%, $white 74.9%, $white 75.1%, $gray-lightest 75.1%, $gray-lightest 100%);
+	        background-image: linear-gradient(to right, $gray-lightest 0%, $gray-lightest 24.9%, $white 24.9%, $white 25.1%, $gray-lightest 25.1%, $gray-lightest 49.9%, $white 49.9%, $white 50.1%, $gray-lightest 50.1%, $gray-lightest 74.9%, $white 74.9%, $white 75.1%, $gray-lightest 75.1%, $gray-lightest 100%);
+	    }
+	}
+
+	@include media-query(XL) {
+	    .wrapper--home {
+	        background-position: center bottom;
+	        background-repeat: repeat-y;
+	        -webkit-background-size: em($max-site-width,12px) 100%;
+	             -o-background-size: em($max-site-width,12px) 100%;
+	                background-size: em($max-site-width,12px) 100%;
+	    }
+	}
+
+	/* footer stuff */
+	.wrapper--clear {
+		background-color: transparent;
+	}
+
+
+
+/* main layout with left naivation for big screen and under content on small screen */
+
+.w-layout-main, .w-layout-nav {
+	@extend .w-1of1;
+}
+
+@include media-query(M) {
+
+	.layout-columns {
+		direction: rtl;
+	}
+	.w-layout-main {
+		@extend .w-M-3of4;
+		direction: ltr;
+	}
+
+	.w-layout-nav {
+		@extend .w-M-1of4;
+		direction: ltr;
+	}
+}
+
+
+/* layout without banner or carousel needs extra spacing for abs pos title */
+
+.layout-nobanners {
+	padding-top: 7em;
+}
+
+@include media-query(S) {
+	.layout-nobanners {
+		padding-top: 10em;
+	}
+}
+
+@include media-query(M) {
+	.layout-nobanners {
+		padding-top: $base-spacing-unit + .2em;
+	}
+}
+
+@include media-query(L) {
+	.layout-nobanners {
+		padding-top: $base-spacing-unit - .25em;
+	}
+}
+
+.w-1of1.w-S-1of2:first-child:last-child {
+	width: 100% !important; 
+}

@@ -1,0 +1,260 @@
+	/*
+
+	main
+
+	project specific standards
+
+*/
+
+html {
+	font: em($base-font-size,16px)/#{$line-height-ratio} $default-FontFamily;
+	height: 100%;
+	background-color: $gray-light;
+	/* remove iOS highlight on touch */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@include media-query(M) {
+	html {
+		font-size: em(12px,16px);
+	}
+}
+
+body {
+	-ms-overflow-y: scroll;
+	    overflow-y: scroll;
+	color: $gray-darkest;
+	background: transparent;
+	-ms-overflow-x: hidden;
+	    overflow-x: hidden;
+}
+
+/* let's write the current breakpoint somewhere in the DOM for javascript reference */
+/* @for $i from 1 through length($breakpoints) {
+
+	@include media-query(nth(nth($breakpoints,$i),1)) {
+
+		body::before {
+			content: "#{nth(nth($breakpoints,$i),1)}";
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			left: -100px;
+			top: -100px;
+		}
+	}
+} */
+
+/* default whitespace under block-level elements */
+h1,h2,hgroup,
+ul,ol,dl,
+blockquote,p,address,
+table,
+fieldset,figure,
+pre,
+textarea, input, select, output {
+	margin-bottom: 1em;
+}
+
+
+/* default headers */
+
+h1, .alpha {
+	font-size: em($base-font-size*2);
+	line-height: (45 / 24);
+
+	margin-top: em(7px,36px);
+	margin-bottom: em(13px,36px);
+
+	* + & {
+		margin-top: em(27px,36px);
+	}
+
+	font-weight: normal;
+	color: $black;
+}
+
+h2, .beta {
+	font-size: em($base-font-size*1.5);
+	line-height: 1.35;
+	font-weight: normal;
+	margin-bottom: em(11px);
+}
+
+h3, .gamma {
+	font-size: em($base-font-size*1.25);
+	line-height: 1;
+
+	margin-top: em(10px,20px);
+	margin-bottom: em(10px,20px);
+
+	* + & {
+		margin-top: em(30px,20px);
+	}
+
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h4, .delta {
+	/* font-size: em($base-font-size*1.1);
+	font-weight: normal;
+	line-height: 1.5;
+
+	margin-top: em(10px,18px);
+	margin-bottom: em(8px,18px);
+
+	* + & {
+		margin-top: em(30px,18px);
+	} */
+
+	font-weight: normal;
+}
+
+h5, .epsilon {
+	font-size: em($base-font-size*1.1);
+	line-height: 1.3;
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	* + & {
+		margin-top: em(20px,16px);
+	}
+
+	font-weight: bold;
+}
+
+h6, .zeta {
+	font-size: 1em;
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	// this defaults to 0...
+	/* * + & {
+		margin-top: em(20px,16px);
+	} */
+
+	font-weight: bold;
+}
+
+
+/* links */
+
+a, .link {
+	color: $brand-color;
+	text-decoration: none;
+	-webkit-transition: .2s;
+	   -moz-transition: .2s;
+	        transition: .2s;
+
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+	}
+}
+
+/* Forms */
+
+fieldset {
+	background-color: none;
+	border: none;
+
+    input, textarea, label {
+    	width: 100%;
+    	display: inline-block;
+    	border: none;
+    }
+
+    textarea, input[type=text], input[type=email], input[type=tel] {
+    	padding: $half-spacing-unit;
+    }
+
+    label {
+    	margin-top: $half-spacing-unit;
+    	margin-right: 0;
+    	margin-bottom: $half-spacing-unit;
+    	margin-left: 0;
+    	padding-right: $half-spacing-unit;
+    }
+
+    h3 {
+    	margin: 0 0 $base-spacing-unit 0;
+    }
+
+}
+
+::-webkit-input-placeholder {
+   color: $gray-darkish;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $gray-darkish;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $gray-darkish;
+}
+
+:-ms-input-placeholder {
+   color: $gray-darkish;
+}
+
+/**
+ * Remove vertical spacing from nested lists.
+ */
+ul, ol {
+	//margin-left: 1.5em;
+}
+
+li {
+
+	> ul,
+	> ol {
+		margin-bottom:0;
+		margin-left: 1.5em;
+	}
+}
+
+ul > li {
+	list-style-type: none;
+	margin-left: 1em;
+
+	&::before {
+		@extend .icon-arrow::before;
+		font-family: $icon-FontFamily;
+		color: $brand-color;
+		font-weight: bold;
+		position: absolute;
+		margin-left: -1em;
+	}
+}
+
+ol > li {
+	margin-left: 1.5em;
+}
+
+pre {
+	padding: $half-spacing-unit;
+	border: 1px solid $gray-lighter;
+	-webkit-border-radius: em(1px);
+	        border-radius: em(1px);
+}
+
+
+/* to get rid of Chrome orange outline on focus */
+*:focus {
+    outline: 0;
+}
+
+/* small is just a little less dark but not really littler */
+small {
+	font-size: 100%;
+	color: $gray-dark;
+}
+
+figcaption {
+	font-weight: bold;
+	margin-top: -1em;
+}

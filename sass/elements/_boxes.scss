@@ -1,0 +1,245 @@
+/*
+
+	boxes
+
+	all things that contain things
+
+*/
+
+/* box is the basic template we use for every box and tile */
+
+/* base box pattern */
+%box {
+	display: block;
+	//margin-bottom: $base-spacing-unit;
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	> :first-child {
+		margin-top: 0;
+	}
+}
+
+/* default white box panel */
+.box {
+	@extend %box;
+	padding: $base-spacing-unit;
+}
+
+	/* default content thingy */
+	.box--content {
+		padding: $base-spacing-unit*1.5 $base-spacing-unit;
+
+		h2 a {
+			color: $black;
+		}
+
+		img {
+			@extend .ri;
+			margin-bottom: $base-spacing-unit;
+		}
+
+		.ms-rteTable-0 img {
+			width: auto;
+			height: auto;
+			clear: none;
+			display: inline;
+		}
+
+		.link-primary, .moreLinkList {
+			margin-top: $base-spacing-unit*1.5;
+			margin-bottom: 0; // fix voor lege <div> die soms in content lijkt te zitten
+		}
+	}
+
+	/* variant voor content zoals die in artikelen wordt gebruikt (mn. H3 en H4 gebruik) */
+	.box--article {
+		padding: 0;
+
+		> * {
+			padding-left: $base-spacing-unit;
+			padding-right: $base-spacing-unit;
+		}
+
+		h3, .no-box--article-intro & h3:first-child {
+			color: $brand-color;
+			background: transparent;
+			text-transform: none;
+			font-weight: normal;
+			font-size: 1.5em;
+			line-height: 1.3;
+			padding: .5em 0 1em;
+			margin-top: 1em;
+			margin-bottom: 0;
+		}
+
+		> h3, .no-box--article-intro & > h3:first-child {
+			padding-left: $base-spacing-unit/1.5;
+			padding-right: $base-spacing-unit/1.5;
+		}
+
+		/*h3:first-child {
+			color: $white;
+			background: $brand-color;
+			padding: .5em 0 1em;
+			margin-top: 0;
+			margin-bottom: 1em;
+		}*/
+
+		> h3:first-child {
+			padding-left: $base-spacing-unit/1.5;
+			padding-right: $base-spacing-unit/1.5;
+		}
+
+		h4 {
+			color: $brand-color;
+			font-size: 1.2em;
+			line-height: 1.3;
+			margin-bottom: 1em;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		> h4 {
+			padding-left: $base-spacing-unit/1.2;
+			padding-right: $base-spacing-unit/1.2;
+		}
+
+		li > :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@include media-query(M) {
+
+		.box--article {
+			padding: $base-spacing-unit;
+
+			> * {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			h3, h3:first-child, .no-box--article-intro & h3:first-child {
+				color: $brand-color;
+				background: transparent;
+				padding: 0 0 .5em;
+			}
+
+			h4 {
+				padding: 0;
+			}
+		}
+	}
+
+	/* @include media-query(L) {
+
+		.box--article {
+			font-size: 1.15em;
+		}
+	}
+
+	@include media-query(XL) {
+
+		.box--article {
+			font-size: 1.3em;
+		}
+	} */
+
+
+.box--warning {
+	background: #f3d14a;
+	margin: 0 $base-spacing-unit $half-spacing-unit;
+	display: none;
+	font-weight: bold;
+	color: #300;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+@include media-query(M) {
+
+	.lt-ie9 .box--warning {
+		display: block;
+	}
+}
+
+
+/* voor op container van meerdere .box--contents om links onderaan uit te lijnen */
+/* disabled omdat het nu diapositief moest zijn en breedte te veel issues geeft */
+/* .box-leveled {
+	position: relative;
+
+	.box--content {
+		padding-bottom: 4em;
+
+		.link-primary, .moreLinkList {
+			position: absolute;
+			bottom: $base-spacing-unit;
+		}
+	}
+} */
+
+@include media-query(M) {
+
+	.box-M-level {
+		position: relative;
+
+		.box--content {
+			padding-bottom: 4em;
+
+			.link-primary, .moreLinkList {
+				position: absolute;
+				bottom: $base-spacing-unit;
+			}
+		}
+
+		.w-M-1of4 {
+			.link-primary, .moreLinkList {
+				width: 22%;
+				width: calc( 25% - 3em );
+			}
+		}
+
+		.w-M-1of3 {
+			.link-primary, .moreLinkList {
+				width: 31%;
+				width: calc( 33.333% - #{ $double-spacing-unit } );
+			}
+		}
+	}
+}
+
+@include media-query(S-max) {
+	.box--dynamicheight {
+		height: auto !important;
+	}
+}
+
+	/* .box--spacious {
+		padding: $double-spacing-unit;
+	}
+
+	.box-L--spacious {
+		padding: $base-spacing-unit;
+	}
+
+	@include media-query(L) {
+		.box-L--spacious {
+			padding: $double-spacing-unit;
+		}
+	}
+
+	.box-XM--spacious {
+		padding: $base-spacing-unit;
+	}
+
+	@include media-query(XM) {
+		.box-XM--spacious {
+			padding: $double-spacing-unit;
+		}
+	} */

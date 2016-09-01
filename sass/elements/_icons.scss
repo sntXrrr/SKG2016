@@ -1,0 +1,135 @@
+/*
+
+	icons
+
+*/
+
+/* the icons! (do we have any for macaw.nl?) */
+
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: $icon-FontFamily;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+	a[class*="icon-"]  {
+		text-decoration: none;
+		border: 0;
+	}
+
+.icon-fatarrowup, .icon-fatarrowdown {
+	&::before {
+		content: "\e608";
+	}
+}
+
+.icon-fatarrowup {
+	&::before {
+		@include transform( rotate(-180deg) );
+	}
+}
+
+.icon-arrowup {
+	&::before {
+		content: "\e600";
+	}
+}
+
+.icon-world {
+	&::before {
+		content: "\e601";
+	}
+}
+
+.icon-location {
+	&::before {
+		content: "\e602";
+	}
+}
+
+.icon-arrow {
+	&::before {
+		content: "\e603";
+	}
+}
+
+.icon-arrowup {
+		//@include transform( rotate(-90deg) );
+}
+
+.icon-search {
+	&::before {
+		content: "\e604";
+	}
+}
+
+.icon-close {
+	&::before {
+		content: "\e605";
+	}
+}
+
+.icon-menu {
+	&::before {
+		content: "\e606";
+	}
+}
+
+.icon-share {
+	&::before {
+		content: "\e607";
+	}
+}
+
+.icon-fb {
+	&::before {
+		content: "\e609";
+	}
+}
+
+.icon-tw {
+	&::before {
+		content: "\e60c";
+	}
+}
+
+.icon-em {
+	&::before {
+		content: "\e60a";
+	}
+}
+
+.icon-in {
+	&::before {
+		content: "\e60d";
+	}
+}
+
+.icon-yt {
+	&::before {
+		content: "\e60b";
+	}
+}
+
+.icon-video {
+	&::before {
+		content: "\e60e";
+	}
+}
+
+
+/* video image as icon in a h2 */
+
+.icon--img-inline {
+	height: 1.1em;
+	vertical-align: text-bottom;
+}

@@ -12,6 +12,14 @@
       autoplaySpeed:  7000
   });
 
+  // set links to slide index on first slide
+  $(".carousel-home .slide-01-links a").each( function(index){
+    $(this).click( function(e){
+      event.preventDefault();
+      $(".carousel-home").slick("slickGoTo",index+1);
+    })
+  });
+
   // id needs to be set to correct twitter account
   var config = {
     "id": '501395932357726208',

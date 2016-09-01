@@ -1,0 +1,190 @@
+/*
+
+	buttons
+
+	very basic button styling,
+	based on BEAUTONS.CSS from Inuit.css
+
+*/
+
+/* =============================================================================
+   Beautons.css
+   ========================================================================== */
+/**
+ * beautons is a beautifully simple button toolkit.
+ *
+ * LICENSE
+ *
+ * Copyright 2013 Harry Roberts
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+
+/**
+ *
+ * @csswizardry -- csswizardry.com/beautons
+ *
+ */
+
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Basic cosmetics for default buttons. Change or override at will.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+.btn {
+	display: inline-block;					/* [1] */
+	vertical-align: middle;					/* [2] */
+	white-space: nowrap;					/* [3] */
+	font-family: inherit;					/* [4] */
+	font-size: 100%;						/* [4] */
+	cursor: pointer;						/* [5] */
+	border: 0;								/* [6] */
+	margin: 0;								/* [6] */
+	padding-top:   0;						/* [6] */
+	padding-bottom:0;						/* [6] */
+	line-height: 2.4;						/* [7] */
+	padding-right: 1em;						/* [7] */
+	padding-left: 1em;						/* [7] */
+	border-radius: rem($standard-radius);	/* [8] */
+	background-color: $btn-color;
+	color: $gray-darkest;
+	transition: background-color, border-color .16s;
+	border: 1px solid transparent;
+
+
+	&, &:hover {
+		text-decoration: none;				/* [9] */
+	}
+
+	&:hover, &:focus {
+		background-color: $btn-color-highlight;
+		border-color: $black;
+		color: $black;
+	}
+
+	&:active {
+		background-color: $btn-color-active;
+	}
+}
+
+/* =============================================================================
+   Sizes
+   ========================================================================== */
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+.btn--small {
+	padding-right:0.5em;
+	padding-left: 0.5em;
+	line-height:2;
+	@include font-rem(11px);
+}
+
+.btn--large {
+	padding-right:1.5em;
+	padding-left: 1.5em;
+	line-height:4;
+	@include font-rem(16px);
+}
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+.btn--full {
+	width :100%;
+	padding-right:0;		/* [1] */
+	padding-left: 0;		/* [1] */
+	text-align:center;
+}
+
+/* =============================================================================
+   Variants
+   ========================================================================== */
+
+.btn--light {
+}
+
+.btn-icon-44 {
+	display: block;
+	width: 3.33em;
+	height: 3.33em;
+	//overflow: hidden;
+	text-indent: -999em;
+	margin-right: .5em;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	color: $white;
+	background-color: #636163;
+	cursor: pointer !important;
+	@include transition(.2s);
+	position: relative;
+
+    &::after {
+        font-family: $icon-FontFamily;
+        content: "\e60c";
+        font-size: 2.4em;
+        line-height: 3.33/2.35em;
+        position: absolute;
+        text-indent: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+	&:hover, &:focus {
+		background-color: $black;
+		@include transform(scale(1.05));
+	}
+
+	&:active {
+		@include transform(scale(0.97));
+	}
+
+	&.linkedin::after {content: "\e60d";}
+	&.twitter::after {content: "\e60c";}
+	&.youtube::after {content: "\e60b";}
+	&.email::after {content: "\e60a";}
+	&.facebook::after {content: "\e609";}
+}
+
+@include media-query(M) {
+	.btn-icon-44 {
+		@include transform(scale(0.8));
+		margin-right: -0.3em;
+
+		&:hover, &:focus {
+			@include transform(scale(0.87));
+		}
+
+		&:active {
+			@include transform(scale(0.78));
+		}
+	}
+}

@@ -1,0 +1,19 @@
+// preserve the header + fonts but minus border
+body > header {
+  border-bottom-width: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// and now it's blue!
+.header-search .link-search {
+  background: #01a1dd;
+  color: #fff;
+
+  &::after {
+    color: #fff;
+  }
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+  }
+}

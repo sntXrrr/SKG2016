@@ -1,0 +1,50 @@
+/*
+
+	subnavigation
+
+*/
+
+.pagetitle {
+    /*position: absolute;
+    top: 9em;*/
+
+    h1 {
+        font-size: em($base-font-size*1.8);
+        line-height: 1.2;
+    }
+}
+
+@include media-query(S) {
+
+    .pagetitle {
+        /*top: 12em;*/
+        width: 75%;
+
+        h1 {
+            font-size: em($base-font-size*2);
+        }
+    }
+}
+
+@include media-query(M) {
+
+    .pagetitle {
+        /*position: static;*/
+        width: 100%;
+
+        h1 {
+            padding: .5em 0 0 4px;
+            padding: .5em 0 0 .3rem;
+        }
+    }
+
+    .w-layout-nav .pagetitle h1 {
+        padding: .5em $base-spacing-unit 0 $half-spacing-unit/1.2;
+    }
+}
+
+
+
+
+
+

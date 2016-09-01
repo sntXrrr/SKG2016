@@ -1,0 +1,43 @@
+/*
+ asset (media library) summaries
+*/
+
+.asset {
+	@extend %box;
+	margin-bottom: $base-spacing-unit;
+	position: relative;
+	
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background: $gray-light;
+	}
+
+	border-bottom: 1px solid $brand-color;
+}
+
+.asset {
+	.media__img {
+		padding: 1.25em;
+		margin-right: 0em;
+	}
+}
+
+.asset__text {
+	margin-left: .5em;
+
+	h2 {
+		margin-top: .2em;
+		margin-bottom: .2em;
+		
+	}
+
+	p {
+		line-height: 1.4;
+		color: $black;
+		padding: 0 0 .35em 0;
+		margin-bottom: 1em; 
+	}
+}

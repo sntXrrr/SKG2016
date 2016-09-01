@@ -1,0 +1,62 @@
+/*
+
+	SASS source file for smurfitkappa.css
+
+	this file contains only imports to construct the css stylesheet
+
+*/
+
+// setup
+
+@import "setup/variables";
+@import "setup/mixins";
+
+// patterns
+
+@import "patterns/grid";
+@import "patterns/media";
+@import "patterns/lists";
+
+
+// basics
+
+@import "basics/normalize";
+@import "basics/main";
+@import "basics/font";
+
+
+// elements
+
+@import "elements/icons";
+@import "elements/states";
+@import "elements/buttons";
+@import "elements/boxes";
+@import "elements/links";
+@import "elements/panels";
+@import "elements/forms";
+@import "elements/additionalcontentstyling";
+
+
+// components
+
+@import "components/layout";
+@import "components/header";
+@import "components/footer";
+@import "components/carousel";
+@import "components/pagetitle";
+@import "components/breadcrumbs";
+@import "components/quicklaunch";
+@import "components/productcategory";
+@import "components/share";
+@import "components/mselector";
+@import "components/searchresult";
+@import "components/pagination";
+@import "components/location";
+@import "components/person";
+@import "components/asset";
+
+// helpers, always last to overrule stuff
+@import "helpers/helpers";
+
+// only import debug during development!!!
+/*@import "setup/debug";*/

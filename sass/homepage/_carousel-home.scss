@@ -1,0 +1,221 @@
+.carousel-home {
+  background-color: #eee;
+
+  .slick-prev, .slick-next {
+    position: absolute;
+    display: none !important;
+    top: 50%;
+    left: 20px;
+    right: auto;
+    margin-top: -25px;
+
+    @include media-query(M) {
+      display: block !important;
+    }
+
+    @media screen and (min-width: map-get($breakpoints,"XL")) {
+      left: 50%;
+      margin-left: #{20px - map-get($breakpoints,"XL")/2};
+    }
+
+    border: 0;
+    background: transparent no-repeat left center;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAjBAMAAACN74woAAAABGdBTUEAALGPC/xhBQAAABhQTFRFAAAA////////////////////////////I36dXwAAAAd0Uk5TADPumRHNbKeSBfwAAABRSURBVHjaY2CAAvMEBjhgLi9DcMzLyxMQEuUIKaBEebkAQqK8SABJQnEQSKByXJGVsYQPqFSpA7KUAJJUMSx4QVIG8FhwRUiApBASDAyMQAwAlINIFVr9CbgAAAAASUVORK5CYII=');
+    background-size: auto;
+    width: 50px;
+    height: 50px;
+    text-indent: -999em;
+    overflow: hidden;
+    transform-origin: left center;
+    transition: .1s ease-in;
+    transform: translateX(-3px);
+
+    &:hover {
+      transform: translateX(-8px);
+    }
+
+    &:active {
+      transform: translateX(-8px) scale(.9);
+    }
+  }
+
+  .slick-next {
+    left: auto;
+    right: 20px;
+    transform-origin: 50% 50%;
+    transform: rotate(180deg) translateX(-3px);
+
+    &:hover {
+      transform: rotate(180deg) translateX(-8px);
+    }
+
+    &:active {
+      transform: rotate(180deg) translateX(-8px) scale(.9);
+    }
+
+    @media screen and (min-width: map-get($breakpoints,"XL")) {
+      left: auto;
+      right: 50%;
+      margin-right: #{20px - map-get($breakpoints,"XL")/2};
+    }
+  }
+
+  .slick-dots {
+    top: auto;
+    bottom: 2rem;
+    right: auto;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media-query(M) {
+      display: none !important;
+    }
+
+    button {
+      width: 1.25rem;
+      height: .75rem;
+
+      &::before {
+        width: .75rem;
+        height: .75rem;
+        overflow: hidden;
+        border: 0;
+        background: rgba(255,255,255,.35);
+        transform: translateX(.5rem);
+      }
+    }
+
+    .slick-active button::before {
+      background-color: #fff;
+    }
+  }
+}
+
+// slides
+
+.carousel-home__item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 490px;
+  overflow: hidden;
+}
+
+.carousel-home__content {
+  width: 100%;
+  height: 490px;
+  max-width: map-get($breakpoints,"XL");
+  margin: 0 auto;
+  padding: 1.3334rem;
+  font-size: 16px;
+
+  // pretty specific for first slide?
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+
+  @include media-query(S) {
+    flex-direction: row;
+  }
+}
+
+// first slide stuff:
+.slide-01-title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: bold;
+  font-size: em(48px);
+  line-height: .85;
+  width: 5.5em;
+  margin: auto;
+  position: relative;
+  transform: translate(-2.6rem,1.3334rem);
+
+  @include media-query(S) {
+    transform: translate(-2.6rem,0);
+  }
+
+  @media screen and (min-width: 810px) {
+    font-size: em(52px);
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: em(64px);
+  }
+
+  @include media-query(M) {
+    font-size: em(87px);
+  }
+
+  svg {
+    position: absolute;
+    width: 1.3em;
+    height: 4.2em;
+    right: -.43em;
+    top: -1.22em;
+    margin: 0;
+    animation: swoosh .75s ease-out;
+  }
+}
+
+@keyframes swoosh {
+  0% { transform: translateX(-7px); opacity: 0; }
+  40% { transform: translateX(-7px); opacity: 0; }
+}
+
+.slide-01-links {
+  font-size: 20px;
+  font-weight: bold;
+
+  @include media-query(S) {
+    font-size: em(21px);
+  }
+
+  @media screen and (min-width: 810px) {
+    font-size: em(24px)
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: em(28px);
+  }
+
+  @include media-query(M) {
+    font-size: em(36px);
+  }
+
+  li:not(:first-child)::before {
+    content: "|";
+    color: $brand-color;
+    position: static;
+    display: inline;
+    margin: 0;
+    padding: 0 .25em 0 .1em;
+  }
+
+  a {
+    color: #fff;
+    transition: .2s;
+
+    &:hover, &:focus {
+      opacity: .75;
+      text-decoration: none;
+    }
+  }
+}
+
+.slide-01-btn {
+  margin-top: 1rem;
+}
+
+// other slides
+.carousel-home__message {
+  position: absolute;
+  font-size: 16px;
+  color: #fff;
+  top: 50%;
+  padding: 1.3334rem;
+}

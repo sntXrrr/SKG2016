@@ -1,0 +1,314 @@
+/*
+
+	lists
+
+	patterns for being flexible with different list layouts
+
+*/
+
+/**
+ * list abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=list>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ *
+ */
+.list {
+	list-style: none;
+	margin-left: 0;
+	margin-bottom: 0;
+	@extend .cf;
+
+	> li {
+		display: inline-block;
+		margin-left: 0;
+
+		&::before {
+			content: "";
+		}
+	}
+}
+
+/**
+ * `.list--content` extends `.list` to correct some bottom margin stuff so margin collapse with other content works as expected
+ *
+	<ul class="list list--content">
+		<li>
+			<p>Home</p>
+		</li>
+		<li>
+			<p>About</p>
+		</li>
+		<li>
+			<p>Portfolio</p>
+		</li>
+		<li>
+			<p>Contact</p>
+		</li>
+	</ul>
+ *
+ */
+/* .list--content {
+	> li:last-child > :last-child {
+		margin-bottom: 0;
+	}
+} */
+
+
+/**
+ * `.list--publications` adapts the media pattern for displaying publications nicely
+ *
+	<ul class="list list--publications">
+		<li class="media">
+			<a href="#" class="media__img">
+				<img src="../img/publication01.jpg" alt="">
+			</a>
+			<div class="media__body">
+				<h4><a href="#">Smurfit Kappa: Our Sustainability Story 2014</a></h4>
+				<small>pdf 951Mb</small>
+			</div>
+		</li>
+	</ul>
+ *
+ */
+.list--publications {
+
+	.media {
+		margin-bottom: $base-spacing-unit;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.media__img {
+		width: 33%;
+		max-width: 7em;
+
+		/* responsiveness is covered by .box--content img */
+		/* img {
+			@extend .ri;
+		} */
+	}
+
+	.media__body {
+		margin-top: 1em;
+
+		h4 {
+			display: inline-block;
+		}
+
+		&:hover, &:focus, &:active {
+				text-decoration: none;
+
+			h4 {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	small {
+		color: $black;
+		text-transform: uppercase;
+		display: block;
+	}
+}
+
+
+
+
+/**
+ * `.list--stacked` extends `.list` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="list list--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.list--stacked {
+
+	> li {
+		display: block;
+
+		> a {
+			display: block;
+		}
+	}
+}
+
+
+/* bloep */
+.list-special {
+	li {
+		margin-left: 0;
+	}
+}
+
+/**
+ * `.list--celled` is like `.list--stacked` but turns .list__item into table-cells
+ * 	with vertical centered content:
+ *
+   <ul class="list  list--celled">
+       <li><a href=# class="list__item">Home</a></li>
+       <li><a href=# class="list__item">About</a></li>
+       <li><a href=# class="list__item">Portfolio</a></li>
+       <li><a href=# class="list__item">Contact</a></li>
+   </ul>
+ *
+ */
+.list--celled {
+
+	> li {
+		display: table-row;
+
+		> * {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+/**
+ * Force a list to occupy 100% of the available width of its parent. Extends
+ * `.list`, e.g.:
+ *
+   <ul class="list list--fit">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.list--fit {
+	display: table;
+	width: 100%;
+
+	> li {
+		display: table-cell;
+
+		> a {
+			display: block;
+		}
+	}
+}
+
+
+/**
+ * Makes a list 100% wide and turns it into a table
+ * with content containers acting as cells(!)
+ * `.list`, e.g.:
+ *
+	<ul class="list list--table">
+		<li>
+			<a href=#>Home</a>
+			<p>description with many a word</p>
+		</li>
+		<li>
+			<a href=#>About</a>
+			<p>description with many a word</p>
+		</li>
+		<li>
+			<a href=#>Portfolio</a>
+			<p>description with many a word</p>
+		</li>
+		<li>
+			<a href=#>Contact</a>
+			<p>description with many a word</p>
+		</li>
+	</ul>
+ *
+ */
+.list--table {
+	display: table;
+	width: 100%;
+
+	> li {
+		display: table-row;
+
+		> * {
+			display: table-cell;
+		}
+	}
+}
+
+
+/**
+ * Makes a list 100% wide and turns it into a table
+ * with li's acting as cells(!)
+ * `.list`, e.g.:
+ *
+	<ul class="list list--table">
+		<li>
+			<a href=#>Home</a>
+			<p>description with many a word</p>
+		</li>
+		<li>
+			<a href=#>About</a>
+			<p>description with many a word</p>
+		</li>
+		<li>
+			<a href=#>Portfolio</a>
+			<p>description with many a word</p>
+		</li>
+		<li>
+			<a href=#>Contact</a>
+			<p>description with many a word</p>
+		</li>
+	</ul>
+ *
+ */
+.list--tablecell {
+	display: table;
+	width: 100%;
+
+	> li {
+		display: table-cell;
+	}
+}
+
+
+/**
+ * Makes a list with fixed width items so they wrap in columns
+ * Used for displaying countries on "About us/Where we are"
+ * e.g.:
+ *
+	<ul class="list--columned">
+		<li>
+			<a href=#>Home</a>
+		</li>
+		<li>
+			<a href=#>About</a>
+		</li>
+		<li>
+			<a href=#>Portfolio</a>
+		</li>
+		<li>
+			<a href=#>Contact</a>
+		</li>
+	</ul>
+ *
+ */
+.list-columned {
+	display: block;
+	width: 100%;
+
+	> li {
+		display: inline-block;
+		width: 12em;
+		margin-right: .5em;
+		margin-bottom: .5em;
+		vertical-align: top;
+	}
+}

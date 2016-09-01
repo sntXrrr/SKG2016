@@ -1,0 +1,68 @@
+/*
+
+	breadcrumbs
+
+*/
+
+.breadcrumbs {
+    padding: .35em $base-spacing-unit;
+    line-height: 1.4;
+    max-height: 3.4em;
+    overflow: hidden;
+
+    li {
+        display: inline;
+
+        &::after {
+            content: ">";
+            position: static;
+            display: inline;
+            color: $gray-lightest;
+            font-weight: normal;
+            padding-left: .4em;
+        }
+
+        &:last-child::after {
+            content: "";
+        }
+
+        a {
+            color: $gray-lightest;
+
+            &:hover, &:focus, &:active {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@include media-query(M) {
+
+    .breadcrumbs {
+        position: relative;
+        margin: -.75em 0 .5em;
+        padding: 0 $double-spacing-unit*2 0 $double-spacing-unit/1.05;
+        line-height: 1.5;
+        max-height: none;
+
+        li {
+            display: inline-block;
+
+            &::after, a {
+                color: $black;
+            }
+
+            a {
+
+                &:hover, &:focus, &:active {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.lt-ie9 .breadcrumbs a {
+    color: $black;
+}

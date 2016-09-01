@@ -1,0 +1,74 @@
+/*
+
+	links
+
+	variations on the default in basics/main.scss
+
+*/
+
+
+.link-simple {
+	color: $black;
+	text-decoration: none;
+
+	&:hover, &:focus, &:active {
+		text-decoration: underline;
+	}
+}
+
+/* with an arrow at the end */
+
+.link-primary, .moreLinkList {
+	font-weight: bold;
+	background: $brand-color;
+	color: $brand-color;
+	color: $white;
+	padding-right: 3em;
+	padding: .3em 3em .3em .75em;
+	line-height: 2em;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 1em;
+
+	&::after {
+		@extend [class*=" icon-"];
+		@extend .icon-arrow::before;
+		@include transition(.3s);
+		position: absolute;
+		//font-size: 3em;
+		font-size: 47px; // for oldies, unfortunately
+		height: .82em;
+		width: .65em;
+		margin-left: .25em;
+		// for oldies, unfortunately
+		margin-top: -.08em;
+		overflow: hidden;
+		line-height: 40px;
+	}
+
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+		//color: $black;
+		background: $btn-color-highlight;
+
+		&::after {
+			margin-left: .35em;
+		}
+	}
+}
+
+// for oldies, unfortunately
+@include media-query(M) {
+
+	.link-primary, .moreLinkList {
+
+		&::after {
+			font-size: 35px;
+			height: .88em;
+			margin-top: -.1em;
+			line-height: 32px;
+		}
+
+	}
+}

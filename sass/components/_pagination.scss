@@ -1,0 +1,44 @@
+/*
+
+	pagination
+
+    pagenumbers under search results
+
+*/
+
+.pagination {
+    @extend .list;
+    @extend .list--tablecell;
+    width: 100%;
+    max-width: 27em;
+    margin: 1em auto;
+
+    a {
+        display: block;
+        max-width: 3.5em;
+        height: 2.5em;
+        line-height: 2.5em;
+        background: $gray-lighter;
+        font-weight: bold;
+        text-align: center;
+        margin: 1em auto;
+
+        &:hover, &:active, &:focus, &.is-selected {
+            background: $brand-color;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+@include media-query(S) {
+
+    .pagination {
+        width: auto;
+
+        a {
+            width: 3.5em;
+            margin: 1em .25em;
+        }
+    }
+}

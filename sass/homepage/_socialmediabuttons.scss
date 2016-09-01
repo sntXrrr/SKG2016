@@ -1,0 +1,42 @@
+.btn-icon-44 {
+  color: rgba(0,0,0,0);
+
+  &::after {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    will-change: transform;
+  }
+
+  &.email {
+    background: #fff;
+    box-shadow: 0 0 0 3px #8d8787 inset;
+    &::after { color: #8d8787; }
+  }
+
+  &.twitter {
+    background: #fff;
+    box-shadow: 0 0 0 3px #33bcf3 inset;
+    &::after { color: #33bcf3; }
+  }
+
+  &.linkedin {
+    background: #fff;
+    box-shadow: 0 0 0 3px #3598c1 inset;
+    &::after { color: #3598c1; }
+  }
+
+  &.youtube {
+    background: #fff;
+    box-shadow: 0 0 0 3px #ca3433 inset;
+    &::after { color: #ca3433; }
+  }
+
+  @include media-query(M) {
+    transform: scale(1);
+    margin-right: .5em;
+
+    &::after {
+      font-size: 1.65rem;
+    }
+  }
+}

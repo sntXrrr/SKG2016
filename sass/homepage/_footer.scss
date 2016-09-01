@@ -1,0 +1,156 @@
+/*
+
+	footer
+
+*/
+
+footer.wrapper.wrapper {
+  background: #fff;
+  font-size: 13px;
+  color: #1a181d;
+
+  a {
+    text-transform: none;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 1em;
+
+    &, a {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-icon-44 {
+    font-size: .8125em;
+  }
+
+  .footer__copy {
+    padding-top: 3em;
+    padding-bottom: 0;
+
+    li:first-child {
+      position: static;
+      margin-bottom: .25em;
+    }
+  }
+}
+
+@include media-query(S) {
+  footer.wrapper.wrapper {
+    font-size: 13px;
+
+    .list.box {
+      padding-top: 2em;
+    }
+
+    .footer__copy {
+      padding-top: 3.5em;
+      padding-bottom: 0;
+      position: relative;
+
+      .icon-arrowup {
+        bottom: -2.35em;
+      }
+
+      li {
+        display: inline-block;
+
+        &::before {
+          content: "|";
+          color: #1a181d;
+          font-weight: normal;
+          display: inline;
+          position: static;
+          margin-left: 0;
+          padding: 0 .5em 0 .25em;
+        }
+
+        a {
+          margin-bottom: 0;
+        }
+
+        &:first-child {
+
+          &::before {
+              content: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-query(M) {
+  footer.wrapper.wrapper {
+    font-size: 13px;
+
+    .list.box {
+      padding-top: 3em;
+      text-align: right;
+    }
+
+    .btn-icon-44 {
+    }
+
+    .footer__copy {
+      text-align: left;
+
+      &, & a {
+          color: #1a181d;
+      }
+    }
+  }
+}
+
+.footer__quicklinks-button {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 26px;
+  width: auto !important;
+  margin: 1.25em auto;
+  padding-left: 1.25em;
+  position: relative;
+  color: $brand-color;
+  overflow: visible;
+
+  &:hover, &:focus, &:active {
+    color: $btn-color-highlight;
+  }
+
+  &::before {
+    content: "+";
+    color: #1a181d;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    transform-origin: 50% 50%;
+    transform: scale(1.75) rotate(90deg);
+    transition: .16s ease-in;
+    will-change: transform;
+  }
+
+  &.is-active::before {
+    content: "\2212";
+    transform: scale(1.75) rotate(0deg);
+  }
+}
+
+.footer__quicklinks-panel {
+  overflow: hidden;
+  height: 0;
+  border-top: 1px solid #ccc;
+  background: #fff linear-gradient(#ccc, #ccc) left bottom repeat-x;
+  background-size: 1px 1px;
+}

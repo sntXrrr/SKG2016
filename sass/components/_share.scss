@@ -1,0 +1,81 @@
+/*
+
+	share
+
+*/
+
+.link--share {
+    //display: inline-block;
+    //padding-left: 0;
+
+    &::before {
+        content: "\e607";
+        font-family: $icon-FontFamily;
+        float: left;
+        padding: 0 .85em 0 .65em;
+        @include transform(scale(1.75));
+        @include transition(.2);
+    }
+
+    &::after {
+        content: "";
+    }
+}
+
+/* some override stuff to show our own icons... */
+
+#shareThis .stButton {
+    border-radius: 50%;
+    height: 32px;
+    background-color: #636163;
+    overflow: hidden;
+    text-align: center;
+    @include transition(.3s);
+    @include transform-origin(center top);
+
+    &:hover, &:active, &:focus {
+        background: $black;
+        @include transform(scale(1.08));
+    }
+}
+
+#shareThis .stLarge {
+    background-image: none !important;
+    position: relative;
+
+    &:hover {
+        opacity: 1 !important;
+    }
+
+    &::after {
+        font-family: $icon-FontFamily;
+        content: "\e60c";
+        color: $white;
+        font-size: 2em;
+        line-height: 32px;
+    }
+}
+
+#shareThis  {
+    .st_linkedin_large .stLarge::after { content: "\e60d";}
+    .st_twitter_large .stLarge::after { content: "\e60c";}
+    .st_email_large .stLarge::after { content: "\e60a";}
+    //.st_youtube_large .stLarge::after { content: "\e60b";}
+    .st_facebook_large .stLarge::after { content: "\e609";}
+}
+
+
+/* make it open nicely */
+#shareThis > div {
+    float: left;
+    padding-bottom: 3em;
+    @include transform-origin(left top);
+
+}
+
+/* make it a bit bigger on mobile */
+@include media-query(M-max) {
+    #shareThis > div {
+        @include transform(scale(1.4));
+    }
+}

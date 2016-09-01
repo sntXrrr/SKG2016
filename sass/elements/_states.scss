@@ -1,0 +1,68 @@
+/*
+
+	states
+
+	stuff in a certain way, easy add-on classes for styling states
+
+*/
+
+.is-brand {
+	color: $brand-color;
+}
+
+.is-branded {
+	background-color: $brand-color;
+}
+
+.is-branded--overlay {
+	background-color: $brand-color;
+	background-color: $brand-color-transparent;
+}
+
+// a black thing with almost-white text
+.is-dark {
+	background-color: $black;
+	color: $gray-lightest;
+}
+
+// a black thing with almost-white text
+.is-darked {
+	background-color: $gray-darked;
+	color: $gray-lightest;
+}
+
+// a black thing with almost-white text
+.is-light {
+	background-color: $white;
+}
+
+
+/* text only: for indicating errors on form labels */
+
+.is-error {
+	color: $ui-alert !important;
+}
+
+.is-muted { // for de-emphasising text color
+	color: $gray;
+}
+
+.is-warning {
+	color: $ui-attention;
+}
+
+
+
+/* particular functional with panels, this... */
+
+.is-hidden {
+	display: none;
+}
+
+.is-open, .is-intransit.is-hidden {
+	display: block;
+}
+
+.is-intransit {
+	overflow: hidden;
+}

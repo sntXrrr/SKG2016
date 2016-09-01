@@ -1,0 +1,498 @@
+/*
+
+    carousel
+
+    pretty much default Slick.css plus slick-theme.scss
+    slick-theme.scss slightly adapted for Smurfit Kappa
+
+*/
+
+.carousel {
+    min-height: 6em;
+
+    .carousel__banner & {
+        margin-bottom: 0;
+    }
+
+    /* this will hide all slides until the js init manipulates the DOM :) */
+    > .carousel__item {
+        display: none;
+    }
+}
+
+/* not-homepage (carousel is not page-wide) needs a white-out on the left side for the title */
+.layout-columns .carousel__item {
+    position: relative;
+
+    &::before {
+        content: "";
+        /* background-image: -webkit-gradient( linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0.95)), color-stop(0.33, rgba(255, 255, 255, 0.95)), color-stop(1, rgba(255, 255, 255, 0)));
+        background-image: -moz-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 33%, rgba(255, 255, 255, 0) 100%);
+        background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 33%, rgba(255, 255, 255, 0) 100%);
+        background-image: -ms-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 33%, rgba(255, 255, 255, 0) 100%);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 33%, rgba(255, 255, 255, 0) 100%); */
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+.carousel__message {
+    position: relative;
+    z-index: 200;
+    background: $brand-color;
+    color: $white;
+    font-size: 1.4em;
+    line-height: 1.4;
+
+    p {
+        padding: $half-spacing-unit/1.4 $base-spacing-unit/1.4;
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        color: $white;
+        font-size: .85em;
+        padding: $half-spacing-unit $base-spacing-unit/1.1;
+        background: $brand-highlight;
+        background: transparentize($white, .875);
+        @include transition-duration(.2s);
+
+        &::after {
+            @extend [class^="icon-"];
+            content: "\e603";
+            font-size: 1.5em;
+            position: absolute;
+            margin-left: .25em;
+            margin-top: -.05em;
+        }
+
+        &:hover, &:focus, &:active {
+            background: transparentize($white, .75);
+            text-decoration: none;
+            text-indent: .5em;
+            @include transition-duration(.8s);
+        }
+    }
+}
+
+@include media-query(M) {
+    .carousel {
+        padding: 0 $base-spacing-unit;
+    }
+
+    /* not-homepage white-out stuff is less obtrusive here */
+    .layout-columns .carousel__item {
+        position: relative;
+
+        &::before {
+            width: 50%;
+            /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0.95)), color-stop(1, rgba(255, 255, 255, 0))
+            );
+            background-image: -o-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: -moz-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: -ms-linear-gradient(right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);*/
+        }
+    }
+
+    .layout-columns .carousel__banner .carousel__item::before {
+        background-image: none;
+    }
+
+    .carousel__message {
+        font-size: 1.5em;
+        background: transparentize($brand-color, .15);
+        width: 28em;
+        position: absolute;
+        left: 0;
+        bottom: 20%;
+
+        p {
+            padding: $base-spacing-unit $double-spacing-unit;
+        }
+
+        a {
+            padding: $half-spacing-unit $double-spacing-unit*1.175;
+        }
+    }
+}
+
+/* temp code to try out gray 'sidebars' on very wide screens, doesn't work 100% in FF. No IE8 support either */
+@include media-query(XL) {
+
+    .layout-columns .carousel__wrapper {
+        position: relative;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            background: $gray-lightest;
+            top: 0;
+            z-index: 1;
+        }
+
+        &::after {
+            width: calc( 50vw - #{$max-site-width}/2 + #{$base-spacing-unit}/2 );
+            right: calc( -50vw + #{$max-site-width}/2 + #{$base-spacing-unit}/2 );
+        }
+
+        &::before {
+            width: calc( 50vw - #{$max-site-width}/2 );
+            left: calc( -33% - (50vw - #{$max-site-width}/2) );
+        }
+    }
+
+    .layout-columns .w-M-2of3 .carousel__wrapper {
+
+        &::after, &::before {
+            display: none;
+        }
+    }
+}
+
+
+/* default styling from slick.css */
+
+/* Slider */
+.slick-slider {
+    position: relative;
+
+    display: block;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+/* end: default styling from slick.css */
+
+
+
+// Default Variables
+
+$slick-font-path: "./fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "←" !default;
+$slick-next-character: "→" !default;
+$slick-dot-character: "•" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+@function slick-font-url($url) {
+    @if function-exists(font-url) {
+        @return font-url($url);
+    }
+    @else {
+        @return url($slick-font-path + $url);
+    }
+}
+
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("../img/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Icons */
+/* @if $slick-font-family == "slick" {
+    @font-face {
+        font-family: "slick";
+        src: slick-font-url("slick.eot");
+        src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+} */
+
+/* Arrows */
+/*
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -10px;
+    padding: 0;
+    border: none;
+    outline: none;
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+        &:before {
+            opacity: $slick-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: $slick-opacity-not-active;
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: $slick-font-family;
+    font-size: 20px;
+    line-height: 1;
+    color: $slick-arrow-color;
+    opacity: $slick-opacity-default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+    left: -25px;
+    [dir="rtl"] & {
+        left: auto;
+        right: -25px;
+    }
+    &:before {
+        content: $slick-prev-character;
+        [dir="rtl"] & {
+            content: $slick-next-character;
+        }
+    }
+}
+
+.slick-next {
+    right: -25px;
+    [dir="rtl"] & {
+        left: -25px;
+        right: auto;
+    }
+    &:before {
+        content: $slick-next-character;
+        [dir="rtl"] & {
+            content: $slick-prev-character;
+        }
+    }
+} */
+
+/* Dots */
+
+.slick-dots {
+    position: absolute;
+    top: .12em;
+    right: .25em;
+    list-style: none;
+    width: auto;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+
+    z-index: 90;
+
+    li {
+        position: relative;
+        display: inline-block;
+        height: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+        }
+
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 1em;
+            width: 1em;
+            outline: none;
+            overflow: hidden;
+            color: transparent;
+            cursor: pointer;
+
+            &:hover, &:focus {
+                outline: none;
+
+                &::before {
+                    //opacity: $slick-opacity-on-hover;
+                    background: $gray;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                webkit-border-radius:   50%;
+                border-radius:          50%;
+                background: $brand-color;
+                border: 1px solid rgba(255,255,255,.3);
+                top: .75em;
+                right: .75em;
+                content: "";
+                width: .5em;
+                height: .5em;
+                //font-family: $slick-font-family;
+                //font-size: $slick-dot-size;
+                //line-height: 20px;
+                text-align: center;
+                //color: $slick-dot-color;
+                //opacity: $slick-opacity-not-active;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                @include transition(.3s);
+            }
+        }
+
+        &.slick-active {
+            button {
+
+                &::before {
+                    //color: $slick-dot-color-active;
+                    //opacity: $slick-opacity-default;
+                    background: $gray-dark;
+                }
+            }
+        }
+    }
+}
+
+@include media-query(M) {
+    .slick-dots {
+        top: 0;
+        right: 2.25em;
+
+        li button {
+            height: 2.5em;
+            width: 1.5em;
+
+            &::before {
+                top: 1em;
+                right: .25em;
+                width: .75em;
+                height: .75em;
+            }
+        }
+    }
+}

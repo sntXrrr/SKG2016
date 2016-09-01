@@ -1,0 +1,160 @@
+.carousel-twitter {
+  background: #fff;
+  padding: rem(20px);
+  position: relative;
+  min-height: 70px;
+  margin-bottom: $home-gridspacing;
+
+  h3 {
+    color: $brand-color;
+    line-height: 1;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    transform-origin: left center;
+    padding-bottom: .1em;
+
+    @media screen and (max-width: 400px) {
+      transform: scale(.8);
+    }
+
+    @include media-query(M) {
+      padding-right: 1.5em;
+      float: left;
+      padding-top: .7em;
+    }
+  }
+
+  .btn-icon-44 {
+    display: inline-block;
+    font-size: .6em;
+    margin-top: -.3em;
+    margin-left: -.2em;
+    margin-right: 1em;
+    vertical-align: middle;
+    box-shadow: 0 0 0 3px $brand-color inset;
+    transform: scale(1);
+
+    &::after {
+      color: $brand-color;
+    }
+
+    &:hover, &:focus, &:active {
+      transform: none;
+      transform: scale(1);
+    }
+  }
+
+
+  .slick-slider {
+    font-size: 16px;
+    padding-top: 1.7rem;
+    max-width: 100%;
+    line-height: 1.35;
+
+    @include media-query(M) {
+      padding-top: 0;
+    }
+  }
+
+  .slick-slide {
+    padding-bottom: 2em;
+
+    @include media-query(S) {
+      padding-bottom: 0;
+      padding-right: 2em;
+    }
+
+    @include media-query(M) {
+      min-height: 55px;
+      height: 55px; // for IE11
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .tweet-content {
+    margin-bottom: 0;
+  }
+
+  .slick-dots {
+    left: -.3em;
+    bottom: -.8em;
+    top: auto;
+    text-align: left;
+
+    @include media-query(S) {
+      left: auto;
+      bottom: auto;
+      right: 0;
+      top: 50%;
+      text-align: right;
+      transform: translateY( -50% ); // for IE11
+      transform: translateY( calc( -50% - 11px ) );
+
+      > li {
+        display: block;
+      }
+
+    }
+
+    @include media-query(M) {
+      transform: translateY( -50% ); // for IE11
+      transform: translateY( calc( -50% + 5px ) );
+    }
+
+    li button {
+      margin-bottom: .25em;
+      width: 1em;
+      height: 1em;
+
+      &::before {
+        top: 0;
+        right: 0;
+        background: #c7c7c7;
+        border-color: #c7c7c7;
+        width: .75em;
+        height: .75em;
+      }
+    }
+
+    .slick-active button {
+      &::before {
+        background: #fff;
+        box-shadow: 0 0 0 1px #c7c7c7 inset;
+      }
+    }
+  }
+}
+
+
+.homepage-news {
+  background: #fff;
+  margin-bottom: $home-gridspacing;
+
+  @include media-query(M) {
+    height: calc( 100% - #{$home-gridspacing} );
+  }
+}
+
+.homepage-date {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #1a181d;
+}
+
+.homepage-newsitem {
+  font-size: 16px;
+  line-height: 1.35;
+
+  a {
+    display: block;
+  }
+
+  a:hover, a:focus {
+    text-decoration: none;
+    color: lighten($brand-color, 10);
+    transition: .2s;
+  }
+}

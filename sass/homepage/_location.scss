@@ -1,0 +1,132 @@
+.wrapper--home-locations {
+  background: #fff url("/img/homepage-location-bg.png") no-repeat right top;
+    background-position: calc(87% + 126px) top;
+
+  @include media-query(XL) {
+    background-position: calc(50% + 575px) top;
+  }
+}
+
+.locations-home {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: $brand-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 1100px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include media-query(M) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.locations-countries,
+.locations-continents,
+.locations-customers,
+.locations-facilities,
+.locations-go {
+  display: block;
+  margin: 0;
+  padding-right: 5px;
+  background: transparent no-repeat left top;
+  background-size: auto 100%;
+
+  &::before {
+    content: "";
+  }
+
+  span {
+    color: #585657;
+    font-size: 2.3125em;
+    line-height: .9;
+    font-weight: normal;
+    letter-spacing: normal;
+    display: block;
+  }
+
+  @include media-query(M) {
+    width: auto;
+  }
+}
+
+.locations-countries,
+.locations-continents,
+.locations-customers,
+.locations-facilities {
+  font-size: 9.8px;
+
+  @media screen and (min-width: 460px) {
+    font-size: 12px;
+  }
+
+  @include media-query(S) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 900px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    font-size: 16px;
+  }
+
+  @include media-query(M) {
+    font-size: 16px;
+  }
+}
+
+.locations-countries,
+.locations-continents {
+  margin-bottom: 1rem;
+
+  @include media-query(S) {
+    margin-bottom: 0;
+  }
+}
+
+.locations-countries {
+  padding-left: em(65px,16px);
+  background-image: url("/img/homepage-location-countries.png");
+}
+
+.locations-continents {
+  padding-left: em(75px,16px);
+  background-image: url("/img/homepage-location-facilities.png");
+}
+
+.locations-customers {
+  padding-left: em(85px,16px);
+  background-image: url("/img/homepage-location-customers.png");
+}
+
+.locations-facilities {
+  padding-left: em(82px,16px);
+  background-image: url("/img/homepage-location-continents.png");
+}
+
+.locations-go {
+  text-align: center;
+  padding-top: 1.3334rem;
+
+  @media screen and (min-width: 1100px) {
+    padding-top: 2rem;
+  }
+
+  @include media-query(M) {
+    padding-top: 0;
+  }
+}

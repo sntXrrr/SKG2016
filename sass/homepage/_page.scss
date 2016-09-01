@@ -1,0 +1,55 @@
+$home-gridspacing: 1.333334rem; // 20px
+
+html {
+  font-family: Effra, Tahoma, Verdana, sans-serif;
+}
+
+body {
+  color: #585657;
+}
+
+.wrapper>.grid {
+  max-width: 1445px;
+}
+
+.box {
+  padding: rem(20px);
+}
+
+.wrapper--home-dark,
+.wrapper--home-capital {
+  background-color: #003662;
+  color: #fff;
+}
+
+.wrapper--home-capital {
+  background-image: url("/img/homepage-capital-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper--home-gray {
+  background: #eee;
+}
+
+.homepage-comptitle {
+  font-size: 22px;
+  font-weight: normal;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.grid:not(.grid--nogutter) {
+  padding-left: $home-gridspacing;
+}
+
+.grid:not(.grid--nogutter) > [class*="w-"] {
+  padding-right: $home-gridspacing;
+}
+
+.homepage-itemtitle {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #01a1dd;
+}
