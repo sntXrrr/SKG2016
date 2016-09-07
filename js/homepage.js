@@ -5,9 +5,9 @@
       arrows:         true,
       dots:           true,
       infinite:       true,
-      autoplay:       false,
+      autoplay:       true,
       fade:           true,
-      speed:          500,
+      speed:          750,
       lazyLoad:       'progressive',
       autoplaySpeed:  7000
   });

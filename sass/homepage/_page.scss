@@ -13,7 +13,11 @@ body {
 }
 
 .box {
-  padding: rem(20px);
+  padding: rem(20px) rem(10px);
+
+  @include media-query(S) {
+    padding: rem(20px);
+  }
 }
 
 .wrapper--home-dark,
@@ -37,14 +41,27 @@ body {
   font-weight: normal;
   text-align: center;
   padding: 10px 0;
+
+  @include media-query(S) {
+    font-size: 24px;
+    padding: 20px 0;
+  }
 }
 
 .grid:not(.grid--nogutter) {
-  padding-left: $home-gridspacing;
+  padding-left: rem(10px);
+
+  @include media-query(S) {
+    padding-left: $home-gridspacing;
+  }
 }
 
 .grid:not(.grid--nogutter) > [class*="w-"] {
-  padding-right: $home-gridspacing;
+  padding-right: rem(10px);
+
+  @include media-query(S) {
+    padding-right: $home-gridspacing;
+  }
 }
 
 .homepage-itemtitle {
@@ -52,4 +69,12 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: #01a1dd;
+
+  @include media-query(S) {
+    font-size: 20px;
+
+    .w-S-1of2 & {
+      font-size: 18px;
+    }
+  }
 }

@@ -40,7 +40,7 @@
   .media__body {
     width: 100%;
     font-size: 16px;
-    line-height: 1.35;
+    line-height: 1.5;
     position: relative;
     padding-bottom: 2rem;
     max-width: 30em;
@@ -48,6 +48,7 @@
     @include media-query(S) {
       width: 75%;
       padding-bottom: 3rem;
+      margin: rem(10px) 0;
     }
 
     @include media-query(M) {

@@ -3,16 +3,54 @@
   flex-flow: column;
   align-items: stretch;
   line-height: 1.5;
+  background: #f0f0f0 no-repeat 50% 50%;
+  background-size: cover;
+
+  @media screen and (max-width: #{map-get($breakpoints,"S") - 1}) {
+    background-image: none !important;
+  }
 
   @include media-query(S) {
-    flex-flow: row;
+    flex-flow: row-reverse;
+    background-position: calc( 50% + 16vw ) 50%;
+    background-size: auto calc( 100% + 7vw );
+
+    &.banner-home--reverse {
+      flex-flow: row;
+      background-position: calc( 50% - 16vw ) 50%;
+    }
+  }
+
+  @include media-query(M) {
+
+    &, &.banner-home--reverse {
+      background-position: 50% 50%;
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints,"XL")) {
+    padding-left: calc( 50% - #{map-get($breakpoints,"XL")/2} );
+    padding-right: calc( 50% - #{map-get($breakpoints,"XL")/2} );
   }
 }
 
 .banner-home__img {
   display: block;
-  background-position: center center;
+  background: transparent no-repeat 72% 50%;
   background-size: cover;
+
+  .banner-home--reverse > & {
+    background-position: 28% 50%;
+  }
+
+  @include media-query(S) {
+    width: 33.3334%;
+    background-image: none !important;
+  }
+
+  @include media-query(M) {
+    width: 50%;
+  }
 
   &::before {
     content: "";
@@ -20,25 +58,9 @@
     width: 100%;
     height: 0;
     padding-bottom: 75%;
-  }
 
-  @include media-query(S) {
-    width: 33.333%;
-
-    :nth-child(even) > & {
-      order: 2;
-    }
-
-    &::before {
+    @include media-query(S) {
       padding-bottom: 50%;
-    }
-  }
-
-  @include media-query(M) {
-    width: 50%;
-
-    &::before {
-      padding-bottom: 56.25%;
     }
   }
 }
@@ -46,24 +68,21 @@
 .banner-home__body {
   display: block;
   position: relative;
-  padding: 5rem;
   font-size: 16px;
-  padding: 2rem;
+  padding: 2rem rem(10px);
 
   @include media-query(S) {
-    width: 66.666%;
+    width: 66.6667%;
+    min-height: 366px;
     font-size: 18px;
-    padding: 4rem 3rem;
-
-    :nth-child(even) > & {
-      order: 1;
-    }
+    padding: 4rem rem(20px);
   }
 
   @include media-query(M) {
     width: 50%;
+    min-height: 0;
     font-size: 20px;
-    padding: 5rem;
+    padding: 5rem rem(20px);
   }
 
   .homepage-itemtitle {
