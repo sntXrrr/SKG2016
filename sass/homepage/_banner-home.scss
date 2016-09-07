@@ -22,6 +22,7 @@
   }
 
   @include media-query(M) {
+    background-size: cover;
 
     &, &.banner-home--reverse {
       background-position: 50% 50%;
