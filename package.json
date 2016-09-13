@@ -1,9 +1,9 @@
 {
   "author": "Paul",
-  "version": "0.1.0",
-  "description": "Very basic http server + gulp to watch and compile scss and js",
+  "version": "0.2.0",
+  "description": "browsersync + gulp to watch and compile/prefix/minify scss and js",
   "scripts": {
-    "start": "concurrently \"http-server -s\" \"gulp watch\" "
+    "start": "concurrently \"browser-sync start --server --files \"css/*.css\"\" \"gulp watch\" "
   },
   "dependencies": {
     "concurrently": "^2.1.0",
@@ -11,8 +11,8 @@
     "gulp-concat": "^2.6.0",
     "gulp-minify": "0.0.12",
     "gulp-sass": "^2.3.2",
-    "gulp-postcss": "^5.1.2",
-    "gulp-autoprefixer": "^3.1.1",
-    "http-server": "^0.9.0"
+    "autoprefixer": "^6.4.1",
+    "gulp-cssnano": "^2.1.2",
+    "browser-sync": "^2.15.0"
   }
 }

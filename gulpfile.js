@@ -4,18 +4,28 @@ var gulp = require('gulp');
 var sassCompiler = require('gulp-sass');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
-//var postcss      = require('gulp-postcss');
-//var autoprefixer = require('gulp-autoprefixer');
+//var postcss = require('gulp-postcss');
+//var autoprefixer = require('autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
 
 var scssMonitorGlob = ['./sass/homepage.scss', './sass/homepage/*.scss']; //Find files with scss extension but ignore files that are named sourcejs.scss
 var scssHomeGlob = ['./sass/homepage.scss'];
 var jsGlob = './js/homepage.js';
 
 gulp.task('sassCompiler', function () {
+  // var plugins = [
+  //   autoprefixer({ browsers: ['last 2 versions'] })
+  // ];
   return gulp.src(scssHomeGlob) //Find all files with .scss extension recursively starting from rootfolder
-	.pipe(sassCompiler({ outputStyle: 'compressed' }).on('error', sassCompiler.logError)) //Compile using sassCompiler
-	.pipe(concat('homepage.css')) //Concat the files to one file
-  //.pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+	.pipe(sassCompiler({ outputStyle: 'normal' }).on('error', sassCompiler.logError)) //Compile using sassCompiler
+  //.pipe(concat('homepage.css')) //Concat the files to one file
+  //.pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] })]))
+  .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+  .pipe(cssnano())
   .pipe(gulp.dest('./css/')); //Set destination folder
 });
 

@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper>.grid {
-  max-width: 1445px;
+  max-width: map-get($breakpoints,"XL");
 }
 
 .box {

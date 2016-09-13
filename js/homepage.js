@@ -8,7 +8,6 @@
       autoplay:       true,
       fade:           true,
       speed:          750,
-      lazyLoad:       'progressive',
       autoplaySpeed:  7000
   });
 
@@ -20,9 +19,9 @@
     })
   });
 
-  // id needs to be set to correct twitter account
+  // id needs to be set to correct twitter account in the head of the page
   var config = {
-    "id": '501395932357726208',
+    "id": twitterid,
     "dataOnly": true,
     "maxTweets": 3,
     "customCallback": initTwitterCarousel

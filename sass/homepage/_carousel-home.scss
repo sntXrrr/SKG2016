@@ -102,6 +102,7 @@
   height: 490px;
   overflow: hidden;
   opacity: 0;
+  color: #fff;
 
   .slick-initialized & {
     opacity: 1;
@@ -115,6 +116,7 @@
   margin: 0 auto;
   padding: 1.3334rem;
   font-size: 16px;
+  position: relative;
 
   // pretty specific for first slide?
   display: flex;
@@ -125,6 +127,60 @@
 
   @include media-query(S) {
     flex-direction: row;
+  }
+
+  .btn-home {
+    margin: 1rem 2rem 0;
+  }
+}
+
+.carousel-home__title {
+  font-size: em(28px);
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: .5em;
+
+  @include media-query(S) {
+    font-size: em(30px);
+  }
+
+  @media screen and (min-width: 810px) {
+    font-size: em(34px)
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: em(34px);
+  }
+
+  @include media-query(M) {
+    font-size: em(36px);
+  }
+}
+
+.carousel-home__text {
+  font-size: em(16px);
+  font-weight: normal;
+  letter-spacing: .05em;
+  line-height: 1.3;
+  padding: 0;
+
+  @include media-query(S) {
+    font-size: em(18px);
+    padding: 0 2em;
+  }
+
+  @media screen and (min-width: 810px) {
+    font-size: em(20px);
+    padding: 0 3em;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 4em;
+  }
+
+  @include media-query(M) {
+    font-size: em(22px);
+    padding: 0 5em;
   }
 }
 
@@ -217,17 +273,4 @@
       text-decoration: none;
     }
   }
-}
-
-.slide-01-btn {
-  margin-top: 1rem;
-}
-
-// other slides
-.carousel-home__message {
-  position: absolute;
-  font-size: 16px;
-  color: #fff;
-  top: 50%;
-  padding: 1.3334rem;
 }
