@@ -3,7 +3,11 @@
   padding: rem(20px);
   position: relative;
   min-height: 70px;
-  margin-bottom: $home-gridspacing;
+  margin-bottom: $home-gridspacing/2;
+
+  @include media-query(S) {
+    margin-bottom: $home-gridspacing;
+  }
 
   h3 {
     color: $brand-color;
@@ -80,7 +84,7 @@
 
   .slick-dots {
     left: -.3em;
-    bottom: -.8em;
+    bottom: -.5em;
     top: auto;
     text-align: left;
 
@@ -131,7 +135,11 @@
 
 .homepage-news {
   background: #fff;
-  margin-bottom: $home-gridspacing;
+  margin-bottom: $home-gridspacing/2;
+
+  @include media-query(S) {
+    margin-bottom: $home-gridspacing;
+  }
 
   @include media-query(M) {
     height: calc( 100% - #{$home-gridspacing} );
