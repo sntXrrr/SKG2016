@@ -12,7 +12,7 @@
   });
 
   // set links to slide index on first slide
-  $(".carousel-home .slide-01-links a").each( function(index){
+  $(".carousel-home .slide-01-links a, .carousel-home .slide-01-links2 a").each( function(index){
     $(this).click( function(e){
       event.preventDefault();
       $(".carousel-home").slick("slickGoTo",index+1);
