@@ -96,6 +96,7 @@
 // slides
 
 .carousel-home__item {
+  background-color: #000;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,6 +107,16 @@
 
   .slick-initialized & {
     opacity: 1;
+  }
+
+  @include media-query(M-max) {
+    background-position: 55% center;
+  }
+
+  @include media-query(S-max) {
+    background-size: auto 42%;
+    background-position: 22% top;
+    background-position: calc( 27% + 6vw ) top;
   }
 }
 
@@ -162,6 +173,10 @@
   font-size: em(36px,16px);
   margin-bottom: 0;
 
+  @include media-query(S-max) {
+    margin-top: 2em;
+  }
+
   @include media-query(S) {
     font-size: em(36px,16px);
   }
@@ -184,8 +199,11 @@
   font-size: em(16px);
   font-weight: normal;
   letter-spacing: .05em;
-  line-height: 1.3;
+  line-height: 1.1;
   padding: 0;
+  max-width: 26em;
+  margin-left: auto;
+  margin-right: auto;
 
   @include media-query(S) {
     font-size: em(18px);
@@ -194,22 +212,24 @@
 
   @media screen and (min-width: 810px) {
     font-size: em(20px);
-    padding: 0 3em;
+    padding: 0 2em;
+    max-width: none;
   }
 
   @media screen and (min-width: 1024px) {
-    padding: 0 4em;
+    padding: 0 3em;
   }
 
   @include media-query(M) {
     font-size: em(22px);
-    padding: 0 5em;
+    padding: 0 4em;
   }
 }
 
 .carousel-home__text2 {
   font-size: em(15px,16px);
-  margin-bottom: 4em;
+  margin-bottom: 1em;
+  line-height: 1.3;
 
   @include media-query(S) {
     font-size: em(16px,16px);
@@ -218,6 +238,7 @@
 
   @include media-query(M) {
     font-size: em(20px,16px);
+    padding: 0 5em;
   }
 }
 
@@ -315,7 +336,7 @@
 
 .slide-01-links2 {
   font-weight: normal;
-  font-size: em(18px);
+  font-size: em(16px);
 
   @include media-query(S) {
     font-size: em(22px);
