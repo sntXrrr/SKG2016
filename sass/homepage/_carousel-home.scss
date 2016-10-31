@@ -331,6 +331,16 @@
       opacity: .75;
       text-decoration: none;
     }
+
+    // .slick-slide:only-of-type & {
+    //   cursor: default;
+    //   pointer-events: none;
+    //
+    //   &:focus {
+    //     outline: 0;
+    //     opacity: 1;
+    //   }
+    // }
   }
 }
 

@@ -1,7 +1,10 @@
 (function ($) {
 
+  console.log("booh");
+
   /* init Slick carousel http://kenwheeler.github.io/slick/ */
-  $(".carousel-home").slick({
+  $(".carousel-home")
+    .slick({
       arrows:         true,
       dots:           true,
       infinite:       true,
@@ -9,11 +12,11 @@
       fade:           true,
       speed:          750,
       autoplaySpeed:  7000
-  });
+    });
 
   // set links to slide index on first slide
-  $(".carousel-home .slide-01-links a, .carousel-home .slide-01-links2 a").each( function(index){
-    $(this).click( function(e){
+  $(".slick-slide:not(:only-of-type)").find(".slide-01-links a, .slide-01-links2 a").each( function(index){
+    $(this).click( function(event,slick){
       event.preventDefault();
       $(".carousel-home").slick("slickGoTo",index+1);
     })

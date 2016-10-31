@@ -6,6 +6,13 @@
   background: #f0f0f0 no-repeat 50% 50%;
   background-size: cover;
 
+  .banner-home__inner {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
   @media screen and (max-width: #{map-get($breakpoints,"S") - 1}) {
     background-image: none !important;
   }
@@ -15,9 +22,17 @@
     background-position: calc( 50% + 16vw ) 50%;
     background-size: auto calc( 100% + 7vw );
 
+    .banner-home__inner {
+      flex-flow: row-reverse;
+    }
+
     &.banner-home--reverse {
       flex-flow: row;
       background-position: calc( 50% - 16vw ) 50%;
+
+      .banner-home__inner {
+        flex-flow: row;
+      }
     }
   }
 
@@ -30,8 +45,14 @@
   }
 
   @media screen and (min-width: map-get($breakpoints,"XL")) {
-    padding-left: calc( 50% - #{map-get($breakpoints,"XL")/2} );
-    padding-right: calc( 50% - #{map-get($breakpoints,"XL")/2} );
+    // IE11 doesn't do this dynamically so we need that extra wrapper .banner-home__inner
+    // padding-left: calc( 50% - #{map-get($breakpoints,"XL")/2} );
+    // padding-right: calc( 50% - #{map-get($breakpoints,"XL")/2} );
+
+    .banner-home__inner {
+      margin: auto;
+      max-width: map-get($breakpoints,"XL");
+    }
   }
 }
 
@@ -40,7 +61,7 @@
   background: transparent no-repeat 72% 50%;
   background-size: cover;
 
-  .banner-home--reverse > & {
+  .banner-home--reverse & {
     background-position: 28% 50%;
   }
 
