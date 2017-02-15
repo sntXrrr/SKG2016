@@ -7,13 +7,13 @@
 	"start": "concurrently \"browser-sync start --server --files \"css/*.css\"\" \"gulp watch\" "
   },
   "dependencies": {
-	"concurrently": "^2.1.0",
+	"concurrently": "^3.3.0",
 	"gulp": "^3.9.1",
-	"gulp-concat": "^2.6.0",
-	"gulp-minify": "0.0.12",
-	"gulp-sass": "^2.3.2",
+	"gulp-concat": "^2.6.1",
+	"gulp-minify": "0.0.15",
+	"gulp-sass": "^3.1.0",
 	"gulp-autoprefixer": "^3.1.1",
 	"gulp-cssnano": "^2.1.2",
-	"browser-sync": "^2.15.0"
+	"browser-sync": "^2.18.8"
   }
 }
