@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Macaw Tour</title>
+    <meta name="description" content="360&deg; Macaw Tour">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="assets/js/components/set-image.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="macaw01" crossorigin="anonymous" src="assets/img/macaw01.jpg">
+        <img id="macaw01-thumb" crossorigin="anonymous" src="assets/img/macaw01-thumb.jpg">
+        <img id="macaw02" crossorigin="anonymous" src="assets/img/macaw02.jpg">
+        <img id="macaw02-thumb" crossorigin="anonymous" src="assets/img/macaw02-thumb.jpg">
+        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: .6; width: .8"
+            rotation="-15 0 0"
+            material="shader: flat; src: ${thumb}"
+            animation__1="property: scale; startEvents: mousedown,mouseenter,click; to: 1.2 1.2 1.2; dur: 300;easing: easeInQuad;"
+            animation__2="property: scale; startEvents: mouseup,mouseleave; to: 1 1 1; dur: 300;easing: easeInQuad;"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+      </a-assets>
+
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="100" rotation="0 180 0" src="#macaw01"></a-sky>
+
+      <!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 .5 -2">
+        <a-entity template="src: #link" data-src="#macaw01" data-thumb="#macaw01-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#macaw02" data-thumb="#macaw02-thumb"></a-entity>
+      </a-entity>
+
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls position="0 1 0">
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link"></a-cursor>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
