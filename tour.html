@@ -18,6 +18,8 @@
         <img id="macaw01-thumb" crossorigin="anonymous" src="assets/img/macaw01-thumb.jpg">
         <img id="macaw02" crossorigin="anonymous" src="assets/img/macaw02.jpg">
         <img id="macaw02-thumb" crossorigin="anonymous" src="assets/img/macaw02-thumb.jpg">
+        <img id="macaw03" crossorigin="anonymous" src="assets/img/macaw03.jpg">
+        <img id="macaw04" crossorigin="anonymous" src="assets/img/macaw04.jpg">
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
         <!-- Image link template to be reused. -->
@@ -34,12 +36,12 @@
       </a-assets>
 
       <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="100" rotation="0 180 0" src="#macaw01"></a-sky>
+      <a-sky id="image-360" radius="100" rotation="0 180 0" src="#macaw03"></a-sky>
 
       <!-- Image links. -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 .5 -2">
-        <a-entity template="src: #link" data-src="#macaw01" data-thumb="#macaw01-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#macaw02" data-thumb="#macaw02-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#macaw03" data-thumb="#macaw01-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#macaw04" data-thumb="#macaw02-thumb"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
