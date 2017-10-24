@@ -1,12 +1,2811 @@
----
-layout: hnk-default
-title: Carrousel
-navigation:
-- top
-- side
-viewport: 
-- faq/default.liquid
-- carrousel/default.liquid
-- faq/default.liquid
-- carrousel/images-only.liquid
----
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="geo.country" content="Nederland">
+		<title></title>
+		<script async src="https://www.google.com/recaptcha/api.js"></script>
+		
+	<style>
+		html>body.loading * { color: transparent !important }
+		.loading #animation-container .spinner { display: block; z-index:200; opacity:1; color: #fff !important; animation: fadeIn .5s linear; }
+
+		html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}[hidden]{display:none}.visually-hidden{position:absolute;clip:rect(0, 0, 0, 0)}.is-sticky{position:fixed !important;z-index:25}@viewport{zoom:1.0;width:device-width;height:device-height}@-ms-viewport{zoom:1.0;width:device-width;height:device-height}html{overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;scrollbar-base-color:#1a2024;scrollbar-face-color:#4e5162;scrollbar-track-color:#1a2024;scrollbar-3dlight-color:#4e5162;scrollbar-highlight-color:#4e5162;scrollbar-arrow-color:#4e5162;scrollbar-darkshadow-color:#4e5162;scrollbar-shadow-color:#4e5162}html ::-webkit-scrollbar{background:#141a1e}html ::-webkit-scrollbar-track{background:transparent}html ::-webkit-scrollbar-thumb{background:#4e5162}html ::-webkit-scrollbar-thumb:hover{background:#c3c3ce}html body{position:relative;min-height:100%;min-width:320px;line-height:1.42857;max-width:100%;font-family:'Noto Sans', 'Body Fallback', sans-serif;font-size:20px;touch-action:pan-y;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar;-ms-touch-action:pan-y;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html body.windows-phone{height:100vh}html.no-scrolling{overflow:hidden;touch-action:none;-webkit-overflow-scrolling:auto;-ms-overflow-style:none;-ms-touch-action:none}html.no-scrolling body{max-height:100vh;-ms-touch-action:none;touch-action:none}@media screen and (max-width: 750px){html.no-scrolling body.new-android{overflow:hidden;overflow-y:hidden;overflow-x:hidden}}html.no-scrolling body.windows-phone{overflow-y:hidden}a,a:active,a:visited{color:inherit;text-decoration:none}a:hover{text-decoration:none}h1{font-size:26px;color:#fff;font-weight:normal}h2{font-size:20px;font-weight:normal;line-height:14px}h3{font-size:16px;font-weight:normal}fieldset{margin:0;padding:0;border:0}input[type="text"],input[type="password"],input[type="email"],input[type="url"],input[type="date"],input[type="month"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="week"],input[type="number"],input[type="search"],input[type="country"],input[type="tel"],input[type="color"],select,textarea{box-sizing:border-box;height:41px;line-height:41px;display:inline-block;border:0;padding:0 0.8em 0 0.8em;background-color:rgba(0,0,0,0.35)}textarea{resize:none}ol,ul{margin:0;padding:0}ol li,ul li{padding:0}button{border:0;background:transparent}hr{border:0 none;border-top:1px solid #101417;margin:0;padding:0;height:0;overflow:hidden}[visible]{transition-property:opacity, transform;transition-timing-function:ease-out;transition-delay:0, 0;transition-duration:.5s, .5s !important;opacity:0 !important;transform:translateY(20px) !important}[visible]:nth-child(1){transition-delay:0.4s,0.4s}[visible]:nth-child(2){transition-delay:0.8s,0.8s}[visible]:nth-child(3){transition-delay:1.2s,1.2s}[visible]:nth-child(4){transition-delay:1.6s,1.6s}[visible]:nth-child(5){transition-delay:2s,2s}[visible]:nth-child(6){transition-delay:2.4s,2.4s}[visible]:nth-child(7){transition-delay:2.8s,2.8s}[visible]:nth-child(8){transition-delay:3.2s,3.2s}[visible]:nth-child(9){transition-delay:3.6s,3.6s}[visible]:nth-child(10){transition-delay:4s,4s}[visible]:nth-child(11){transition-delay:4.4s,4.4s}[visible]:nth-child(12){transition-delay:4.8s,4.8s}[visible]:nth-child(13){transition-delay:5.2s,5.2s}[visible]:nth-child(14){transition-delay:5.6s,5.6s}[visible]:nth-child(15){transition-delay:6s,6s}[visible]:nth-child(16){transition-delay:6.4s,6.4s}[visible]:nth-child(17){transition-delay:6.8s,6.8s}[visible]:nth-child(18){transition-delay:7.2s,7.2s}[visible]:nth-child(19){transition-delay:7.6s,7.6s}[visible]:nth-child(20){transition-delay:8s,8s}[visible="true"]{opacity:1 !important;transform:translateY(0) !important}[visible="false"]{opacity:0 !important;transition-duration:.1s, .1s !important;transform:translateY(20px) !important}svg.icon{vertical-align:middle}svg.icon .text{fill:#454750;transition:fill .1s}svg.icon .background{fill:transparent;transition:fill 1s}.has-cursor svg.icon:hover .text{fill:#cfcfdb}.has-cursor svg.icon:hover .background{fill:#171c1f}svg.icon[variant*="negative"] .text{fill:#cfcfdb}svg.icon[variant*="negative"] .background{fill:rgba(16,20,23,0.8)}.has-cursor svg.icon[variant*="negative"]:hover .text{fill:#0b0e10}.has-cursor svg.icon[variant*="negative"]:hover .background{fill:#ffffff}svg.icon[variant*="switch"] .text{opacity:0;transition:fill 0.1s,opacity .5s}.rtf{font-size:14px;line-height:1.8em}.rtf h2{font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;font-size:56px;line-height:1.2em;text-transform:uppercase;margin:0;letter-spacing:-1.2px}.rtf h3{font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;font-size:45px;line-height:1.2em;text-transform:uppercase;margin:0;letter-spacing:-0.5px}.rtf h4{font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;font-size:35px;line-height:1.2em;text-transform:uppercase;margin:0;letter-spacing:-0.3px}.rtf h5{font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;font-size:25px;line-height:1.2em;text-transform:uppercase;margin:0}.rtf h2,.rtf h3,.rtf h4,.rtf h5{margin-bottom:10px}.rtf ul:not([class]){margin-left:1.25em}.rtf p,.rtf li:not([class]),.rtf p.body-text,.rtf .body-text{font-size:14px;line-height:1.78em;margin:0 0 30px}.rtf p.intro-text,.rtf .intro-text{font-size:14px;line-height:1.68em;font-weight:700}.rtf .annotation,.rtf p.annotation{font-size:11px;line-height:1.54em;color:#9898ab}.rtf a{color:#47a742}.rtf .button-black-transparent-border,.rtf .button-black-transparent,.rtf .button-black,.rtf .button-green-dark,.rtf .button-green,.rtf .button-green-light,.rtf .button-transparent-border,.rtf .button-white-border{display:inline-block;padding:28px 30px;margin:0 5px 5px 0;line-height:1;min-height:70px;min-width:267px;text-align:center;background-image:url("/browser-resources/img/button-hover.png");background-position:center;background-clip:padding-box;background-size:0%;background-repeat:no-repeat;box-shadow:inset 0 0 0 0 rgba(255,255,255,0);box-sizing:border-box;color:#fff;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;text-transform:uppercase;transition:background-color .8s, background-size .3s ease-out, color .1s, box-shadow 0.4s}@media screen and (max-width: 750px){.rtf .button-black-transparent-border,.rtf .button-black-transparent,.rtf .button-black,.rtf .button-green-dark,.rtf .button-green,.rtf .button-green-light,.rtf .button-transparent-border,.rtf .button-white-border{width:100%;margin:0}}.has-cursor .rtf .button-black-transparent-border:hover,.rtf .button-black-transparent-border[state="active"],.has-cursor .rtf .button-black-transparent:hover,.rtf .button-black-transparent[state="active"],.has-cursor .rtf .button-black:hover,.rtf .button-black[state="active"],.has-cursor .rtf .button-green-dark:hover,.rtf .button-green-dark[state="active"],.has-cursor .rtf .button-green:hover,.rtf .button-green[state="active"],.has-cursor .rtf .button-green-light:hover,.rtf .button-green-light[state="active"],.has-cursor .rtf .button-transparent-border:hover,.rtf .button-transparent-border[state="active"],.has-cursor .rtf .button-white-border:hover,.rtf .button-white-border[state="active"]{background-size:115%;background-color:#fff;color:#000;transition:background-color .8s, background-size .3s ease-in, color .1s, box-shadow 0.4s}@media screen and (max-width: 750px){.rtf .button-black-transparent-border,.rtf .button-black-transparent,.rtf .button-black,.rtf .button-green-dark,.rtf .button-green,.rtf .button-green-light,.rtf .button-transparent-border,.rtf .button-white-border{min-width:200px;text-align:center}}.rtf .button-black-transparent-border{background-color:rgba(23,28,31,0.8);box-shadow:inset 0 0 0 3px #fff}.rtf .button-black-transparent{background-color:rgba(23,28,31,0.8)}.rtf .button-black{background-color:#0b0e10}.rtf .button-green-dark{background-color:#005d1f}.rtf .button-green{background-color:#47a742}.rtf .button-green-light{background-color:#b0e768}.rtf .button-transparent-border{background-color:transparent;box-shadow:inset 0 0 0 3px #fff}.rtf .button-white-border{color:#0b0e10;background-color:#fff;box-shadow:inset 0 0 0 3px #0b0e10}.rtf .link-with-arrow{display:inline-block;color:#47a742}.rtf .link-with-arrow:after{display:inline-block;content:'';background:url(../img/icons/arrow-link.svg) 0 0 no-repeat;width:5px;height:9px;font-size:20px;margin:0 5px;vertical-align:middle}.rtf hr{margin:30px 0 30px 0;width:57px;height:2px;background-color:#fff;border:0}.img-responsive{max-width:100%;max-height:100%}.shared-button{display:inline-block;position:relative;overflow:hidden;margin:5px;line-height:70px;min-height:70px;min-width:267px;text-align:center;background-clip:padding-box;box-shadow:inset 0 0 0 0px rgba(255,255,255,0);box-sizing:border-box;color:#fff;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;text-transform:uppercase;transition:background-color .5s, color .1s, box-shadow 0.4s, filter 0.4s}@media screen and (max-width: 750px){.shared-button{min-width:100%;width:100%}}.shared-button:disabled,.shared-button:disabled::before{cursor:not-allowed;opacity:.6;filter:saturate(0)}.shared-button .multiplelines{box-sizing:border-box;display:block;line-height:1;padding:28px 30px;position:relative;z-index:1;pointer-events:none}.iOS.safari .shared-button .multiplelines{padding-top:32px;padding-bottom:24px}.shared-button[modifiers*="size1"]{font-size:14px}.shared-button[modifiers*="size1"] .multiplelines{padding:28px 30px}.shared-button[modifiers*="size2"]{font-size:18px}.shared-button[modifiers*="size2"] .multiplelines{padding:26px 30px}.shared-button[modifiers*="size3"]{font-size:22px}.shared-button[modifiers*="size3"] .multiplelines{padding:24px 30px}.shared-button[modifiers*="color1"]{background-color:rgba(23,28,31,0.8);box-shadow:inset 0 0 0 4px #fff}.shared-button[modifiers*="color2"]{background-color:rgba(23,28,31,0.8)}.shared-button[modifiers*="color3"]{background-color:#0b0e10}.shared-button[modifiers*="color4"]{background-color:#005d1f}.shared-button[modifiers*="color5"]{background-color:#47a742}.shared-button[modifiers*="color6"]{background-color:#b0e768}.shared-button[modifiers*="color7"]{background-color:transparent;box-shadow:inset 0 0 0 3px #fff}.has-cursor .shared-button:before{display:block;content:'';background-image:url("/browser-resources/img/button-hover.png");background-position:center;background-repeat:no-repeat;position:absolute;top:0;right:0;bottom:0;left:0;transition:opacity 0.3s ease-out, background-size 0.3s ease-in;background-size:0%;opacity:0;z-index:0}.has-cursor .shared-button:hover:not(:disabled),.has-cursor .shared-button[state="active"]{color:#000;background-color:#fff}.has-cursor .shared-button:hover:not(:disabled):before,.has-cursor .shared-button[state="active"]:before{background-size:115%;opacity:1;transition:opacity 0.3s ease-in, background-size 0.3s ease-out}@media screen and (max-width: 750px){.shared-button.is-sticky{bottom:0;left:0;right:0;margin:0;font-size:16px;line-height:60px;min-height:60px;height:auto;animation:delayedSlideInBottom 1.9s cubic-bezier(0.3, 0.8, 0.5, 1)}.shared-button.is-sticky.move-above-legal{bottom:100px}.shared-button.is-sticky:not(.positioned-over-footer){margin-bottom:0 !important}.shared-button.is-sticky.positioned-over-footer{position:absolute !important}.shared-button.is-sticky .multiplelines{padding-top:22px;padding-bottom:22px}}a.shared-button{color:#fff}.safari .button .multiplelines{margin:28px 0 24px}.shared-button.buy-now-button,.shared-button{overflow:visible;-webkit-tap-highlight-color:rgba(255,255,255,0);-webkit-focus-ring-color:rgba(255,255,255,0);outline:none}.shared-button.buy-now-button:hover,.shared-button:hover{cursor:pointer}.shared-button.buy-now-button:hover .slide-button-list,.shared-button:hover .slide-button-list{opacity:1;pointer-events:all}.shared-button.buy-now-button:hover .slide-button-list .slide-button,.shared-button:hover .slide-button-list .slide-button{transform:translateX(0)}.slide-button-list{overflow:hidden;position:absolute;left:0;top:73px;opacity:0;pointer-events:none;width:100%;top:70px;padding-top:1px}.slide-button-list .slide-button{transition:background .12s, transform .3s;transform:translateX(-120%);margin-bottom:1px;width:100%;margin:0 0 1px;height:70px;line-height:70px}.slide-button-list .slide-button:nth-child(1){transition-delay:.05s}.slide-button-list .slide-button:nth-child(2){transition-delay:.1s}.slide-button-list .slide-button:nth-child(3){transition-delay:.15s}.slide-button-list .slide-button:nth-child(4){transition-delay:.2s}.slide-button-list .slide-button:nth-child(5){transition-delay:.25s}.slide-button-list .slide-button:nth-child(6){transition-delay:.3s}.slide-button-list .slide-button:nth-child(7){transition-delay:.35s}.slide-button-list .slide-button:nth-child(8){transition-delay:.4s}.slide-button-list .slide-button:nth-child(9){transition-delay:.45s}.slide-button{display:block;width:calc(100% - 10px);height:60px;line-height:60px;background:#101417;position:relative;margin:0 5px 5px 5px;cursor:pointer;text-transform:uppercase;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;transition:background-color .12s linear}.slide-button a{display:block;height:100%}.slide-button__img,.slide-button__title{position:absolute;left:50%;transition:all 0.22s cubic-bezier(0.5, 0, 0.5, 1)}.slide-button__title{color:#fff;transform:translateX(-50%);font-size:18px}.slide-button__img,.slide-button .has-cursor .navigation-tiles .slide-button__img{animation:none;height:auto;transform:translate3d(-250px, -50%, 0);top:50%;max-width:28px;filter:grayscale(100%)}@media screen and (min-width: 450px){.slide-button__img,.slide-button .has-cursor .navigation-tiles .slide-button__img{transform:translate3d(-400px, -50%, 0)}}@media screen and (min-width: 570px){.slide-button__img,.slide-button .has-cursor .navigation-tiles .slide-button__img{transform:translate3d(-450px, -50%, 0)}}@media screen and (min-width: 650px){.slide-button__img,.slide-button .has-cursor .navigation-tiles .slide-button__img{transform:translate3d(-600px, -50%, 0)}}@media screen and (min-width: 751px){.slide-button__img,.slide-button .has-cursor .navigation-tiles .slide-button__img{transform:translate3d(-250px, -50%, 0)}}.slide-button:hover{background:#47a742}.slide-button:hover .slide-button__title{transform:translateX(250px)}@media screen and (min-width: 450px){.slide-button:hover .slide-button__title{transform:translateX(400px)}}@media screen and (min-width: 570px){.slide-button:hover .slide-button__title{transform:translateX(450px)}}@media screen and (min-width: 650px){.slide-button:hover .slide-button__title{transform:translateX(600px)}}@media screen and (min-width: 751px){.slide-button:hover .slide-button__title{transform:translateX(250px)}}.slide-button:hover .slide-button__img{transform:translate3d(-50%, -50%, 0);transition-delay:.05s}.wow{visibility:hidden}.animated{visibility:visible;animation-duration:1s;animation-fill-mode:both}.animated.infinite{animation-iteration-count:infinite}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.animated.fadeIn{animation-name:fadeIn}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0, 100px, 0)}to{opacity:1;transform:none}}.animated.fadeInUp{animation-name:fadeInUp}@keyframes fadeInRight{from{opacity:0;transform:translate3d(100%, 0, 0)}to{opacity:1;transform:none}}.animated.fadeInRight{animation-name:fadeInRight}@keyframes zoomIn{from{opacity:0;transform:scale3d(0.1, 0.1, 0.1)}50%{opacity:1}}.animated.zoomIn{animation-name:zoomIn;animation-duration:1.5s}@keyframes pop-centered{50%{transform:translate(-50%, -50%) scale(1.03)}}@keyframes pop{50%{transform:scale(1.03)}}@keyframes slideInTop{0%{transform:translate3d(0, -120%, 0)}}@keyframes slideInBottom{0%{transform:translate3d(0, 120%, 0)}}@keyframes delayedSlideInBottom{0%{transform:translate3d(0, 120%, 0)}75%{transform:translate3d(0, 120%, 0)}}.spinner{display:none;margin:50px auto 0;width:70px;text-align:center;transition:.2s opacity ease-in-out}.spinner[state*="active"],body.loading .spinner{display:block}.spinner[state*="invisible"]{display:block;opacity:0}.spinner__bounce{width:18px;height:18px;background-color:#005d1f;border-radius:100%;display:inline-block;animation:heineken-bounce 1.4s infinite ease-in-out both}.spinner__bounce--1{animation-delay:-0.32s}.spinner__bounce--2{animation-delay:-0.16s}.spinner[modifier*="color1"] .spinner__bounce{background-color:#9898ab}.spinner[modifier*="color2"] .spinner__bounce{background-color:#fff}@keyframes heineken-bounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}body{background-color:#141a1e}.viewport{z-index:2;position:relative;box-sizing:border-box;min-height:100vh;width:100%;max-width:100vw;padding:0;border:0 solid transparent;margin:0 auto;opacity:1;transition:opacity .5s linear}.viewport>.container{margin-left:auto;margin-right:auto;max-width:100%;position:relative;z-index:3}.viewport>.container:nth-child(1){z-index:12}.viewport>.container:nth-child(2){z-index:11}.viewport>.container:nth-child(3){z-index:10}.viewport>.container:nth-child(4){z-index:9}.viewport>.container:nth-child(5){z-index:8}.viewport>.container:nth-child(6){z-index:7}.viewport>.container:nth-child(7){z-index:6}.viewport>.container:nth-child(8){z-index:5}.viewport>.container:nth-child(9){z-index:4}.viewport>.container:nth-child(10){z-index:3}.viewport>.background.container{z-index:2}.loading .viewport{visibility:collapse !important;opacity:0 !important;transition:opacity 1s linear}.viewport[state~="pushed-down"]:before{content:' ';display:block;padding-top:90px}@media screen and (max-width: 750px){.viewport[state~="pushed-down"]:before{padding-top:110px}}.viewport[state~="pushed-down-extra"]:before{content:' ';display:block;padding-top:156px}.viewport[state*="pushed-right"]{border-left-width:228px}.viewport[state*="pushed-right pushed-down-less"]{border-left-width:228px}.viewport[state*="pushed-right pushed-down-less"]:before{content:' ';display:block;padding-top:66px}.viewport[state*="pushed-left"]{opacity:0.2}.viewport[state*="pushed-up"]{border-bottom-width:240px}.viewport[variant="stage"]{z-index:1;position:absolute;top:0;right:0;bottom:0;left:0;opacity:0}.viewport[variant="stage"][state="active"]{opacity:1}.viewport[variant="size"]{z-index:1;position:absolute;top:0;right:0;left:0;height:100vh}.viewport[variant="live"]{z-index:2;position:relative}.viewport[variant*='overlay']{display:none}.viewport[variant*='overlay'][state*='active']{display:block;z-index:3}[building-page] .viewport>*:not(.background):not(.hero),[building-page] .viewport .hero .content{opacity:0}.nav.unit{position:fixed;z-index:8}.nav.unit::-webkit-scrollbar{width:12px}.nav.unit .carousel-slide{float:left}.nav.unit .bar{position:relative}.nav.unit .menu[variant*="vertical"]{list-style:none;text-transform:uppercase}.nav.unit .menu[variant*="vertical"] a,.nav.unit .menu[variant*="vertical"] div{transition:.5s}.nav.unit .menu[variant*="vertical"]>li{font-size:16px;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;color:#9898ab}.nav.unit .menu[variant*="vertical"]>li>a,.nav.unit .menu[variant*="vertical"]>li>div{display:block;line-height:24px;padding:22px 10px;letter-spacing:-0.2px;text-align:center;cursor:pointer}.has-cursor .nav.unit .menu[variant*="vertical"]>li>a:hover,.has-cursor .nav.unit .menu[variant*="vertical"]>li>div:hover,.nav.unit .menu[variant*="vertical"]>li[state*="active"]>a,.nav.unit .menu[variant*="vertical"]>li[state*="active"]>div{background:#14181c;color:#fff}.nav.unit .menu[variant*="horizontal"]{z-index:2;list-style:none;display:block;white-space:nowrap;text-align:center;height:66px;overflow:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch}.nav.unit .menu[variant*="horizontal"]>li{height:100%;display:inline-block;box-sizing:border-box;margin:0 -3px;line-height:66px}.has-cursor .nav.unit .menu[variant*="horizontal"]>li:hover,.nav.unit .menu[variant*="horizontal"]>li[state="active"]{background:#171d21}.has-cursor .nav.unit .menu[variant*="horizontal"]>li:hover>a,.nav.unit .menu[variant*="horizontal"]>li[state="active"]>a{color:#fff}.nav.unit .menu[variant*="horizontal"]>li>a{display:inline-block;padding:5px 28px;line-height:19px;text-transform:uppercase;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;color:#9898ab;font-size:16px}.nav.unit .menu .menu.menu{overflow:hidden}.nav.unit .menu .menu.menu,.nav.unit .menu .menu>li,.nav.unit .menu .menu>li>a{background-color:#1c2125;font-family:'Subtitle', 'Default Fallback', sans-serif;line-height:20px;letter-spacing:0;margin-top:0;transition:max-height .9s cubic-bezier(0, 1, 0.5, 1)}.nav.unit .menu .menu>li>a{display:block;text-align:center;padding:11px 10px}.nav.unit .menu .menu>li:first-child a{padding-top:22px}.nav.unit .menu .menu>li:last-child a{padding-bottom:22px}.nav.unit .menu .menu>li[state*="active"]>a,.nav.unit .menu .menu>li a:hover{color:white}.nav.unit .menu li[state*="active"]>.menu{max-height:800px}.nav.unit .menu li:not([state*="active"])>.menu{max-height:0 !important}.nav.unit .menu li>*>.icon{display:inline-block;margin-right:7px;width:auto;height:24px}@media screen and (max-width: 750px){.nav.unit .menu li>*>.icon{margin:-4px 0 0 7px}}.nav.unit .follow{display:-moz-flex;display:-ms-flexbox;display:flex;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center;text-align:center}.nav.unit .follow span[variant*="hidden"]{display:none;font-size:17px;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;color:#fff;padding:5px;text-align:center;text-transform:uppercase}.nav.unit .follow a svg.icon .text{fill:#6c6e7b}.has-cursor .nav.unit .follow a svg.icon:hover .text{fill:#fff}.has-cursor .nav.unit .follow a svg.icon:hover .background{fill:#14181c}.nav[variant*="side"]{top:0;bottom:0;left:0;width:228px;background-color:#101417;display:-moz-flex;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:start;-moz-align-items:flex-start;align-items:flex-start;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center;overflow:hidden;-webkit-overflow-scrolling:touch;transition:transform .9s cubic-bezier(0, 1, 0.5, 1);transform:translateX(-228px)}.nav[variant*="side"][state="active"]{transform:translateX(0);overflow:auto}.nav[variant*="side"] .logo{-ms-flex-item-align:start;align-self:flex-start;display:block;padding:25px 0 25px 0;text-align:center;background-color:transparent}.nav[variant*="side"] .logo img{width:98px;height:70px;display:inline-block}.nav[variant*="side"] .top{-ms-flex-item-align:start;align-self:flex-start;width:100%}.nav[variant*="side"] .bottom{width:100%;-ms-flex-item-align:end;align-self:flex-end}.nav[variant*="side"] .follow{width:100%;padding:26px 0}.nav[variant*="side"] .menu[variant*="vertical"]{margin-top:15px}.nav[variant*="side"] .menu[variant*="vertical"] .menu{transition-delay:.4s;transition-duration:1.35s}@media screen and (max-width: 750px){.nav[variant*="mobile"]{top:0;right:0;bottom:0;width:80%;background-color:#0b0e10;transform:translateX(101%);z-index:15;overflow:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;transition:transform .9s cubic-bezier(0, 1, 0.5, 1)}.old-android .nav[variant*="mobile"]{display:none}.lt-ie10 .nav[variant*="mobile"]{right:-80%}}@media screen and (min-width: 751px){.nav[variant*="mobile"]{display:none}}.not-android .nav[variant*="mobile"] .carousel,.new-android .nav[variant*="mobile"] .carousel{margin:30px 15px 0 15px}.not-android .nav[variant*="mobile"] .carousel .carousel-unit .content h2,.new-android .nav[variant*="mobile"] .carousel .carousel-unit .content h2{font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;text-transform:uppercase}.not-android .nav[variant*="mobile"] .carousel .carousel-dots,.new-android .nav[variant*="mobile"] .carousel .carousel-dots{padding-bottom:30px}.old-android .nav[variant*="mobile"] .carousel{display:none !important}.nav[variant*="mobile"] .follow{-ms-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start;padding:56px 13px}.not-android .nav[variant*="mobile"][state="active"],.new-android .nav[variant*="mobile"][state="active"]{transform:translateX(0)}.old-android .nav[variant*="mobile"][state="active"]{display:block}.lt-ie10 .nav[variant*="mobile"][state="active"]{right:-0%}.nav[variant*="mobile"] .menu[variant*="vertical"]>li>a,.nav[variant*="mobile"] .menu[variant*="vertical"]>li>div{padding-left:23px;padding-right:23px;text-align:left}.nav[variant*="mobile"] .menu[variant*="vertical"]>li .menu{font-size:16px;transition-delay:0s}.nav[variant*="mobile"] .menu[variant*="vertical"]>li .menu [state="active"] a{background-color:#1c2125;color:#fff}.nav[variant*="mobile"] .menu[variant*="vertical"]>li .menu a{padding-left:46px;text-align:left}.nav[variant*="top"]{position:fixed;top:-90px;right:0;left:0;width:100%;background:transparent;transition:top .3s ease-out,opacity .5s linear .3s}.nav[variant*="top"] .bar.main{height:90px;background-color:transparent;transition:background-color .5s linear .3s}.nav[variant*="top"] .logo{z-index:9;position:absolute;left:33px;top:12px;bottom:12px;transition:transform .9s cubic-bezier(0, 1, 0.5, 1),opacity .5s linear .3s}.nav[variant*="top"] .logo img{height:100%;width:80px;float:left}.nav[variant*="top"] .tool{z-index:13;position:fixed;top:18px;right:23px;height:55px;visibility:collapse;display:-moz-flex;display:-ms-flexbox;display:flex;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center;-webkit-backface-visibility:hidden}@media screen and (min-width: 751px){.nav[variant*="top"] .tool .arrow{opacity:1}}@media screen and (max-width: 750px){.nav[variant*="top"] .tool .bars{opacity:1}}.has-cursor .nav[variant*="top"] .tool:hover .background{fill:#fff}.has-cursor .nav[variant*="top"] .tool:hover .text{fill:#0b0e10}.nav[variant*="top"] .title{margin:0 125px;overflow:auto;height:100%;display:-moz-flex;display:-ms-flexbox;display:flex;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center;transition:transform .9s cubic-bezier(0, 1, 0.5, 1),opacity .5s linear .3s;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;font-size:20px;text-transform:uppercase;text-align:center}.nav[variant*="top"] .title span{color:#cfcfdb;line-height:26px;display:inline-block;letter-spacing:0.3px}@media screen and (max-width: 750px){.nav[variant*="top"] .title{display:none}}.nav[variant*="top"][state*="active"]{top:0 !important;background:#0b0e10;transition:top .3s ease-out,opacity .5s linear .3s}.nav[variant*="top"][state*="active"] .tool{visibility:visible}.nav[variant*="top"][state*="active"] .bar.main{background-color:#101417}.nav[variant*="top"][state*="up"][state*="active"],.nav[variant*="top"][state*="down"][state*="active"]{top:-90px !important}@media screen and (min-width: 751px){.nav[variant="sub"],.nav[variant*="top"][variant*="sub"]{top:-156px}.nav[variant="sub"] .bar.secondary,.nav[variant*="top"][variant*="sub"] .bar.secondary{z-index:11;height:66px;line-height:66px;top:0;background:#14181c;transition:top .3s cubic-bezier(0, 1, 0.5, 1),height .3s cubic-bezier(0, 1, 0.5, 1),line-height .3s cubic-bezier(0, 1, 0.5, 1),transform .9s cubic-bezier(0, 1, 0.5, 1),opacity .5s linear .3s}.nav[variant="sub"] .menu[variant*="horizontal"],.nav[variant*="top"][variant*="sub"] .menu[variant*="horizontal"]{z-index:2;height:100%;width:100%;position:absolute;left:0;top:0}.nav[variant="sub"] .menu[variant*="horizontal"] li,.nav[variant*="top"][variant*="sub"] .menu[variant*="horizontal"] li{transition:line-height .3s cubic-bezier(0, 1, 0.5, 1),height .3s cubic-bezier(0, 1, 0.5, 1);transition:background .5s}.nav[variant="sub"] .menu[variant*="horizontal"] a,.nav[variant*="top"][variant*="sub"] .menu[variant*="horizontal"] a{transition:font-size .3s cubic-bezier(0, 1, 0.5, 1);transition:color .5s}.nav[variant="sub"][state*="down"][state*="active"],.nav[variant*="top"][variant*="sub"][state*="down"][state*="active"]{top:-90px;height:90px}.nav[variant="sub"][state*="down"][state*="active"] .bar.secondary,.nav[variant*="top"][variant*="sub"][state*="down"][state*="active"] .bar.secondary{top:-90px}.nav[variant="sub"][state*="down"][state*="active"] .menu[variant*="horizontal"] li,.nav[variant*="top"][variant*="sub"][state*="down"][state*="active"] .menu[variant*="horizontal"] li{line-height:90px}.nav[variant="sub"][state*="up"][state*="active"],.nav[variant*="top"][variant*="sub"][state*="up"][state*="active"]{height:90px}.nav[variant="sub"][state*="up"][state*="active"] .bar.secondary,.nav[variant*="top"][variant*="sub"][state*="up"][state*="active"] .bar.secondary{height:90px;line-height:90px}.nav[variant="sub"][state*="up"][state*="active"] .menu[variant*="horizontal"],.nav[variant*="top"][variant*="sub"][state*="up"][state*="active"] .menu[variant*="horizontal"]{width:100%}.nav[variant="sub"][state*="up"][state*="active"] .menu[variant*="horizontal"] li,.nav[variant*="top"][variant*="sub"][state*="up"][state*="active"] .menu[variant*="horizontal"] li{line-height:90px}.nav[variant="sub"]{top:0;width:100%;box-sizing:border-box;padding-left:228px;background-color:#101417;transition:transform .9s cubic-bezier(0, 1, 0.5, 1);transition-delay:0s;transform:translateY(-66px)}.nav[variant="sub"][state="active"]{transition-delay:.75s;transform:translateY(0)}.nav[variant="sub"] .bar{overflow-x:auto;overflow-y:hidden;text-align:center}}@media screen and (min-width: 751px) and (max-width: 1024px){.nav[variant="sub"] .menu[variant*="horizontal"]>li>a{padding:5px 16px}}@media screen and (max-width: 750px){.nav[variant*="top"][variant*="sub"] .bar.secondary{display:none}.nav[variant="sub"]{display:none}}.nav[variant*="top"][variant*="modal"] .tool .bars{opacity:0}.nav[variant*="top"][variant*="modal"] .tool .arrow{opacity:0}.nav[variant*="top"][variant*="modal"] .tool .cross{opacity:1}@media screen and (max-width: 750px){.nav[variant*="top"][variant*="logo"] .logo{display:block}}.nav[variant*="top"][variant*="logo"] .title{display:none}.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .bar.main{background-color:rgba(0,0,0,0.3)}.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .bar.secondary{opacity:0.2;transform:translateX(-80%)}.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .logo,.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .title{opacity:0.2;transform:translateX(-600px)}.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .tool{right:81%;margin:0 10px;max-width:calc(20% - 20px)}.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .tool .bars{opacity:0}.nav[variant*="mobile"][state*="active"] ~ .nav[variant*="top"] .tool .cross{opacity:1}.hero .play{width:95px;height:95px;border-radius:50%;margin:18px;transition:background-color .8s, color .1s, box-shadow 0.4s;display:inline-block;line-height:95px;text-align:center;background-clip:padding-box;box-shadow:inset 0 0 0 0px rgba(255,255,255,0)}.hero .play svg{display:inline-block;vertical-align:middle;margin-right:-4px;margin-top:-4px}.hero .play .text{fill:#fff}.hero .play[variant*="color1"]{background-color:rgba(23,28,31,0.8);box-shadow:inset 0 0 0 4px #fff}.hero .play[variant*="color2"]{background-color:rgba(23,28,31,0.8)}.hero .play[variant*="color3"]{background-color:#0b0e10}.hero .play[variant*="color4"]{background-color:#005d1f}.hero .play[variant*="color5"]{background-color:#47a742}.hero .play[variant*="color6"]{background-color:#b0e768}.hero .play[variant*="color7"]{background-color:transparent;box-shadow:inset 0 0 0 4px #fff}.hero .play:hover,.hero .play[state="active"]{box-shadow:inset 0 0 0 8px #fff;background-color:#fff;color:#000}.hero .play:hover .text,.hero .play[state="active"] .text{fill:#000}.hero .title{color:#fff;font-family:'Title', 'Title Fallback 1', 'Title Fallback 2', sans-serif;text-transform:uppercase;line-height:1em;min-height:1em;margin:0;padding:0;font-size:26px;display:block;max-height:100%;max-width:100%;-ms-flex-negative:0;flex-shrink:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;transform:translate3d(0, 0, 0)}@media screen and (max-width: 750px){.hero .title[variant*="size1"]{font-size:45px}.hero .title[variant*="size2"]{font-size:37px}.hero .title[variant*="size3"]{font-size:35px}.hero .title[variant*="size4"]{font-size:20px}}@media screen and (min-width: 751px){.hero .title[variant*="size1"]{font-size:60px}.hero .title[variant*="size2"]{font-size:43px}.hero .title[variant*="size3"]{font-size:35px}.hero .title[variant*="size4"]{font-size:20px}}@media screen and (min-width: 1024px){.hero .title[variant*="size1"]{font-size:70px}.hero .title[variant*="size2"]{font-size:53px}.hero .title[variant*="size3"]{font-size:35px}.hero .title[variant*="size4"]{font-size:20px}}@media screen and (min-width: 1280px){.hero .title[variant*="size1"]{font-size:80px}.hero .title[variant*="size2"]{font-size:63px}.hero .title[variant*="size3"]{font-size:45px}.hero .title[variant*="size4"]{font-size:30px}}.hero .title[variant*="color1"]{color:#005d1f}.hero .title[variant*="color2"]{color:#47a742}.hero .title[variant*="color3"]{color:#b0e768}.hero .title[variant*="color4"]{color:#ffffff}.hero .title[variant*="color5"]{color:#171c1f}.hero .title[variant*="color6"]{color:#6c6e7b}.hero .shared-button{margin-top:30px;margin-bottom:10px}.hero__logo{display:block;transform:scale(0.5);height:auto}.hero__logo+.hero__logo{margin-top:0}@media screen and (min-width: 751px){.hero__logo{transform:scale(1)}.hero__logo+.hero__logo{margin-top:20px}}@media screen and (min-width: 751px) and (max-width: 1280px){[state*="pushed-right"] .hero__logo{transform:scale(0.75)}[state*="pushed-right"] .hero__logo+[state*="pushed-right"] .hero__logo{margin-top:5px}}[variant*="tl"] .hero__logo{transform-origin:left top}[variant*="tc"] .hero__logo{transform-origin:center top}[variant*="tr"] .hero__logo{transform-origin:right top}[variant*="cl"] .hero__logo{transform-origin:left center}[variant*="cc"] .hero__logo{transform-origin:center center}[variant*="cr"] .hero__logo{transform-origin:right center}[variant*="bl"] .hero__logo{transform-origin:left bottom}[variant*="bc"] .hero__logo{transform-origin:center bottom}[variant*="br"] .hero__logo{transform-origin:right bottom}.hero[variant="default"] .content{position:absolute;z-index:5;top:0;left:0;bottom:0;right:0;overflow:visible;opacity:1;transform:translate(0, 0) translate3d(0, 0, 0)}.hero[variant="default"] .background{position:fixed;z-index:1;top:0;left:0;width:100vw;height:100vh;transition:opacity 1s linear}.hero[variant="default"] .background _::-webkit-full-page-media,.hero[variant="default"] .background _:future,:root .hero[variant="default"] .background{height:112vh}.hero[variant="default"] .background embed,.hero[variant="default"] .background object,.hero[variant="default"] .background iframe,.hero[variant="default"] .background video,.hero[variant="default"] .background img{border:0 none;min-width:100%;min-height:100%;height:auto;object-fit:cover;transform-origin:center top;transform:translate(0, 0);transition:opacity .5s linear .3s;border:0 none;outline:0 none}.hero[variant="default"] .background .video_ratio{position:relative;min-width:100%;min-height:100%}@media screen and (min-width: 750px){.hero[variant="default"] .background .video_ratio{width:178vh}}.hero[variant="default"] .background .video_ratio:before{content:'';display:block;position:relative;padding-top:56.25%}.hero[variant="default"] .background .video_ratio img,.hero[variant="default"] .background .video_ratio video,.hero[variant="default"] .background .video_ratio embed,.hero[variant="default"] .background .video_ratio object,.hero[variant="default"] .background .video_ratio video,.hero[variant="default"] .background .video_ratio iframe{position:absolute;width:100%;height:100%;object-fit:cover;top:0;right:0;bottom:0;left:0}.hero[variant="default"] .background .image_ratio{position:relative;min-height:100%;min-width:100%;max-height:100%;max-height:100vh;width:100vw;height:100vh}.hero[variant="default"] .background .image_ratio img,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio embed,.hero[variant="default"] .background .image_ratio object,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio iframe{width:100%;height:auto}@media screen and (max-width: 750px){.hero[variant="default"] .background .image_ratio img,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio embed,.hero[variant="default"] .background .image_ratio object,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio iframe{max-width:none;max-height:100%}}@media screen and (max-width: 750px) and (-ms-high-contrast: none){.hero[variant="default"] .background .image_ratio img,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio embed,.hero[variant="default"] .background .image_ratio object,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio iframe{width:auto;height:100%}}@media screen and (min-width: 750px) and (-ms-high-contrast: none){.hero[variant="default"] .background .image_ratio img,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio embed,.hero[variant="default"] .background .image_ratio object,.hero[variant="default"] .background .image_ratio video,.hero[variant="default"] .background .image_ratio iframe{width:100%;height:auto}}.hero[variant="default"] .background *{pointer-events:none !important}.hero[variant="default"] .background.regular,.hero[variant="default"] .background.blurred{z-index:2;opacity:0;display:-moz-flex;display:-ms-flexbox;display:flex;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center}@media screen and (min-aspect-ratio: 1 / 1){.hero[variant="default"] .background.regular,.hero[variant="default"] .background.blurred{-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row}}.hero[variant="default"] .background.regular[state*="active"],.hero[variant="default"] .background.blurred[state*="active"]{opacity:1}.hero[variant="default"] .background.video{z-index:2;opacity:0;display:-moz-flex;display:-ms-flexbox;display:flex;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center}@media screen and (min-aspect-ratio: 16 / 9){.hero[variant="default"] .background.video{-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row}}.hero[variant="default"] .background.video[state*="active"]{opacity:1}.hero[variant="default"] .background.blurred{z-index:3;opacity:0}.hero[variant="default"] .placeholder{position:absolute;z-index:4;top:20px;left:20px;bottom:0;right:20px;overflow:visible;pointer-events:none;display:-moz-flex;display:-ms-flexbox;display:flex;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center}.hero[variant="default"] .placeholder[variant="tl"]{text-align:left;-ms-flex-align:start;-moz-align-items:flex-start;align-items:flex-start;-ms-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start}.hero[variant="default"] .placeholder[variant="tc"]{text-align:center;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start}.hero[variant="default"] .placeholder[variant="tr"]{text-align:right;-ms-flex-align:end;-moz-align-items:flex-end;align-items:flex-end;-ms-flex-pack:start;-moz-justify-content:flex-start;justify-content:flex-start}.hero[variant="default"] .placeholder[variant="cl"]{text-align:left;-ms-flex-align:start;-moz-align-items:flex-start;align-items:flex-start;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center}.hero[variant="default"] .placeholder[variant="cc"]{text-align:center;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center}.hero[variant="default"] .placeholder[variant="cr"]{text-align:right;-ms-flex-align:end;-moz-align-items:flex-end;align-items:flex-end;-ms-flex-pack:center;-moz-justify-content:center;justify-content:center}.hero[variant="default"] .placeholder[variant="bl"]{text-align:left;-ms-flex-align:start;-moz-align-items:flex-start;align-items:flex-start;-ms-flex-pack:end;-moz-justify-content:flex-end;justify-content:flex-end}.hero[variant="default"] .placeholder[variant="bc"]{text-align:center;-ms-flex-align:center;-moz-align-items:center;align-items:center;-ms-flex-pack:end;-moz-justify-content:flex-end;justify-content:flex-end}.hero[variant="default"] .placeholder[variant="br"]{text-align:right;-ms-flex-align:end;-moz-align-items:flex-end;align-items:flex-end;-ms-flex-pack:end;-moz-justify-content:flex-end;justify-content:flex-end}.hero[variant="default"] .placeholder>*{pointer-events:auto}.lt-ie9 .hero[variant="default"] .placeholder>*{display:block;width:auto}.hero[variant="editing"] .content{z-index:2;position:relative;border:1px solid #fff;width:100%;height:100%}.hero[variant="editing"] .title{display:block}.hero[variant="editing"] .title[variant*="size1"]{font-size:45px !important}.hero[variant="editing"] .title[variant*="size2"]{font-size:37px !important}.hero[variant="editing"] .title[variant*="size3"]{font-size:35px !important}.hero[variant="editing"] .title[variant*="size4"]{font-size:20px !important}.hero[variant="editing"] .placeholder{width:33.333%;height:33.333%;border:1px dotted #fff;text-align:center;vertical-align:middle}.hero[variant="editing"] .background{z-index:1;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;overflow:hidden}.hero[variant="editing"] .background *{max-width:100%;height:auto}.hero[variant="editing"] .message{padding:20px;margin:15px 0;background:Tomato}.hero[variant="editing"] .video{padding:20px;margin:15px 0;background:Silver}.hero.container[variant="default"]{margin-top:0;margin-bottom:0;position:relative;z-index:2}.hero.container[variant="default"]>.unit{position:relative;width:100%}.hero.container[variant="default"]>.unit:before{content:"";display:block}@media screen and (max-width: 750px){.hero.container[variant="default"]>.unit:before{padding-top:66.666vh}}@media screen and (max-width: 480px) and (orientation: landscape){.hero.container[variant="default"]>.unit:before{padding-top:0;height:150%;min-height:550px}}@media screen and (min-width: 480px) and (max-width: 750px) and (orientation: landscape){.hero.container[variant="default"]>.unit:before{padding-top:0;height:120%;min-height:450px}}@media screen and (min-width: 751px) and (max-width: 1499px){.hero.container[variant="default"]>.unit:before{padding-top:80vh}}@media screen and (min-width: 1500px){.hero.container[variant="default"]>.unit:before{padding-top:80vh}}.hero.container[variant="default"][modifier*="medium"]>.unit{position:relative;width:100%}.hero.container[variant="default"][modifier*="medium"]>.unit:before{content:"";display:block}@media screen and (max-width: 750px){.hero.container[variant="default"][modifier*="medium"]>.unit:before{padding-top:60vh}}@media screen and (max-width: 480px) and (orientation: landscape){.hero.container[variant="default"][modifier*="medium"]>.unit:before{padding-top:0;height:150%;min-height:550px}}@media screen and (min-width: 480px) and (max-width: 750px) and (orientation: landscape){.hero.container[variant="default"][modifier*="medium"]>.unit:before{padding-top:0;height:120%;min-height:450px}}@media screen and (min-width: 751px) and (max-width: 1499px){.hero.container[variant="default"][modifier*="medium"]>.unit:before{padding-top:66.666vh}}@media screen and (min-width: 1500px){.hero.container[variant="default"][modifier*="medium"]>.unit:before{padding-top:66.666vh}}.hero.container[variant="default"][modifier*="small"]>.unit{position:relative;width:100%}.hero.container[variant="default"][modifier*="small"]>.unit:before{content:"";display:block}@media screen and (max-width: 750px){.hero.container[variant="default"][modifier*="small"]>.unit:before{padding-top:40%}}@media screen and (max-width: 480px) and (orientation: landscape){.hero.container[variant="default"][modifier*="small"]>.unit:before{padding-top:0;height:75%;min-height:225px}}@media screen and (min-width: 480px) and (max-width: 750px) and (orientation: landscape){.hero.container[variant="default"][modifier*="small"]>.unit:before{padding-top:0;height:60%;min-height:225px}}@media screen and (min-width: 751px) and (max-width: 1499px){.hero.container[variant="default"][modifier*="small"]>.unit:before{padding-top:40vh}}@media screen and (min-width: 1500px){.hero.container[variant="default"][modifier*="small"]>.unit:before{padding-top:40vh}}.hero.container[variant="default"][modifier*="extra-small"]>.unit{position:relative;width:100%}.hero.container[variant="default"][modifier*="extra-small"]>.unit:before{content:"";display:block}@media screen and (max-width: 750px){.hero.container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:20%}}@media screen and (max-width: 480px) and (orientation: landscape){.hero.container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:0;height:37%;min-height:225px}}@media screen and (min-width: 480px) and (max-width: 750px) and (orientation: landscape){.hero.container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:0;height:30%;min-height:225px}}@media screen and (min-width: 751px) and (max-width: 1499px){.hero.container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:20vh}}@media screen and (min-width: 1500px){.hero.container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:20vh}}.hero.container[variant="editing"]{position:relative;width:960px;margin:0 auto}.hero.container[variant="editing"]>.unit{position:relative;width:960px;height:540px;max-width:100%}.hero[modifier*="dimmed"] .blurred:after{opacity:1;transform:translateY(0)}.hero .blurred:after{z-index:3;position:absolute;right:0;bottom:0;left:0;content:"";background:linear-gradient(to bottom, transparent, #171c1f);height:350px;opacity:0;transform:translateY(150px);transition:transform 1s, opacity 1s}@media screen and (max-width: 750px){.viewport[state="pushed-down-extra"] .container[variant="default"]>.unit:before{padding-top:60vh}}@media screen and (min-width: 751px) and (max-width: 1499px){.viewport[state="pushed-down-extra"] .container[variant="default"]>.unit:before{padding-top:68vh}}@media screen and (min-width: 1500px){.viewport[state="pushed-down-extra"] .container[variant="default"]>.unit:before{padding-top:75vh}}@media screen and (max-width: 750px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="medium"]>.unit:before{padding-top:50vh}}@media screen and (min-width: 751px) and (max-width: 1499px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="medium"]>.unit:before{padding-top:55vh}}@media screen and (min-width: 1500px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="medium"]>.unit:before{padding-top:60vh}}@media screen and (max-width: 750px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="small"]>.unit:before{padding-top:30vh}}@media screen and (min-width: 751px) and (max-width: 1499px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="small"]>.unit:before{padding-top:34vh}}@media screen and (min-width: 1500px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="small"]>.unit:before{padding-top:37vh}}@media screen and (max-width: 750px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:15vh}}@media screen and (min-width: 751px) and (max-width: 1499px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:17vh}}@media screen and (min-width: 1500px){.viewport[state="pushed-down-extra"] .container[variant="default"][modifier*="extra-small"]>.unit:before{padding-top:18vh}}#animation-box{z-index:2;position:absolute !important;top:0;left:0;width:0;height:0;background-position:center;background-size:cover;background-repeat:no-repeat;background-color:#767685;transform-origin:50% 50%;transform:translate3d(0, 0, 0);will-change:transform, opacity}.rounded #animation-box{box-shadow:none !important;background-color:transparent !important}#animation-background{z-index:1;position:absolute !important;top:0;left:0;width:0;height:0;background-position:center;background-size:cover;background-repeat:no-repeat;background-color:#767685;transform-origin:50% 50%;transform:translate3d(0, 0, 0);will-change:transform}.rounded #animation-background{border-radius:50%}#animation-container{position:fixed;top:0;left:0;width:0;height:0;overflow:visible;z-index:9}#animation-container .spinner{position:fixed;top:50%;left:50%;display:block;z-index:15;opacity:0;transform:translate(-50%, -50%)}#animation-container[loader="true"] .spinner{transition:opacity .5s .5s;opacity:1}
+
+	</style>
+		
+		<link rel="preload" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,greek-ext,greek,devanagari,vietnamese,latin-ext,cyrillic" as="style" onload="this.rel='stylesheet'">
+		
+		
+	</head>
+	<body bgcolor="141a1e">
+		
+		<script async defer src="https://apis.google.com/js/client.js"></script>
+		
+		<script>document.body.classList.add('loading');</script>
+		<div class="nav container" check="">
+			
+
+
+	
+
+	<div class="nav unit" variant="side" state="">
+
+	<div class="top">
+		<a href="/" class="logo">
+	<img src="/browser-resources/img/logo.svg" alt="Heineken - open your world">
+</a>
+		
+		
+<ul class="menu" variant="vertical sub">
+
+	
+		<li>
+	<a href="/pages/article.html">Article</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/anchor-navigation.html">Submenu</a>
+	
+	<ul class="menu">
+		
+			<li>
+	<a href="/pages/anchor-navigation.html">Anchor navigation</a>
+	
+</li>
+		
+			<li>
+	<a href="/pages/hero-small.html">Hero with a small description</a>
+	
+</li>
+		
+			<li>
+	<a href="/pages/calendar.html">Weerlegging geruchten over honden gevechten</a>
+	
+</li>
+		
+	</ul>
+	
+</li>
+	
+		<li>
+	<a href="/pages/carrousel.html">Carrousel</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/craas.html">Craas</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/faq.html">Faq</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/freehtml.html">Freehtml</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-event.html">Full viewport event</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-form-succes.html">Full viewport form succes</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-image.html">Full viewport image</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-page.html">Full viewport page</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-video.html">Full viewport video</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/gateway.html">Gateway</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/gateway-message.html">Gateway message</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/hero-small.html">Hero small</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/hex.html">Hex</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/media-gallery.html">Media gallery</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/product-list.html">Product list</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/submenu.html">Submenu</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/trigger.html">Trigger</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/win.html">Win</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_buttons.html">X buttons</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_error.html">X error</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_form_error.html">X form error</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_form_succes.html">X form succes</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_iframe.html">X iframe</a>
+	
+</li>
+	
+
+</ul>
+	</div>
+
+	<div class="bottom">
+		<div class="follow">
+	<a href="/pages/overlay" toggle="overlay" name="socials">
+		<svg 
+	class="icon"
+	width="49" 
+	height="49" 
+	viewBox="0 0 49 49" 
+	overflow="visible">
+	<path 
+		class="background"
+		fill-rule="evenodd" 
+		clip-rule="evenodd"
+		d="M24.5 0c13.53 0 24.5 10.97 24.5 24.5s-10.97 24.5-24.5 24.5-24.5-10.97-24.5-24.5 10.97-24.5 24.5-24.5z">
+	</path>
+	<path 
+		class="text" 
+		d="M26.02 37v-11h4.39l.66-3.97h-5.04v-2.84c0-1.26.34-2.17 2.16-2.17h2.83v-3.79c-.4-.05-1.24-.22-2.84-.22-3.34 0-6.18 2.22-6.18 5.96v3.06h-4v3.97h4v11h4.02z">
+	</path>
+</svg>
+		<span variant="hidden">Facebook</span>
+ 	</a>
+
+	<a href="https://twitter.com" target="_blank">
+		<svg 
+	class="icon"
+	width="49" 
+	height="49" 
+	viewBox="0 0 49 49" 
+	overflow="visible">
+	<path 
+		class="background"
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M24.5 0c13.53 0 24.5 10.97 24.5 24.5s-10.97 24.5-24.5 24.5-24.5-10.97-24.5-24.5 10.97-24.5 24.5-24.5z">
+	</path>
+	<path 
+		class="text" 
+		d="M38.01 17.36m-7.39-2.36c-2.72 0-4.93 2.26-4.93 5.05 0 .4.04.78.13 1.15-4.09-.21-7.72-2.22-10.15-5.28-.43.75-.67 1.62-.67 2.54 0 1.75.87 3.3 2.19 4.2-.81-.03-1.57-.25-2.23-.63v.06c0 2.45 1.7 4.49 3.95 4.95-.41.12-.85.18-1.3.18-.32 0-.63-.03-.93-.09.63 2.01 2.45 3.47 4.6 3.51-1.69 1.35-3.81 2.16-6.12 2.16-.4 0-.79-.02-1.17-.07 2.18 1.43 4.77 2.27 7.55 2.27 9.06 0 14.02-7.69 14.02-14.37l-.01-.65c.96-.71 1.8-1.6 2.46-2.61-.88.4-1.83.67-2.83.8 1.02-.62 1.8-1.61 2.17-2.79-.95.58-2.01 1-3.13 1.23-.9-1-2.19-1.61-3.6-1.61">
+	</path>
+</svg>
+
+		<span variant="hidden">Twitter</span>
+ 	</a>
+</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="nav unit" variant="mobile" state="">
+
+	<div class="carousel">
+
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+		<div>
+			1
+		</div>
+	
+</div>
+
+
+	<hr/>
+
+	
+<ul class="menu" variant="vertical sub">
+
+	
+		<li>
+	<a href="/pages/article.html">Article</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/anchor-navigation.html">Submenu</a>
+	
+	<ul class="menu">
+		
+			<li>
+	<a href="/pages/anchor-navigation.html">Anchor navigation</a>
+	
+</li>
+		
+			<li>
+	<a href="/pages/hero-small.html">Hero with a small description</a>
+	
+</li>
+		
+			<li>
+	<a href="/pages/calendar.html">Weerlegging geruchten over honden gevechten</a>
+	
+</li>
+		
+	</ul>
+	
+</li>
+	
+		<li>
+	<a href="/pages/carrousel.html">Carrousel</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/craas.html">Craas</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/faq.html">Faq</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/freehtml.html">Freehtml</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-event.html">Full viewport event</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-form-succes.html">Full viewport form succes</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-image.html">Full viewport image</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-page.html">Full viewport page</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/full-viewport-video.html">Full viewport video</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/gateway.html">Gateway</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/gateway-message.html">Gateway message</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/hero-small.html">Hero small</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/hex.html">Hex</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/media-gallery.html">Media gallery</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/product-list.html">Product list</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/submenu.html">Submenu</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/trigger.html">Trigger</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/win.html">Win</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_buttons.html">X buttons</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_error.html">X error</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_form_error.html">X form error</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_form_succes.html">X form succes</a>
+	
+</li>
+	
+		<li>
+	<a href="/pages/x_iframe.html">X iframe</a>
+	
+</li>
+	
+
+</ul>
+
+	<div class="follow">
+	<a href="/pages/overlay" toggle="overlay" name="socials">
+		<svg 
+	class="icon"
+	width="49" 
+	height="49" 
+	viewBox="0 0 49 49" 
+	overflow="visible">
+	<path 
+		class="background"
+		fill-rule="evenodd" 
+		clip-rule="evenodd"
+		d="M24.5 0c13.53 0 24.5 10.97 24.5 24.5s-10.97 24.5-24.5 24.5-24.5-10.97-24.5-24.5 10.97-24.5 24.5-24.5z">
+	</path>
+	<path 
+		class="text" 
+		d="M26.02 37v-11h4.39l.66-3.97h-5.04v-2.84c0-1.26.34-2.17 2.16-2.17h2.83v-3.79c-.4-.05-1.24-.22-2.84-.22-3.34 0-6.18 2.22-6.18 5.96v3.06h-4v3.97h4v11h4.02z">
+	</path>
+</svg>
+		<span variant="hidden">Facebook</span>
+ 	</a>
+
+	<a href="https://twitter.com" target="_blank">
+		<svg 
+	class="icon"
+	width="49" 
+	height="49" 
+	viewBox="0 0 49 49" 
+	overflow="visible">
+	<path 
+		class="background"
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M24.5 0c13.53 0 24.5 10.97 24.5 24.5s-10.97 24.5-24.5 24.5-24.5-10.97-24.5-24.5 10.97-24.5 24.5-24.5z">
+	</path>
+	<path 
+		class="text" 
+		d="M38.01 17.36m-7.39-2.36c-2.72 0-4.93 2.26-4.93 5.05 0 .4.04.78.13 1.15-4.09-.21-7.72-2.22-10.15-5.28-.43.75-.67 1.62-.67 2.54 0 1.75.87 3.3 2.19 4.2-.81-.03-1.57-.25-2.23-.63v.06c0 2.45 1.7 4.49 3.95 4.95-.41.12-.85.18-1.3.18-.32 0-.63-.03-.93-.09.63 2.01 2.45 3.47 4.6 3.51-1.69 1.35-3.81 2.16-6.12 2.16-.4 0-.79-.02-1.17-.07 2.18 1.43 4.77 2.27 7.55 2.27 9.06 0 14.02-7.69 14.02-14.37l-.01-.65c.96-.71 1.8-1.6 2.46-2.61-.88.4-1.83.67-2.83.8 1.02-.62 1.8-1.61 2.17-2.79-.95.58-2.01 1-3.13 1.23-.9-1-2.19-1.61-3.6-1.61">
+	</path>
+</svg>
+
+		<span variant="hidden">Twitter</span>
+ 	</a>
+</div>
+
+	<hr/>
+
+	<ul class="menu" variant="vertical">
+        <li>
+			<div toggle="overlay" name="languages">Country / Language <svg xmlns="http://www.w3.org/2000/svg" name="world" class="icon" width="24" height="24" viewBox="0 0 35 35" overflow="visible" enable-background="new 0 0 35.001 35.001"><path class="text" d="M17.5 0c-9.7 0-17.5 7.8-17.5 17.5s7.8 17.5 17.5 17.5 17.5-7.8 17.5-17.5-7.8-17.5-17.5-17.5zm7.4 22.9c0 .3-.1.7-.2 1l-1.3 2.7c-.1.2-.4.6-.6.8l-4.2 3.9c-.2.2-.1.3.1.3h.5c.3 0 .5.2.5.4s-.2.4-.5.4h-2c-.3 0-.5-.2-.5-.5v-5.3c0-.3.2-.5.5-.5h.6c.3 0 .5-.2.5-.5v-.6c0-.3-.2-.5-.5-.5h-.6c-.3 0-.5-.2-.5-.5v-3.1c0-.3-.2-.5-.5-.5h-.8c-.3 0-.7-.1-.9-.3l-2.7-1.9-.7-.7-1.2-2.1c-.1-.2-.5-.4-.8-.4h-.6c-.3 0-.6-.2-.7-.5l-1.5-3c-.1-.2-.2-.7-.2-.9v-1.8c0-.3-.2-.4-.5-.4l-.5.2c2.5-3.5 6.6-6 11.1-6.4v2.1c0 .3.2.6.4.8l.9.7c.2.2.6.3.9.3h.7c.3 0 .5.2.5.4s-.2.6-.3.8l-1.1 1.1c-.2.2-.1.4.2.4h.7c.3 0 .5.2.5.5v1.8c0 .3.2.5.5.5h.8c.3 0 .5.2.5.4s-.2.4-.5.4h-2.5c-.3 0-.7.1-.9.3l-1 .8c-.2.2-.4.5-.4.8v3c0 .3-.2.5-.5.5h-.1c-.3 0-.5-.2-.5-.5v-1.7c0-.3-.2-.5-.5-.5h-1.3c-.3 0-.5.2-.5.5v1.4c0 .3.2.6.4.8l2 1.6c.2.2.6.3.9.3h3.3c.3 0 .7.1.9.2l4.2 2.2c.2.1.4.5.4.7l.1.1zm-1.3-15c-.2.2-.6.3-.9.3h-.2c-.3 0-.5-.2-.5-.5v-1.6c0-.3-.2-.5-.5-.5h-.7c-.3 0-.5-.2-.5-.5v-2.6c2.4.4 4.6 1.4 6.5 2.9-.1.1-3.2 2.5-3.2 2.5z"></path>
+			</svg></div>
+		</li>
+	</ul>
+	<hr/>	
+</div>
+
+
+<div class="nav unit" variant="top" state="">
+	<div class="bar main">
+
+		<h1 class="title">
+	<span>Carrousel</span>
+</h1>
+		
+		<a href="/" class="logo">
+	<img src="/browser-resources/img/logo.svg" alt="Heineken - open your world">
+</a>
+
+		<div class="tool">
+			<a class="back" href="/pages/home" toggle="nav">
+				<svg 
+	class="icon"
+	variant="negative switch"
+
+	width="55" 
+	height="55" 
+	viewBox="0 0 55 55" 
+	overflow="visible">
+
+	<path 
+		class="background" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M27.5 0c15.19 0 27.5 12.31 27.5 27.5s-12.31 27.5-27.5 27.5-27.5-12.31-27.5-27.5 12.31-27.5 27.5-27.5z">
+	</path>
+
+	
+	<path 
+		class="text arrow"
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M35.653,28.954 L24.915,28.954 L28.919,32.958 L26.889,34.989 L19.224,27.324 L19.225,27.322 L19.180,27.277 L26.845,19.612 L28.875,21.642 L24.563,25.954 L35.653,25.954 L35.653,28.954 Z"/>
+
+	
+	<path 
+		class="text cross" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M35.5 33.32l-2.18 2.18-5.82-5.82-5.82 5.82-2.18-2.18 5.82-5.82-5.82-5.82 2.18-2.18 5.82 5.82 5.82-5.82 2.18 2.18-5.82 5.82 5.82 5.82z"/>
+
+	
+	<g 
+		class="text bars" 
+		fill-rule="evenodd"
+		clip-rule="evenodd">
+		<path d="M17.47 17.47h20.71v3.88H17.47V17.47z">
+		</path>
+		<path d="M17.47 25.88h20.71v3.88H17.47V25.88z">
+		</path>
+		<path d="M17.47 34.29h20.71v3.88H17.47V34.29z">
+		</path>
+	</g>
+</svg>
+
+			</a>
+		</div>
+	</div>
+
+	
+
+	
+
+</div>
+		</div>
+
+		<div class="viewport" variant="live" data-pagetype="page">
+			
+				
+				
+				
+				<div class="faq container" variant="default">
+	<div class="faq unit">
+		<div class="head">
+			<h1 class="title wow fadeInUp">Frequently asked questions</h1>
+			
+			<div class="form wow fadeInUp" >
+				<input class="input" type="text" placeholder="Search for answers" />
+				<button class="button" type="button">
+					<svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="27.5" 
+	height="27.5" 
+	viewBox="0 0 27.5 27.5" 
+	overflow="visible" 
+	enable-background="new 0 0 27.503 27.503">
+		<path 
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M16.6 21.9c-2.5 0-4.8-0.9-6.7-2.3l-7.9 7.9L0 25.6l7.9-7.9c-1.4-1.9-2.3-4.2-2.3-6.7C5.6 4.9 10.5 0 16.6 0c6 0 10.9 4.9 10.9 10.9S22.6 21.9 16.6 21.9zM16.6 2.7c4.5 0 8.2 3.7 8.2 8.2 0 4.5-3.7 8.2-8.2 8.2 -4.5 0-8.2-3.7-8.2-8.2C8.4 6.4 12.1 2.7 16.6 2.7z">
+		</path>
+</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="body">
+
+			<div class="resultnumber container" state="hidden" data-result-txt="results for , no results for ">
+				<div class="content"></div>
+			</div>
+			<div class="menu container wow fadeInUp" variant="result">
+				<a class="menu unit" variant="all" href="#!*" state="active"><div class="text">Active</div></a>
+
+				
+					<a class="menu unit" variant="1ab5f72def7a40679ca07177b922f33a" href="#!1ab5f72def7a40679ca07177b922f33a"><div class="text">beer</div></a>
+				
+					<a class="menu unit" variant="8e7c1e82aae54c25a9dfe5d84825ae1a" href="#!8e7c1e82aae54c25a9dfe5d84825ae1a"><div class="text">info</div></a>
+				
+					<a class="menu unit" variant="8abe1956-8b59-46f8-904d-3897136573e1" href="#!8abe1956-8b59-46f8-904d-3897136573e1"><div class="text">beertender</div></a>
+				
+			</div>
+
+			
+	<div class="list container" variant="1ab5f72def7a40679ca07177b922f33a" state="">
+
+		<div class="title wow fadeInUp" variant="level1" id=1ab5f72def7a40679ca07177b922f33a>beer</div>
+
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="4589a0fe6bf84430beda37d43cd44efe">Bottled</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="0e5e5099-e344-4ad3-baaf-e568f0b59e1d">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="a1813060-22c5-4d7d-b5ab-9ab48edd3d3e">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+				<div class="title wow fadeInUp" variant="level3" id="07a089ec34b34937863bf3a31b1b30cf">Zebrawater</div>
+				
+					<div class="list unit wow fadeInUp" state="" id="74b57b8d-eb1a-4755-962e-f384306d20ae">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+					<div class="list unit wow fadeInUp" state="" id="">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+			
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="1a3c69425aa747b88aff83279a8d3f6d">In cans</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="28cdc5a039304f22b79348e9faacc480">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="069d7e5085e543f6bd3a5666d0443f26">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+				<div class="title wow fadeInUp" variant="level3" id="dfe2b4201a7248dfafcfd49ceda34aa1">water in blik</div>
+				
+					<div class="list unit wow fadeInUp" state="" id="b474349c4a1d4288a6610cfcc876db78">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+					<div class="list unit wow fadeInUp" state="" id="384b7a4ca76c4ec08b01fd764a0bb46d">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+			
+
+		
+ 
+	</div>
+
+	<div class="list container" variant="8e7c1e82aae54c25a9dfe5d84825ae1a" state="">
+
+		<div class="title wow fadeInUp" variant="level1" id=8e7c1e82aae54c25a9dfe5d84825ae1a>info</div>
+
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="be90885d-a734-4a94-a1c2-fc305a71fafe">Info subsection</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="d996fd77-d924-45d2-ab13-0f19ad809398">
+	<div class="title">I need things to happen!Items 2</div>
+	<div class="content rtf">
+		<div>
+			That is not question.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="4b768ca2-2e17-434f-908a-2b46834cee0a">
+	<div class="title">Where does stuff come from?Items 2</div>
+	<div class="content rtf">
+		<div>
+			Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="6fe404cc-602e-46bc-8f9f-5df7d8d4eeb9">
+	<div class="title">Are things bad for me?Items 2</div>
+	<div class="content rtf">
+		<div>
+			Things can be bad for you when you use all the things at once.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+
+		
+ 
+	</div>
+
+	<div class="list container" variant="8abe1956-8b59-46f8-904d-3897136573e1" state="">
+
+		<div class="title wow fadeInUp" variant="level1" id=8abe1956-8b59-46f8-904d-3897136573e1>beertender</div>
+
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="be90885d-a734-4a94-a1c2-fc305a71fafe">beertender subsection</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="f7b6e0ef-b8b7-417c-aff8-4d9cd6dd7539">
+	<div class="title">Where does stuff come from? Items 3</div>
+	<div class="content rtf">
+		<div>
+			Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="2a58ecfd-ef86-4298-8bb5-e09a151222e4">
+	<div class="title">Are things bad for me?Items 3</div>
+	<div class="content rtf">
+		<div>
+			Things can be bad for you when you use all the things at once.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+
+		
+ 
+	</div>
+
+
+			<div class="bottomtext" state="active">Text can be added here. Is you question not listed? Contact us here</div>
+			<div class="no-result container" variant="result">
+				<div class="content">
+					There are no FAQ available for your search. Please try a different search or browse our FAQ. Sure your question is not here? Contact us and we will do our best to help.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			
+				
+				
+				
+				
+<div class="carrousel-bg background" variant="default"></div>
+<div class="carrousel container" data-id="1" modifier="fixed-background no-background-transition" >
+	
+
+  <div class="carrousel-carousel slider center wow fadeInUp slider-1">
+	
+		  <div class="slide-item-outer" data-id="fsdf1aa" data-youtube-id="dKVn5z8U3ZU" data-youtube-autoplay="true">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+							
+				<div class="slide-item__youtube-wrap">
+					<div class="slide-item__iframe-container">
+						<span class="slide-item__youtube-holder" id="youtube-holder-fsdf1aa-dKVn5z8U3ZU"></span>
+					</div>
+				</div>
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+					<div class="slide-item__trigger trigger">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" 
+	class="icon" 
+	modifier="color1" 
+	width="72" 
+	height="72" 
+	viewBox="0 0 90 90" 
+	overflow="visible"
+	preserveAspectRatio="xMidYMid meet">
+	<path 
+		class="text" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M40 53.27c0 1.61 1.11 2.21 2.47 1.34l12.5-8.02c1.36-.87 1.36-2.3 0-3.17l-12.5-8.02c-1.36-.87-2.47-.27-2.47 1.34v16.53z"/>
+</svg>
+
+					</div>
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Champions</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>League</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+	
+	<span class="slide-item__typograph">Champions League</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="ccc4sad" data-youtube-id="" data-youtube-autoplay="">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/background/test.jpg 250w, /dummy-resources/img/background/test.jpg 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg-test.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg-test.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg-test.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>[{Championses}]®</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>[{Lea,©/gue]}™</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+	
+	<span class="slide-item__typograph">Bief</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="reweqtee6" data-youtube-id="hxxqzaEAtjs" data-youtube-autoplay="false">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+							
+				<div class="slide-item__youtube-wrap">
+					<div class="slide-item__iframe-container">
+						<span class="slide-item__youtube-holder" id="youtube-holder-reweqtee6-hxxqzaEAtjs"></span>
+					</div>
+				</div>
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+					<div class="slide-item__trigger trigger">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" 
+	class="icon" 
+	modifier="color1" 
+	width="72" 
+	height="72" 
+	viewBox="0 0 90 90" 
+	overflow="visible"
+	preserveAspectRatio="xMidYMid meet">
+	<path 
+		class="text" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M40 53.27c0 1.61 1.11 2.21 2.47 1.34l12.5-8.02c1.36-.87 1.36-2.3 0-3.17l-12.5-8.02c-1.36-.87-2.47-.27-2.47 1.34v16.53z"/>
+</svg>
+
+					</div>
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Lorum ipsum</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>Dolor sit</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+	
+	<span class="slide-item__typograph">James Bond</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="akrgkkjhs" data-youtube-id="hxxqzaEAtjs" data-youtube-autoplay="true">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+							
+				<div class="slide-item__youtube-wrap">
+					<div class="slide-item__iframe-container">
+						<span class="slide-item__youtube-holder" id="youtube-holder-akrgkkjhs-hxxqzaEAtjs"></span>
+					</div>
+				</div>
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+					<div class="slide-item__trigger trigger">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" 
+	class="icon" 
+	modifier="color1" 
+	width="72" 
+	height="72" 
+	viewBox="0 0 90 90" 
+	overflow="visible"
+	preserveAspectRatio="xMidYMid meet">
+	<path 
+		class="text" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M40 53.27c0 1.61 1.11 2.21 2.47 1.34l12.5-8.02c1.36-.87 1.36-2.3 0-3.17l-12.5-8.02c-1.36-.87-2.47-.27-2.47 1.34v16.53z"/>
+</svg>
+
+					</div>
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>To infinity</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>And beyond</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+	
+	<span class="slide-item__typograph">Formula 1</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="askjdsf8976" data-youtube-id="" data-youtube-autoplay="">
+	
+	<a href=/pages/full-viewport-page.html>
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Open your</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>World</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+		
+	</a>
+	
+	<span class="slide-item__typograph">Open your world</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="2389dfkjh89" data-youtube-id="" data-youtube-autoplay="">
+	
+	<a href=/pages/full-viewport-page.html>
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Championai</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>League</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+		
+	</a>
+	
+	<span class="slide-item__typograph">Baf</span>
+</div>
+	
+  </div>
+
+	
+		<div class="carrousel-carousel-nav slider center wow fadeInUp nav-1">
+		
+				<div class="slidenav-item-outer" data-id="fsdf1aa">
+	<button>Champions League</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="ccc4sad">
+	<button>Bief</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="reweqtee6">
+	<button>James Bond</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="akrgkkjhs">
+	<button>Formula 1</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="askjdsf8976">
+	<button>Open your world</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="2389dfkjh89">
+	<button>Baf</button>
+</div>
+
+		
+		</div>
+	
+  
+</div>
+
+			
+				
+				
+				
+				<div class="faq container" variant="default">
+	<div class="faq unit">
+		<div class="head">
+			<h1 class="title wow fadeInUp">Frequently asked questions</h1>
+			
+			<div class="form wow fadeInUp" >
+				<input class="input" type="text" placeholder="Search for answers" />
+				<button class="button" type="button">
+					<svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="27.5" 
+	height="27.5" 
+	viewBox="0 0 27.5 27.5" 
+	overflow="visible" 
+	enable-background="new 0 0 27.503 27.503">
+		<path 
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M16.6 21.9c-2.5 0-4.8-0.9-6.7-2.3l-7.9 7.9L0 25.6l7.9-7.9c-1.4-1.9-2.3-4.2-2.3-6.7C5.6 4.9 10.5 0 16.6 0c6 0 10.9 4.9 10.9 10.9S22.6 21.9 16.6 21.9zM16.6 2.7c4.5 0 8.2 3.7 8.2 8.2 0 4.5-3.7 8.2-8.2 8.2 -4.5 0-8.2-3.7-8.2-8.2C8.4 6.4 12.1 2.7 16.6 2.7z">
+		</path>
+</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="body">
+
+			<div class="resultnumber container" state="hidden" data-result-txt="results for , no results for ">
+				<div class="content"></div>
+			</div>
+			<div class="menu container wow fadeInUp" variant="result">
+				<a class="menu unit" variant="all" href="#!*" state="active"><div class="text">Active</div></a>
+
+				
+					<a class="menu unit" variant="1ab5f72def7a40679ca07177b922f33a" href="#!1ab5f72def7a40679ca07177b922f33a"><div class="text">beer</div></a>
+				
+					<a class="menu unit" variant="8e7c1e82aae54c25a9dfe5d84825ae1a" href="#!8e7c1e82aae54c25a9dfe5d84825ae1a"><div class="text">info</div></a>
+				
+					<a class="menu unit" variant="8abe1956-8b59-46f8-904d-3897136573e1" href="#!8abe1956-8b59-46f8-904d-3897136573e1"><div class="text">beertender</div></a>
+				
+			</div>
+
+			
+	<div class="list container" variant="1ab5f72def7a40679ca07177b922f33a" state="">
+
+		<div class="title wow fadeInUp" variant="level1" id=1ab5f72def7a40679ca07177b922f33a>beer</div>
+
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="4589a0fe6bf84430beda37d43cd44efe">Bottled</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="0e5e5099-e344-4ad3-baaf-e568f0b59e1d">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="a1813060-22c5-4d7d-b5ab-9ab48edd3d3e">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+				<div class="title wow fadeInUp" variant="level3" id="07a089ec34b34937863bf3a31b1b30cf">Zebrawater</div>
+				
+					<div class="list unit wow fadeInUp" state="" id="74b57b8d-eb1a-4755-962e-f384306d20ae">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+					<div class="list unit wow fadeInUp" state="" id="">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+			
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="1a3c69425aa747b88aff83279a8d3f6d">In cans</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="28cdc5a039304f22b79348e9faacc480">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="069d7e5085e543f6bd3a5666d0443f26">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+				<div class="title wow fadeInUp" variant="level3" id="dfe2b4201a7248dfafcfd49ceda34aa1">water in blik</div>
+				
+					<div class="list unit wow fadeInUp" state="" id="b474349c4a1d4288a6610cfcc876db78">
+	<div class="title">How come things happen when stuff is done?</div>
+	<div class="content rtf">
+		<div>
+			Things are bound to happen, stuff happening doesn't influence things happening.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+					<div class="list unit wow fadeInUp" state="" id="384b7a4ca76c4ec08b01fd764a0bb46d">
+	<div class="title">How can stuff be done?</div>
+	<div class="content rtf">
+		<div>
+			Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+				
+			
+
+		
+ 
+	</div>
+
+	<div class="list container" variant="8e7c1e82aae54c25a9dfe5d84825ae1a" state="">
+
+		<div class="title wow fadeInUp" variant="level1" id=8e7c1e82aae54c25a9dfe5d84825ae1a>info</div>
+
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="be90885d-a734-4a94-a1c2-fc305a71fafe">Info subsection</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="d996fd77-d924-45d2-ab13-0f19ad809398">
+	<div class="title">I need things to happen!Items 2</div>
+	<div class="content rtf">
+		<div>
+			That is not question.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="4b768ca2-2e17-434f-908a-2b46834cee0a">
+	<div class="title">Where does stuff come from?Items 2</div>
+	<div class="content rtf">
+		<div>
+			Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="6fe404cc-602e-46bc-8f9f-5df7d8d4eeb9">
+	<div class="title">Are things bad for me?Items 2</div>
+	<div class="content rtf">
+		<div>
+			Things can be bad for you when you use all the things at once.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+
+		
+ 
+	</div>
+
+	<div class="list container" variant="8abe1956-8b59-46f8-904d-3897136573e1" state="">
+
+		<div class="title wow fadeInUp" variant="level1" id=8abe1956-8b59-46f8-904d-3897136573e1>beertender</div>
+
+
+		
+			<div class="title wow fadeInUp" variant="level2" id="be90885d-a734-4a94-a1c2-fc305a71fafe">beertender subsection</div>
+			
+				<div class="list unit wow fadeInUp" state="" id="f7b6e0ef-b8b7-417c-aff8-4d9cd6dd7539">
+	<div class="title">Where does stuff come from? Items 3</div>
+	<div class="content rtf">
+		<div>
+			Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+				<div class="list unit wow fadeInUp" state="" id="2a58ecfd-ef86-4298-8bb5-e09a151222e4">
+	<div class="title">Are things bad for me?Items 3</div>
+	<div class="content rtf">
+		<div>
+			Things can be bad for you when you use all the things at once.
+			<a class="button-black-transparent-border" href="#">Button 1</a>
+			<a class="button-black-transparent" href="#">Button 2</a>
+			<a class="button-black" href="#">Button 3</a>
+			<a class="button-green-dark" href="#">Button 4</a>
+			<a class="button-green" href="#">Button 5</a>
+			<a class="button-green-light" href="#">Button 6</a>
+			<a class="button-transparent-border" href="#">Button 7</a>
+			<a class="button-white-border" href="#">Button 8</a>	
+		</div>
+	</div>
+
+	<button class="button"><svg 
+	xmlns="" xml:space="preserve" 
+	class="icon" 
+	width="12" height="12" 
+	viewBox="0 0 12 12" 
+	overflow="visible" 
+	enable-background="new 0 0 12.009 12.008">
+		<path 
+			name="horizontal"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M12.01 6.94H0V5.05h12.01V6.94z"n>
+		</path>
+		<path 
+			name="vertical"
+			class="text" 
+			fill-rule="evenodd" 
+			clip-rule="evenodd" 
+			d="M4.98 12.01V0H6.94v12.01H4.98z">
+		</path>
+</svg></button>
+</div>	
+			
+
+			
+
+		
+ 
+	</div>
+
+
+			<div class="bottomtext" state="active">Text can be added here. Is you question not listed? Contact us here</div>
+			<div class="no-result container" variant="result">
+				<div class="content">
+					There are no FAQ available for your search. Please try a different search or browse our FAQ. Sure your question is not here? Contact us and we will do our best to help.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			
+				
+				
+				
+				
+
+<div class="carrousel-bg background" variant="default"></div>
+<div class="carrousel container" data-id="2" modifier="" >
+  
+		<div class="carrousel-carousel-nav carrousel-carousel-nav--top slider center wow fadeInUp nav-2">
+		
+				<div class="slidenav-item-outer" data-id="11">
+	<button>Champions League</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="12">
+	<button>James Bond</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="13">
+	<button>Formula 1</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="14">
+	<button>Bief</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="15">
+	<button>Open your world</button>
+</div>
+
+		
+				<div class="slidenav-item-outer" data-id="16">
+	<button>Baf</button>
+</div>
+
+		
+		</div>
+	
+	
+  <div class="carrousel-carousel slider center wow fadeInUp slider-2">
+	
+		  <div class="slide-item-outer" data-id="11" data-youtube-id="" data-youtube-autoplay="">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Champions</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>League</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--third">
+					<span>live on tv</span>
+				</div>
+				
+			</h4>
+		</div>
+		
+			<div class="slide-item__summary">
+				<ul><li> visit 3 major attractions in one!</li><li>The Heineken Experience</li><li>The A'DAM tower</li><li>Canal cruise, 45 min. with a Heineken Experience guide</li><li>With 2 perfectly chilled beers at our 'Dam bar</li><li>Free city map with Amsterdam's best hidden gems</li></ul>
+			</div>
+		
+	
+	<span class="slide-item__typograph">Champions League</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="12" data-youtube-id="" data-youtube-autoplay="">
+	
+	<a href=/pages/full-viewport-page.html>
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Lorum ipsum</span>
+				</div>
+				
+
+				
+
+				
+				<div class="slide-item__line slide-item__line--third">
+					<span>ipsum lorem</span>
+				</div>
+				
+			</h4>
+		</div>
+		
+			<div class="slide-item__summary">
+				<ul class="no-columns"><li>visit 3 major attractions in one!</li><li>The Heineken Experience</li><li>The A'DAM tower</li></ul>
+			</div>
+		
+		
+	</a>
+	
+	<span class="slide-item__typograph">James Bond</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="13" data-youtube-id="" data-youtube-autoplay="">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>To infinity</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>And beyond</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+			<div class="slide-item__summary">
+				<ol><li>visit 3 major attractions in one!</li><li>Canal cruise, 45 min. with a Heineken Experience guide</li><li>With 2 perfectly chilled beers at our 'Dam bar</li><li>Free city map with Amsterdam's best hidden gems</li></ol>
+			</div>
+		
+	
+	<span class="slide-item__typograph">Formula 1</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="14" data-youtube-id="" data-youtube-autoplay="">
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/background/test.jpg 250w, /dummy-resources/img/background/test.jpg 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg-test.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg-test.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg-test.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>[{Championses}]</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>[{Lea,/gue]}</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+			<div class="slide-item__summary">
+				<p>Also buttons are allowed!</p><p><a class="shared-button" modifiers="color4 size1" href="#"><span class="multiplelines">Button</span></a></p>
+			</div>
+		
+	
+	<span class="slide-item__typograph">Bief</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="15" data-youtube-id="" data-youtube-autoplay="">
+	
+	<a href=/pages/full-viewport-page.html>
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+
+				
+
+				
+				<div class="slide-item__line slide-item__line--third">
+					<span>open up</span>
+				</div>
+				
+			</h4>
+		</div>
+		
+			<div class="slide-item__summary">
+				<h5>Titles are allowed, but stick to small titles (h4 & h5)!</h5>
+			</div>
+		
+		
+	</a>
+	
+	<span class="slide-item__typograph">Open your world</span>
+</div>
+	
+		  <div class="slide-item-outer" data-id="16" data-youtube-id="" data-youtube-autoplay="">
+	
+	<a href=/pages/full-viewport-page.html>
+	
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 230w, /dummy-resources/img/carousel/carousel-img-1-port-bg.jpg 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="/dummy-resources/img/carousel/carousel-img-1-bg.jpg"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-bg.jpg 400w, /dummy-resources/img/carousel/carousel-img-1-bg.jpg 800w"
+						alt=""
+					>
+					
+				</picture>
+				
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-port-fg.png 250w, /dummy-resources/img/carousel/carousel-img-1-port-fg.png 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="/dummy-resources/img/carousel/carousel-img-1-fg.png"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="/dummy-resources/img/carousel/carousel-img-1-fg.png 420w, /dummy-resources/img/carousel/carousel-img-1-fg.png 840w"
+						alt=""
+					>
+				</picture>
+				
+				
+			</div>
+			<h4 class="slide-item__description">
+				
+				<div class="slide-item__line slide-item__line--first">
+					<span>Championai</span>
+				</div>
+				
+
+				
+				<div class="slide-item__line slide-item__line--second">
+					<span>League</span>
+				</div>
+				
+
+				
+			</h4>
+		</div>
+		
+			<div class="slide-item__summary">
+				<h4>Titles are allowed, but stick to small titles!</h4>
+			</div>
+		
+		
+	</a>
+	
+	<span class="slide-item__typograph">Baf</span>
+</div>
+	
+  </div>
+
+  
+
+
+</div>
+			
+
+			
+
+		</div>
+
+		<div class="viewport" variant="stage"></div>
+		<div class="viewport" variant="size"></div>
+
+		<div class="overlay container" state="">
+
+			<div class="overlay unit" state="" name="xhr"></div>
+
+			<!-- overlay block -->
+			
+
+			<div class="tool">
+				<a class="back" href="/pages/home" toggle="overlay">
+					<svg xmlns="http://www.w3.org/2000/svg" 
+	class="icon"
+	variant="negative"
+
+	width="55" 
+	height="55" 
+	viewBox="0 0 55 55" 
+	overflow="visible">
+
+	<path 
+		class="background" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M27.5 0c15.19 0 27.5 12.31 27.5 27.5s-12.31 27.5-27.5 27.5-27.5-12.31-27.5-27.5 12.31-27.5 27.5-27.5z" />
+
+	<path 
+		class="text cross" 
+		fill-rule="evenodd" 
+		clip-rule="evenodd" 
+		d="M35.5 33.32l-2.18 2.18-5.82-5.82-5.82 5.82-2.18-2.18 5.82-5.82-5.82-5.82 2.18-2.18 5.82 5.82 5.82-5.82 2.18 2.18-5.82 5.82 5.82 5.82z" />
+</svg>
+				</a>
+			</div>
+		</div>
+
+		
+
+		<div id="animation-container">
+			
+<div class="spinner" state="" modifier="">
+  <div class="spinner__bounce spinner__bounce--1"></div>
+  <div class="spinner__bounce spinner__bounce--2"></div>
+  <div class="spinner__bounce spinner__bounce--3"></div>
+</div>
+			<div id="animation-box"></div>
+			<div id="animation-background"></div>
+		</div>
+
+    	
+
+		<script async src="/browser-resources/scripts/main.js"></script>
+
+	</body>
+</html>
