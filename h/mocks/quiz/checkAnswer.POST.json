@@ -1,0 +1,4 @@
+{
+    "correct": {{boolean}},
+    "score": {{float 1 500 round=1}}
+}

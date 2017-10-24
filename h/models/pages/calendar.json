@@ -1,0 +1,248 @@
+{
+	"activeitemMonth" : "Month",
+	"activeitemTag" : "Tags",
+	"activeitemLocation" : "Location",
+	"showtagfilter" : true,
+	"showlocationfilter" : true,
+	"months": [
+		{
+			"key" : "201605",
+			"title" : "mei"
+		},
+		{
+			"key": "201606",
+			"title" : "juni"
+		},
+		{
+			"key": "201607",
+			"title" : "juli"
+		},
+		{
+			"key": "201608",
+			"title" : "augustus"
+		},
+		{
+			"key": "201609",
+			"title" : "september"
+		},
+		{
+			"key": "201610",
+			"title" : "oktober"
+		},
+		{
+			"key": "201611",
+			"title" : "november"
+		},
+		{
+			"key": "201612",
+			"title" : "december"
+		},
+		{
+			"key": "201701",
+			"title" : "januari 2017"
+		},
+		{
+			"key": "201702",
+			"title" : "februari 2017"
+		},
+		{
+			"key": "201703",
+			"title" : "maart 2017"
+		},
+		{
+			"key": "201704",
+			"title" : "april 2017"
+		},
+		{
+			"key": "201705",
+			"title" : "mei 2017"
+		}
+	],
+	"tags": [
+		{
+			"key": "amsterdam",
+			"title" : "Amsterdam"
+		},
+		{
+			"key": "barcelona",
+			"title" : "Barcelona"
+		},
+		{
+			"key": "music",
+			"title" : "Music"
+		},
+		{
+			"key": "champions_league",
+			"title" : "Champions League"
+		},
+		{
+			"key": "sculptures",
+			"title" : "Sculptures"
+		},
+		{
+			"key": "formula_1",
+			"title" : "Formula 1"
+		},
+		{
+			"key": "festival",
+			"title" : "Festival"
+		},
+		{
+			"key": "concerts",
+			"title" : "Concerts"
+		},
+		{
+			"key": "cities",
+			"title" : "Cities"
+		},
+		{
+			"key": "madrid",
+			"title" : "Madrid"
+		}		
+	],
+	"locations" : [
+		{
+			"key": "amsterdam",
+			"title" : "Amsterdam"
+		},
+		{
+			"key": "barcelona", 
+			"title" : "Barcelona"
+		},
+		{
+			"key": "madrid",
+			"title" : "Madrid"
+		}		
+	],
+	"events": [
+		{
+			"startdate" : "20160508",
+			"id" : "1",
+			"tags" : "amsterdam,music,cities",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "08",
+			"daystring" : "THU",
+			"monthstring": "MAY",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"						
+		},
+		{
+			"startdate" : "20160612",
+			"id" : "2",
+			"tags" : "amsterdam,music,cities",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "12",
+			"daystring" : "THU",
+			"monthstring": "JUN",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"			
+		},
+		{
+			"startdate" : "20160622",
+			"id" : "3",
+			"tags" : "music",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "22",
+			"daystring" : "THU",
+			"monthstring": "JUN",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"			
+		},
+		{
+			"startdate" : "20160701",
+			"id" : "4",
+			"tags" : "cities",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "01",
+			"daystring" : "THU",
+			"monthstring": "JUL",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"						
+		},
+		{
+			"startdate" : "20160728",
+			"id" : "5",
+			"tags" : "",
+			"image" : "/dummy-resources/img/calendar/thumbnail-2.jpg",
+			"daynumber" : "28",
+			"daystring" : "THU",
+			"monthstring": "JUL",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"			
+		},
+		{
+			"startdate" : "201609018",
+			"id" : "6",
+			"tags" : "",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "18",
+			"daystring" : "THU",
+			"monthstring": "SEP",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM"	,
+			"locationid" : "amsterdam"						
+		},
+		{
+			"startdate" : "20161104",
+			"id" : "7",
+			"tags" : "cities",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "04",
+			"daystring" : "THU",
+			"monthstring": "NOV",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"			
+		},
+		{
+			"startdate" : "20161231",
+			"id" : "8",
+			"tags" : "music",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "31",
+			"daystring" : "THU",
+			"monthstring": "DEC",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM"		
+		},
+		{
+			"startdate" : "20170201",
+			"id" : "9",
+			"tags" : "amsterdam,cities",
+			"image" : "/dummy-resources/img/calendar/thumbnail-2.jpg",
+			"daynumber" : "01",
+			"daystring" : "SAT",
+			"monthstring": "FEB",
+			"title" : "PSV VS Bayern",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Amstelveense bos 8PM - 11PM",
+			"locationid" : "amsterdam"
+		},
+		{
+			"startdate" : "20170301",
+			"id" : "10",
+			"tags" : "rotterdam",
+			"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+			"daynumber" : "01",
+			"daystring" : "MON",
+			"monthstring": "MAR",
+			"title" : "Ajax-Ado",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+			"location" : "Rotterdamse bos 8PM - 11PM",
+			"locationid" : "rotterdam"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{% if include.modifiers %}
+  {% assign modifiers = include.modifiers %}
+{% else %}
+  {% assign modifiers = item.data.spinner.modifier %}
+{% endif %}
+<div class="spinner" state="{{item.data.spinner.state}}" modifier="{{modifiers | join: ' '}}">
+  <div class="spinner__bounce spinner__bounce--1"></div>
+  <div class="spinner__bounce spinner__bounce--2"></div>
+  <div class="spinner__bounce spinner__bounce--3"></div>
+</div>

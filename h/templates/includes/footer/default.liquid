@@ -1,0 +1,20 @@
+{% if page.showLegal %}
+{% capture modifier %}haslegal{% endcapture %}
+{% else %}
+{% capture modifier %}{% endcapture %}
+{% endif %}
+
+{% if page.legalVariant == 'fixed' %}{% capture legalVariant %}hidden{% endcapture %}
+{% elsif page.legalVariant %}{% capture legalVariant %}{{page.legalVariant}}{% endcapture %}{% endif %}
+
+<div class="footer container" modifier="{{modifier}}" variant="{{include.variant}}">
+	<div class="footer unit" variant="company">
+		<div class="secondary-mobile">{% include footer/parts/menu/secondary.liquid %}</div>
+		{% include footer/parts/menu/main.liquid %}
+		<div class="secondary-desktop">{% include footer/parts/menu/secondary.liquid %}</div>
+	</div>
+</div>
+
+{% if page.showLegal and include.variant == 'absolute' and legalVariant %}
+	{% include legal/default.liquid variant=legalVariant %}
+{% endif %}

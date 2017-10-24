@@ -1,0 +1,46 @@
+{
+	"content": [
+		{
+	        "data": {
+	                "title": "Crack the case",
+	                "text": "Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+	                "replayVideo": {
+	                	"replay": "true",
+	                	"text": "Speel opnieuw"
+	                },
+	                "more-info": {
+	                	"title" : "James Bond: Crack the case"
+	                },
+					"button": {
+						"href": "#",
+						"title": "Watch the highlights"
+					},
+	                "video": {
+	                	"id": "Tv53dhkDsyE",
+	                	"autoplay": {
+	                		"desktop": true,
+	                		"mobile": false
+	                	},
+	                	"autoHideControllers": 1,
+	                	"allowFullscreen": 1
+	                },
+	                "socials": {
+			            "data": [
+			                {
+			                    "icon": "/full-viewport-video/parts/socials/parts/icons/facebook",
+			                    "href": "http://www.facebook.com/share.php?u=http://www-tst-heineken.macawhosting.net/We-are-heineken/Heineken-Story"
+			                },
+			                {
+			                    "icon": "/full-viewport-video/parts/socials/parts/icons/twitter",
+			                    "href": "https://twitter.com/intent/tweet"
+			                }
+			            ]    
+	                },
+					"spinner": {
+						"modifier": ["color1"],
+						"state": "active"
+					}	
+	        }
+		}
+	]
+}

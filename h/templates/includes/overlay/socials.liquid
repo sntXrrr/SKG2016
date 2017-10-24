@@ -1,0 +1,11 @@
+{% capture _state %}{% if site.data.global.overlay.active == "socials" %}active{% endif %}{% endcapture %}
+
+<div class="overlay unit" state="{{_state}}" name="socials" modifiers="allow-scrolling haslegal">
+	<div class="social-block">
+		{% include overlay/parts/title/default.liquid title="Follow us" %}
+
+		{% for _button in site.data.global.overlay.buttons %}
+			{% include overlay/parts/button/default.liquid %}
+		{% endfor %}
+	</div>
+</div>

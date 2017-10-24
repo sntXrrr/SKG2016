@@ -1,0 +1,30 @@
+{% if site.data.pages.carrousel.imagesonly.background %}
+	{% capture backgroundStyle %}style="background-image: url({{site.data.pages.carrousel.imagesonly.background}})"{% endcapture %}
+{% endif %}
+
+<div class="carrousel-bg background" variant="default"></div>
+<div class="carrousel container" data-id="2" modifier="{{site.data.pages.carrousel.imagesonly.modifiers}}" {{backgroundStyle}}>
+  {% if site.data.pages.carrousel.imagesonly.navPosition == 'top' %}
+		<div class="carrousel-carousel-nav carrousel-carousel-nav--top slider center wow fadeInUp nav-2">
+		{% for slide in site.data.pages.carrousel.imagesonly.slides %}
+				{% include carrousel/parts/slidenav/default.liquid %}
+		{% endfor %}
+		</div>
+	{% endif %}
+	
+  <div class="carrousel-carousel slider center wow fadeInUp slider-2">
+	{% for slide in site.data.pages.carrousel.imagesonly.slides %}
+		  {% include carrousel/parts/slide/default.liquid %}
+	{% endfor %}
+  </div>
+
+  {% if site.data.pages.carrousel.imagesonly.navPosition != 'top' %}
+		<div class="carrousel-carousel-nav slider center wow fadeInUp nav-2">
+		{% for slide in site.data.pages.carrousel.imagesonly.slides %}
+				{% include carrousel/parts/slidenav/default.liquid %}
+		{% endfor %}
+		</div>
+	{% endif %}
+
+
+</div>

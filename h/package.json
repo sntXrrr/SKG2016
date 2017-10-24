@@ -1,0 +1,32 @@
+{
+  "name": "heineken-prototype",
+  "version": "1.0.0",
+  "description": "Heineken front end",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erwin Smit",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-remove": "^0.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "gulp-uglify": "^2.1.2",
+    "mock-api-middleware": "0.0.3",
+    "run-sequence": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tfs.macaw.nl/Heineken/_git/RefreshHeinekenCom2015"
+  }
+}

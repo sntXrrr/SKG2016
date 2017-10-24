@@ -1,0 +1,268 @@
+{
+	"info":[
+	{
+		 "data": {
+	 	    "socials": {
+	            "data": [
+	                {
+	                    "icon": "/product-list/parts/socials/icons/facebook",
+	                    "href": "http://www.facebook.com/share.php?u=http://www-tst-heineken.macawhosting.net/We-are-heineken/Heineken-Story"
+	                },
+	                {
+	                    "icon": "/product-list/parts/socials/icons/twitter",
+	                    "href": "https://twitter.com/intent/tweet"
+	                }
+	            ]
+	        }
+		 }
+	}
+	],
+	"menu": [
+		{
+			"path": "title/default",
+			"data": {
+				"title": "Beers we are proud of"
+			}
+		},
+		{
+			"path": "divider/thin"
+		},
+		{
+			"path": "menu/default",
+			"data": {
+				"items": [
+					{
+						"title": "1 The_icon",
+						"icon": "product-list/parts/menu/parts/icon/icon1",
+						"id": "the-icon"
+					},
+					{
+						"title": "2 Normal_draught",
+						"icon": "product-list/parts/menu/parts/icon/icon2",
+						"id": "normal-draught"
+					},
+					{
+						"title": "3 The_new can",
+						"icon": "product-list/parts/menu/parts/icon/icon3",
+						"id": "the-new-can"
+					},
+					{
+						"title": "4 Extra_cold",
+						"icon": "product-list/parts/menu/parts/icon/icon4",
+						"id": "extra-cold"
+					},
+					{
+						"title": "5 The club_bottle",
+						"icon": "product-list/parts/menu/parts/icon/icon5",
+						"id": "club-bottle"
+					},
+					{
+						"title": "6 The_sub",
+						"icon": "product-list/parts/menu/parts/icon/icon6",
+						"id": "the-sub"
+					},
+					{
+						"title": "7 Draught_keg",
+						"icon": "product-list/parts/menu/parts/icon/icon7",
+						"id": "draught-keg"
+					},
+					{
+						"title": "8 The_icon",
+						"icon": "product-list/parts/menu/parts/icon/icon1",
+						"id": "the-icon"
+					},
+					{
+						"title": "9 Normal_draught",
+						"icon": "product-list/parts/menu/parts/icon/icon2",
+						"id": "normal-draught"
+					},
+					{
+						"title": "10 Heineken mini",
+						"icon": "product-list/parts/menu/parts/icon/icon3",
+						"id": "the-new-can"
+					},
+					{
+						"title": "11 The_new can",
+						"icon": "product-list/parts/menu/parts/icon/icon3",
+						"id": "the-new-can"
+					},
+					{
+						"title": "12 The_new can",
+						"icon": "product-list/parts/menu/parts/icon/icon3",
+						"id": "the-new-can"
+					}
+
+				]
+			}
+		},
+		{
+			"path": "divider/thin"
+		}
+	],
+
+	"content": [
+
+		{
+			"path": "product/default",
+			"data": {
+				"items" : [
+					{
+						"id": "the-icon",
+						"title": "Heineken_the icon",
+						"text": "Nulla vitae nunc et sem semper condimentum. Etiam dictum ipsum sit amet nisi sodales, sed sagittis magna euismod. Duis sit amet accumsan mi, eget fringilla felis. Nam fringilla turpis ut velit elementum vehicula.",
+						"backgroundnormal": "/dummy-resources/img/background/product1.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product4.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/product1.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product1-large.png"
+								}
+							},
+						"raas-links": [
+							{
+								"title": "AH",
+								"logo": "/dummy-resources/img/tiles/ah.png",
+								"url": "http://ah.nl"
+							},
+							{
+								"title": "Hoogvliet",
+								"logo": "/dummy-resources/img/tiles/ah.png",
+								"url": "http://ah.nl"
+							},
+							{
+								"title": "Jumbo",
+								"logo": "/dummy-resources/img/tiles/ah.png",
+								"url": "http://ah.nl"
+							}
+						]
+					},
+					{
+						"id": "normal-draught",
+						"title": "Heineken_normal draught",
+						"text": "Ready to pour the perfect beer? With a chilled DraughtKeg — Five litres of fresh, draught Heineken — you just raise your glass, tap and pour. Sowheter it’s a party or a barbeque, you can serve your friends the perfect glass of smooth, cold beer.",
+						"backgroundnormal": "/dummy-resources/img/background/product2.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product2.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/product2.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product2-large.png"
+								}
+							},
+						"button": {
+							"href": "#",
+							"modifiers": "size4 color5",
+							"title": "call to action button"
+						}
+					},
+					{
+						"id": "the-new-can",
+						"title": "Heineken normal draught",
+						"text": "Ready to pour the perfect beer? With a chilled DraughtKeg — Five litres of fresh, draught Heineken — you just raise your glass, tap and pour. Sowheter it’s a party or a barbeque, you can serve your friends the perfect glass of smooth, cold beer.",
+						"backgroundnormal": "/dummy-resources/img/background/product3.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product3.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/product3.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product3-large.png"
+								}
+							}
+					},
+					{
+						"id": "extra-cold",
+						"title": "Heineken_normal draught",
+						"text": "Ready to pour the perfect beer? With a chilled DraughtKeg — Five litres of fresh, draught Heineken — you just raise your glass, tap and pour. Sowheter it’s a party or a barbeque, you can serve your friends the perfect glass of smooth, cold beer.",
+						"backgroundnormal": "/dummy-resources/img/background/product4.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product4.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/product4.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product4-large.png"
+								}
+							}
+					},
+					{
+						"id": "club-bottle",
+						"title": "Heineken_normal draught",
+						"text": "Ready to pour the perfect beer? With a chilled DraughtKeg — Five litres of fresh, draught Heineken — you just raise your glass, tap and pour. Sowheter it’s a party or a barbeque, you can serve your friends the perfect glass of smooth, cold beer.",
+						"backgroundnormal": "/dummy-resources/img/background/product5.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product5.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/product5.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product5-large.png"
+								}
+							}
+					},
+					{
+						"id": "the-sub",
+						"title": "Heineken_normal draught",
+						"text": "Ready to pour the perfect beer? With a chilled DraughtKeg — Five litres of fresh, draught Heineken — you just raise your glass, tap and pour. Sowheter it’s a party or a barbeque, you can serve your friends the perfect glass of smooth, cold beer.",
+						"backgroundnormal": "/dummy-resources/img/background/product6.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product6.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/product6.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product6-large.png"
+								}
+							}
+					},
+					{
+						"id": "draught-keg",
+						"title": "Heineken_normal draught",
+						"text": "Ready to pour the perfect beer? With a chilled DraughtKeg — Five litres of fresh, draught Heineken — you just raise your glass, tap and pour. Sowheter it’s a party or a barbeque, you can serve your friends the perfect glass of smooth, cold beer.",
+						"backgroundnormal": "/dummy-resources/img/background/product7.jpg",
+						"backgroundzoom": "/dummy-resources/img/background/product7.jpg",
+						"icon": {
+								"position-x": "50",
+								"position-y": "60"
+							},
+						"image": {
+								"normal": {
+									"src": "/dummy-resources/img/product/guidance-black.png"
+								},
+								"zoom":  {
+									"src": "/dummy-resources/img/product/product7-large.png"
+								}
+							}
+					}
+				]
+			}
+		}
+	]
+}

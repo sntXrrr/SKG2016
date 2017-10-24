@@ -1,0 +1,9 @@
+{
+    "wrapper": "LZ_container", 
+    "googleKey": "", 
+    "apiBaseUrl": "https://logicapi.heineken.nl/locatiezoeker/v2",
+    "apiKey": "",
+    "locationFinderId": "30176a8818dcab7dffcbe224f0186f1d",
+    "theme": "Heineken", 
+    "language": "en"
+}

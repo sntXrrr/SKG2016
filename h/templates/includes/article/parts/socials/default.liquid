@@ -1,0 +1,11 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit socials" modifier="align-center" variant="{{ item.variant}}" {{backgroundStyle}}>
+	{% for _button in item.data %}
+		{% include article/parts/socials/parts/button/default.liquid %}
+	{% endfor %}
+</div>

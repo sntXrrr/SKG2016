@@ -1,0 +1,8 @@
+<div class="buttons container">
+	<div class="buttons unit button-overview">
+		{% for item in site.data.pages.x_buttons.content %}
+			{% capture includepath %}buttons/parts/button/default.liquid{% endcapture %}
+			{% include {{ includepath }} %}
+		{% endfor %}
+	</div>
+</div>

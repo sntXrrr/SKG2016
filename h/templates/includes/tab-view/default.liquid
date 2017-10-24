@@ -1,0 +1,21 @@
+<div class="tab-view container" variant="box2">
+	{% for item in model.content %}
+		{% include "tab-view/parts/title/default" %}
+
+		<div class="tab-view unit" variant="menu">
+			{% include "tab-view/parts/menu/default" %}
+		</div>
+        <div class="tab-view unit" variant="content">
+			{% for tab in item.data.tab %}
+				{% include tab.path %}
+			{% endfor %}
+		</div>
+
+		<div class="tab-view unit" variant="{{ item.data.mobile-view.variant }}">
+			{% include item.data.mobile-view.path %}
+		</div>
+	{% endfor %}
+</div>
+
+
+

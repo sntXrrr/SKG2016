@@ -1,0 +1,10 @@
+{% comment %} get files in /pages/ {% endcomment %}
+{% assign items = site.data.global.pagesWithSubnav %}
+
+<ul class="menu" variant="horizontal">
+	{% include nav/parts/menu/parts/item/active.liquid %}
+
+	{% for item in items %}
+		{% include nav/parts/menu/parts/item/default.liquid %}
+	{% endfor %}
+</ul>

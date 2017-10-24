@@ -1,0 +1,16 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit rtf" variant="{{ item.variant}}" modifier="align-center" {{backgroundStyle}}>
+    <div class="stackla-widget" 
+         data-id="{{item.data.configuration.id}}" 
+         data-hash="{{item.data.configuration.hash}}" 
+         data-ct="{{item.data.configuration.ct}}" 
+         data-title="{{item.data.configuration.title}}" 
+         data-alias="{{item.data.configuration.alias}}" 
+         data-ttl="{{item.data.configuration.ttl}}"\
+         ></div> 
+</div>

@@ -1,0 +1,38 @@
+<div class="hero container" variant="editing">
+	<div class="hero unit">
+		<table class="content">
+			<tr>
+				<td class="placeholder" variant="tl">
+					{% include "hero/parts/title/default" with "This hero" %}
+					{% include "hero/parts/title/default" with "is amazing" %}
+				</td>
+				<td class="placeholder" variant="tc"></td>
+				<td class="placeholder" variant="tr"></td>
+			</tr>
+			<tr>
+				<td class="placeholder" variant="cl"></td>
+				<td class="placeholder" variant="cc">
+					{% include "hero/parts/play/default" with "color3" %}
+				</td>
+				<td class="placeholder" variant="cr"></td>
+			</tr>
+			<tr>
+				<td class="placeholder" variant="bl"></td>
+				<td class="placeholder" variant="bc"></td>
+				<td class="placeholder" variant="br">
+					{% include "hero/parts/button/default" with "size4 color3" %}
+				</td>
+			</tr>
+		</table>
+
+		{% include "hero/parts/background/image" %}
+
+	</div>
+
+	<div class="message">Note, this is a representation of the hero within the contraints of Sitecore.</div>
+
+	<div class="video">
+		<h2>configured video: https://www.youtube.com/watch?v=Ys3FLhtZYkk</h2>
+		<iframe width="920" height="518" src="https://www.youtube-nocookie.com/embed/Ys3FLhtZYkk?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>

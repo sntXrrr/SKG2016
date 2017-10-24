@@ -1,0 +1,11 @@
+<ul class="menu" variant="main">
+	{% include footer/parts/menu/parts/item/enjoy-responsibly.liquid %}
+
+	{% for _item in site.data.global.footer.navs %}
+		{% if _item.image %}
+			{% include footer/parts/menu/parts/item/image.liquid %}
+		{% else %}
+			{% include footer/parts/menu/parts/item/default.liquid %}
+		{% endif %}
+	{% endfor %}
+</ul>

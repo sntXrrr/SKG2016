@@ -1,0 +1,10 @@
+{% capture modifier %}
+	{% if page.showLegal %}
+		haslegal
+	{% else %}
+
+	{% endif %}
+{% endcapture %}
+<div class="scroll-top-button container" modifier="{{modifier}}">
+	<div class="scroll-top-button unit" state="hidden"></div>
+</div>	

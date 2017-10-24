@@ -1,0 +1,18 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit rtf" variant="{{ item.variant }}" modifier="{{ item.modifiers }}" {{backgroundStyle}}>	
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<p>Cta button below</p>
+	<p>
+		<div sticky="mobileOnly">
+			<a href="#" class="shared-button" modifiers="color4 size2 haslegal">
+				<span class="multiplelines">Watch the highlight Watch the highlight Multiplelines</span>
+			</a>
+		</div>
+	</p>	
+
+</div>

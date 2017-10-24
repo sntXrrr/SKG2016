@@ -1,0 +1,9 @@
+{
+    "formName": "full-form",
+    "action": "#",
+    "errorData" : false,
+    "succesData": {
+        "name": "Ravi",
+        "page": "full-viewport-form-success.html"
+    }
+}

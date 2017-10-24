@@ -1,0 +1,31 @@
+<div id="angular-app-placeholder">
+    <div class="hex-form container" variant="box2" id="angular-app">
+        <div ng-controller="pocController">
+            <div class="hex-form unit title" modifier="center">
+                <h2 class="title">
+                    {% raw %} {{angularPocMessage}} {% endraw %}
+                </h2>
+            </div>
+            
+            <div class="hex-form unit">
+                <div class="form container">
+                    <form class="form" action="x_form_succes" name="full-form" variant="full-form" novalidate="">
+                        <div class="form unit">
+                            <div class="content container" style="width: 360px; margin: 0 auto; float: none;">
+                                <div class="content unit">
+                                    <div class="inputfield container">
+                                        <div class="inputfield unit">
+                                            <input class="input" variant="text" ng-model="angularPocMessage" type="text" name="poc" placeholder="Angular Poc*">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<script src="/browser-resources/scripts_source/poc/angular-poc.js"></script>

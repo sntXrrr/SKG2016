@@ -1,0 +1,10 @@
+{
+	"content": [
+		{
+            "path": "video/default"
+        },
+        {
+        	"path": "image/default"
+        }
+	]
+}

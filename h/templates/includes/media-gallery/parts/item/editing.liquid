@@ -1,0 +1,9 @@
+<div class="media unit">
+	<div class="sitecore-edit">
+		{% include media-gallery/parts/item/parts/head/default.liquid %}
+		<div class="content">
+			{% capture includepath %}media-gallery/parts/item/parts/content-img/{{item.size}}{% endcapture %}
+			{% include {{includepath}}.liquid %}
+		</div>
+	</div>
+</div>

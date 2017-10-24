@@ -1,0 +1,49 @@
+<div class="form container" modifier="hide-desktop">
+    <form class="form" action="x_form_succes" name="mobile-form" variant="mobile-form" novalidate>
+        <div class="form unit">
+            <div class="content container">
+                <div class="content unit text">
+                    <p>How can we contact you</p>
+                </div>
+                <div class="content unit">
+                    <div class="inputfield container">
+                        <div class="inputfield unit">
+                            <input class="input" variant="text" type="text" name="company" placeholder="Company*" data-required="true" />
+                        </div>
+                        <div class="inputfield unit">
+                            <input class="input" variant="text" type="text" name="name" placeholder="Your name*" data-required="true" />
+                        </div>
+                        <div class="inputfield unit">
+                            <input class="input" variant="text" type="tel" name="phone" pattern="^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$" placeholder="Phone number*" data-required="true" oninvalid="setCustomValidity(' ')" />
+                        </div>
+                        <div class="inputfield unit">
+                            <input class="input" variant="email" type="email" name="email" placeholder="E-mail address*" data-required="true" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form unit" variant="error-message" state="hidden">
+            <div class="content container">
+                <div class="content unit text">
+                    <p>Not all required fields are filled in correctly</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form unit">
+            <div class="content container">
+                <div class="content unit">
+                    <div class="button container">
+                        <div class="button unit">
+                            <button class="submit-button shared-button" modifiers="color4 size1">
+                                <span class="multiplelines">Send request</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

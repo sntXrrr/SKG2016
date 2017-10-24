@@ -1,0 +1,296 @@
+{
+    "background": "/dummy-resources/img/background/product4.jpg",
+    "content": [{
+            "path": "title/default"
+        },
+        {
+            "path": "socials/default",
+            "data": [{
+                    "color": "color1",
+                    "icon": "article/parts/socials/parts/icon/facebook",
+                    "title": "facebook",
+                    "href": "htttps://www.facebook.nl"
+                },
+                {
+                    "color": "color2",
+                    "icon": "article/parts/socials/parts/icon/twitter",
+                    "title": "twitter",
+                    "href": "https://www.twitter.com"
+                },
+                {
+                    "color": "color3",
+                    "icon": "article/parts/socials/parts/icon/youtube",
+                    "title": "youtube",
+                    "href": "/pages/full-viewport-image"
+                }
+            ]
+        },
+        {
+            "id": "section1",
+            "path": "rich-text/default",
+            "variant": "box1",
+            "modifiers": "",
+            "data": "Lorem ipsum"
+        },
+        {
+            "id": "section1",
+            "path": "rich-text/cta",
+            "variant": "box1",
+            "modifiers": "",
+            "data": "Lorem ipsum"
+        },
+        {
+            "id": "section2",
+            "path": "rich-text/default",
+            "variant": "box3",
+            "modifiers": "align-center",
+            "data": "Lorem ipsum",
+            "background": "/dummy-resources/img/background/product4.jpg"
+        },
+        {
+            "id": "section3",
+            "path": "rich-text/default",
+            "variant": "box3",
+            "modifiers": "fixed-background",
+            "data": "Lorem ipsum",
+            "background": "/dummy-resources/img/product/product1.png"
+        },
+        {
+            "path": "quote/default",
+            "data": {
+                "name": "Koen en Sander",
+                "job": "Radio DJ",
+                "text": "<strong>Cras urna urna</strong>, accumsan id tincidunt non, ullamcorper vel erat. Sed orci nisl, tincidunt eu lectus sed, dapibus rhoncus mauris. Cras venenatis massa mi, convallis facilisis lectus porta ut. Proin dapibus dolor non interdum elementum. Proin condimentum pulvinar varius. Aenean nec tortor eget lacus lobortis blandit. Morbi nibh neque, condimentum id sem sit amet, pretium tempus lorem. Fusce vestibulum id enim nec consectetur. Etiam hendrerit nec tortor at bibendum. Mauris felis leo, mollis id odio id, varius gravida lorem."
+            }
+
+        },
+
+        {
+            "path": "image/default",
+            "modifiers": "",
+            "data": {
+                "src": "http://placehold.it/1600x900",
+                "alt": "a placeholder image",
+                "title": "nothing to see here..."
+            }
+        },
+        {
+            "path": "image/default",
+            "modifiers": "full-width",
+            "data": {
+                "src": "http://placehold.it/1600x900",
+                "alt": "a placeholder image",
+                "title": "nothing to see here..."
+            }
+        },
+        {
+            "path": "divider/short",
+            "variant": "box1"
+        },
+        {
+            "path": "divider/short",
+            "variant": "box2"
+        },
+        {
+            "path": "divider/thin"
+        },
+        {
+            "path": "divider/thick"
+        },
+
+        {
+            "path": "list/simple",
+            "variant": "box1",
+            "data": {
+                "title": "Top 5 tips for cutting down",
+                "items": [{
+                        "title": "List item #1"
+                    },
+                    {
+                        "title": "List item #2"
+                    },
+                    {
+                        "title": "List item #3"
+                    },
+                    {
+                        "title": "List item #4"
+                    },
+                    {
+                        "title": "List item #5"
+                    },
+                    {
+                        "title": "List item #6"
+                    }
+                ]
+            }
+        },
+        {
+            "path": "list/extended",
+            "variant": "box2",
+            "data": {
+                "title": "Top 5 tips for cutting down",
+                "items": [{
+                        "title": "List item #1",
+                        "text": "Some long string of text here, possible with embedded HTML"
+                    },
+                    {
+                        "title": "List item #2",
+                        "text": "Some long string of text here, possible with embedded HTML"
+                    },
+                    {
+                        "title": "List item #3",
+                        "text": "Some long string of text here, possible with embedded HTML"
+                    },
+                    {
+                        "title": "List item #4",
+                        "text": "Some long string of text here, possible with embedded HTML"
+                    },
+                    {
+                        "title": "List item #5",
+                        "text": "Some long string of text here, possible with embedded HTML"
+                    },
+                    {
+                        "title": "List item #6",
+                        "text": "Some long string of text here, possible with embedded HTML"
+                    }
+                ]
+            }
+        },
+        {
+            "path": "column-2/default",
+            "data": {
+                "items": [{
+                        "variant": "box1",
+                        "column": [{
+                                "block": "left",
+                                "button": {
+                                    "class": "button-black-transparent-border",
+                                    "href": "#",
+                                    "title": "Watch the highlights"
+                                }
+                            },
+                            {
+                                "block": "right",
+                                "button": {
+                                    "class": "button-black-transparent-border",
+                                    "href": "#",
+                                    "title": "Watch the highlights"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "variant": "box2",
+                        "column": [{
+                                "block": "left",
+                                "button": {
+                                    "class": "button-black-transparent-border",
+                                    "href": "#",
+                                    "title": "Watch the highlights"
+                                }
+                            },
+                            {
+                                "block": "right",
+                                "button": {
+                                    "class": "button-black-transparent-border",
+                                    "href": "#",
+                                    "title": "Watch the highlights"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "path": "image-text/default",
+            "data": {
+                "modifiers": "image-left",
+                "textblock": {
+                    "title": "Some practical tips lorem ipsum dolor",
+                    "secondaryTitle": "Page section",
+                    "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+                    "button": {
+                        "class": "button-black-transparent-border",
+                        "href": "/pages/full-viewport-video.html",
+                        "title": "Watch the highlights"
+                    }
+                },
+                "image": {
+                    "src": "http://placehold.it/1600x900",
+                    "alt": "a placeholder image",
+                    "title": "nothing to see here..."
+                }
+            }
+        },
+        {
+            "path": "image-text/default",
+            "data": {
+                "modifiers": "image-right",
+                "textblock": {
+                    "title": "Some practical tips lorem ipsum dolor",
+                    "secondaryTitle": "Page section",
+                    "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+                    "button": {
+                        "class": "button-black-transparent-border",
+                        "href": "#",
+                        "title": "Watch the highlights"
+                    }
+                },
+                "image": {
+                    "src": "http://placehold.it/1600x900",
+                    "alt": "a placeholder image",
+                    "title": "nothing to see here..."
+                }
+            }
+        },
+        {
+            "path": "image-image/default",
+            "data": {
+                "image": {
+                    "src": "http://placehold.it/1600x900",
+                    "alt": "a placeholder image",
+                    "title": "nothing to see here..."
+                }
+            }
+        },
+        {
+            "path": "raas/default",
+            "data": {
+                "raas": [{
+                        "id": "1",
+                        "url": "http://ah.nl",
+                        "image": "/dummy-resources/img/raas/button_ah.png",
+                        "label": "AH"
+                    },
+                    {
+                        "id": "2",
+                        "url": "http://jumbo.nl",
+                        "image": "/dummy-resources/img/raas/button_jumbo.png",
+                        "label": "Jumbo"
+                    },
+                    {
+                        "id": "3",
+                        "url": "http://hoogvliet.nl",
+                        "image": "/dummy-resources/img/raas/button_hoogvliet.png",
+                        "label": "Hoogvliet"
+                    }
+                ]
+            }
+        },
+        {
+            "path": "stackla/default",
+            "variant": "box2",
+            "data": {
+                "configuration": {
+                    "id": 13279,
+                    "hash": "582ebe083d3a1",
+                    "ct": "",
+                    "title": "Macaw Test",
+                    "alias": "heineken.stackla.com",
+                    "ttl": 30
+                }
+            }
+        }
+    ]
+}

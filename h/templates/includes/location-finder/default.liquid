@@ -1,0 +1,15 @@
+<script type="text/javascript" src="https://locatiezoeker.heineken.nl/locatiezoeker2.0/js/LocationFinder.js" charset="utf-8"></script>
+
+<div id="{{site.data.pages.location-finder.wrapper}}" class="location-finder"></div>
+
+<script type="text/javascript">
+	new LocationFinder({
+		wrapper: '{{site.data.pages.location-finder.wrapper}}', 
+		googleKey: '{{site.data.pages.location-finder.googleKey}}', // See widget guide how to obtain this value
+		apiBaseUrl: '{{site.data.pages.location-finder.apiBaseUrl}}',
+		apiKey: '{{site.data.pages.location-finder.apiKey}}', // See the widget guide how to obtain this value
+		locationFinderId: '{{site.data.pages.location-finder.locationFinderId}}',
+		theme: '{{site.data.pages.location-finder.theme}}', // Empty or missing uses default Google Maps
+		language: '{{site.data.pages.location-finder.language}}' // Possible languages are: en, nl
+	});
+</script>

@@ -1,0 +1,174 @@
+[
+    {
+        "key": "pages",
+        "name": "Pages",
+        "url": "/pages",
+        "directory": true,
+        "children": [
+            {
+                "key": "home",
+                "name": "Home",
+                "url": "/pages/home",
+                "directory": false
+            }
+        ]
+    },
+    {
+        "key": "pages",
+        "name": "Pages",
+        "url": "/pages",
+        "directory": true,
+        "children": [
+            {
+                "key": "article",
+                "name": "Article",
+                "url": "/pages/article",
+                "directory": false
+            },
+            {
+                "key": "calendar",
+                "name": "Calendar",
+                "url": "/pages/calendar",
+                "directory": false
+            },
+            {
+                "key": "carrousel",
+                "name": "Carrousel",
+                "url": "/pages/carrousel",
+                "directory": false
+            },
+            {
+                "key": "craas",
+                "name": "Craas",
+                "url": "/pages/craas",
+                "directory": false
+            },
+            {
+                "key": "faq",
+                "name": "Faq",
+                "url": "/pages/faq",
+                "directory": false
+            },
+            {
+                "key": "freehtml",
+                "name": "Freehtml",
+                "url": "/pages/freehtml",
+                "directory": false
+            },
+            {
+                "key": "full-viewport-event",
+                "name": "Full viewport event",
+                "url": "/pages/full-viewport-event",
+                "directory": false
+            },
+            {
+                "key": "full-viewport-form-succes",
+                "name": "Full viewport form succes",
+                "url": "/pages/full-viewport-form-succes",
+                "directory": false
+            },
+            {
+                "key": "full-viewport-image",
+                "name": "Full viewport image",
+                "url": "/pages/full-viewport-image",
+                "directory": false
+            },
+            {
+                "key": "full-viewport-page",
+                "name": "Full viewport page",
+                "url": "/pages/full-viewport-page",
+                "directory": false
+            },
+            {
+                "key": "full-viewport-video",
+                "name": "Full viewport video",
+                "url": "/pages/full-viewport-video",
+                "directory": false
+            },
+            {
+                "key": "gateway",
+                "name": "Gateway",
+                "url": "/pages/gateway",
+                "directory": false
+            },
+            {
+                "key": "gateway-message",
+                "name": "Gateway message",
+                "url": "/pages/gateway-message",
+                "directory": false
+            },
+            {
+                "key": "hero-small",
+                "name": "Hero small",
+                "url": "/pages/hero-small",
+                "directory": false
+            },
+            {
+                "key": "hex",
+                "name": "Hex",
+                "url": "/pages/hex",
+                "directory": false
+            },
+            {
+                "key": "media-gallery",
+                "name": "Media gallery",
+                "url": "/pages/media-gallery",
+                "directory": false
+            },
+            {
+                "key": "product-list",
+                "name": "Product list",
+                "url": "/pages/product-list",
+                "directory": false
+            },
+            {
+                "key": "submenu",
+                "name": "Submenu",
+                "url": "/pages/submenu",
+                "directory": false
+            },
+            {
+                "key": "trigger",
+                "name": "Trigger",
+                "url": "/pages/trigger",
+                "directory": false
+            },
+            {
+                "key": "win",
+                "name": "Win",
+                "url": "/pages/win",
+                "directory": false
+            },
+            {
+                "key": "x_buttons",
+                "name": "X buttons",
+                "url": "/pages/x_buttons",
+                "directory": false
+            },
+            {
+                "key": "x_error",
+                "name": "X error",
+                "url": "/pages/x_error",
+                "directory": false
+            },
+            {
+                "key": "x_form_error",
+                "name": "X form error",
+                "url": "/pages/x_form_error",
+                "directory": false
+            },
+            {
+                "key": "x_form_succes",
+                "name": "X form succes",
+                "url": "/pages/x_form_succes",
+                "directory": false
+            },
+            {
+                "key": "x_iframe",
+                "name": "X iframe",
+                "url": "/pages/x_iframe",
+                "directory": false
+            }
+        ]
+    }
+]

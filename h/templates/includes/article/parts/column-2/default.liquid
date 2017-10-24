@@ -1,0 +1,14 @@
+{% for _list in item.data.items %}
+	{% if item.background %}
+		{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+	{% else %}
+		{% capture backgroundStyle %}{% endcapture %}
+	{% endif %}
+
+
+	<div id="art_{{ item.id }}" class="article unit column-2" variant="{{ _list.variant }}" {{backgroundStyle}}>
+		{% for _column in _list.column %}
+			{% include article/parts/column-2/parts/column/default.liquid %}
+		{% endfor %}
+	</div>
+{% endfor %}

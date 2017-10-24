@@ -1,0 +1,10 @@
+<li>
+	<a href="{{item.url}}">{{item.name | remove: ".html"}}</a>
+	{% if item.pages %}
+	<ul class="menu">
+		{% for item in item.pages %}
+			{% include nav/parts/menu/parts/item/default.liquid %}
+		{% endfor %}
+	</ul>
+	{% endif %}
+</li>

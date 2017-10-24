@@ -1,0 +1,143 @@
+{
+	"default": {
+        "id": 1,
+        "checkAnswerEndpoint": "/mockapi/quiz/checkAnswer",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Who brewed the first Heineken",
+                "answers": [
+                    {
+                        "id": 11,
+                        "text": "Gerard Heineken"
+                    },
+                    {
+                        "id": 12,
+                        "text": "Clarence Heineken"
+                    },
+                    {
+                        "id": 13,
+                        "text": "Henk Heineken"
+                    },
+                    {
+                        "id": 14,
+                        "text": "Arnold-Jan Heineken" 
+                    }
+                ]        
+            },
+            {
+                "id": 2,
+                "text": "Where is the Heineken experience",
+                "answers": [
+                    {
+                        "id": 21,
+                        "text": "Amstelveen"
+                    },
+                    {
+                        "id": 22,
+                        "text": "Utrecht"
+                    },
+                    {
+                        "id": 23,
+                        "text": "Amsterdam"
+                    },
+                    {
+                        "id": 24,
+                        "text": "Arnhem" 
+                    }
+                ]        
+            },
+            {
+                "id": 3,
+                "text": "What colour is the Heineken star?",
+                "answers": [
+                    {
+                        "id": 31,
+                        "text": "red"
+                    },
+                    {
+                        "id": 32,
+                        "text": "green"
+                    },
+                    {
+                        "id": 33,
+                        "text": "blue"
+                    },
+                    {
+                        "id": 34,
+                        "text": "purple" 
+                    }
+                ]        
+            },
+            {
+                "id": 4,
+                "text": "When was Heineken founded?",
+                "answers": [
+                    {
+                        "id": 41,
+                        "text": "1947"
+                    },
+                    {
+                        "id": 12,
+                        "text": "1680"
+                    },
+                    {
+                        "id": 13,
+                        "text": "1864"
+                    },
+                    {
+                        "id": 14,
+                        "text": "1910" 
+                    }
+                ]        
+            }
+        ],
+        "highscore": [
+            {
+                "name": "Debbie Mullen",
+                "score": "10000"
+            },
+            {
+                "name": "Shanna Page",
+                "score": "9999"
+            },
+            {
+                "name": "Mccoy Taylor",
+                "score": "9998"
+            },
+            {
+                "name": "Moon Hogan",
+                "score": "9997"
+            },
+            {
+                "name": "Hubbard Clayton",
+                "score": "9996"
+            },
+            {
+                "name": "Wilson Fields",
+                "score": "9995"
+            },
+            {
+                "name": "Adeline Harper",
+                "score": "9994"
+            },
+            {
+                "name": "Mae Whitfield",
+                "score": "9993"
+            },
+            {
+                "name": "Mcdonald Henry",
+                "score": "9992"
+            },
+            {
+                "name": "Jenny Bowen",
+                "score": "9991"
+            },
+            {
+                "name": "Just played",
+                "score": "500",
+                "position": "52"
+            }
+        ]
+    }
+}

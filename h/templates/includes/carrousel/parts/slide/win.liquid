@@ -1,0 +1,47 @@
+<div class="slide-item-outer" data-id="{{slide.id}}">
+	<div class="slide-item">
+		<div class="slide-item__img-wrap">
+			<picture>
+				<source
+					media="(max-width: 750px) and (orientation: portrait)"
+					sizes="80vw"
+					srcset="{{slide.image-port-bg}} 230w, {{slide.image-port-bg}} 460w"
+				>
+				<img
+					class="slide-item__img-bg"
+					src="{{slide.image-bg}}"
+					sizes="80vw,(min-width: 1220px) 800px"
+					srcset="{{slide.image-bg}} 400w, {{slide.image-bg}} 800w"
+					alt=""
+				>
+			</picture>
+			{% if slide.image-fg != empty && slide.image-port-fg != empty%}
+			<picture>
+				<source
+					media="(max-width: 750px) and (orientation: portrait)"
+					sizes="80vw"
+					srcset="{{slide.image-port-fg}} 250w, {{slide.image-port-fg}} 500w"
+				>
+				<img
+					class="slide-item__img-fg"
+					src="{{slide.image-fg}}"
+					sizes="80vw, (min-width: 1220px) 840px"
+					srcset="{{slide.image-fg}} 420w, {{slide.image-fg}} 840w"
+					alt=""
+				>
+			</picture>
+			{% endif %}
+		</div>
+		<h4 class="slide-item__description">
+			<div class="slide-item__line">
+				<span>{{slide.line1}}</span>
+			</div>
+			<div class="slide-item__line">
+				<span>{{slide.line2}}</span>
+			</div>
+		</h4>
+		<p class="slide-item__descriptiontext">
+			<span>{{slide.text}}</span>
+		</p>
+	</div>
+</div>

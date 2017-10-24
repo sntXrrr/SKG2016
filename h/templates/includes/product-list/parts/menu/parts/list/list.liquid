@@ -1,0 +1,6 @@
+<a href="#prd_{{_list.id}}">
+	{% if _list.icon != empty %}
+		<div class="icon-block">{% include {{_list.icon}}.liquid %}</div>		
+	{% endif %}
+	<span>{{_list.title}}</span>
+</a>

@@ -1,0 +1,7 @@
+<h2 class="title" variant="default" modifier="{{ content.modifiers | join: ' ' }}">
+	{% assign icon = content.icon %}
+	{% capture includepath %}trigger/parts/icon/{{ icon.variant }}.liquid{% endcapture %}
+	{% include {{ includepath }} %}
+
+	<span>{{ content.text }}</span>
+</h2>

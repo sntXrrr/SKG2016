@@ -1,0 +1,15 @@
+<div class="product-list container wow fadeIn">
+	{% for _product in item.data.items %}
+		<div class="product-list unit" id="prd_{{ _product.id }}">
+			{% include product-list/parts/product/parts/title/default.liquid %}
+			{% include product-list/parts/product/parts/text/default.liquid %}
+			{% include product-list/parts/product/parts/button/default.liquid %}
+			{% include product-list/parts/product/parts/raas/default.liquid %}
+
+			{% include product-list/parts/product/parts/icon/default.liquid %}
+			{% include product-list/parts/background/image.liquid %}
+		</div>
+	{% endfor %}
+</div>
+
+{% include product-list/parts/dot-navigation/default.liquid %}

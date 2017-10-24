@@ -1,0 +1,31 @@
+{% if page.showLegal %}
+	{% assign variant = 'haslegal' %}
+{% else %}
+	{% assign variant = '' %}
+{% endif %}
+
+<div class="full-viewport container" modifier="{{variant}}">
+	{% for item in site.data.pages.full-viewport-page.content %}
+		{% include full-viewport-page/parts/page/default.liquid %}
+
+		<div class="full-viewport-info unit" state="hidden">
+			<div class="full-viewport-info-middle unit">
+				{% include full-viewport-page/parts/title/default.liquid %}
+				{% include full-viewport-page/parts/text/default.liquid %}
+				{% include full-viewport-page/parts/button/default.liquid %}
+			</div>
+			
+			{% include full-viewport-page/parts/socials/default.liquid %}
+
+			<div class="background-transparent"></div>
+		</div>	
+		<div class="full-viewport-info-text unit" state="active">
+			<div class="full-viewport-info-text-middle unit">
+				{% include full-viewport-page/parts/title/default.liquid %}
+			</div>
+		</div>	
+		{% include full-viewport-page/parts/more-info/default.liquid %}
+	{% endfor %}
+
+	{% include full-viewport-page/parts/close-button/default.liquid %}
+</div>	

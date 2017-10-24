@@ -1,0 +1,54 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit rtf" variant="{{ item.variant }}" modifier="{{ item.modifiers }}" {{backgroundStyle}}>	
+	Sed id interdum elit. Nam sit amet fermentum mi, sit amet finibus lorem. Fusce purus ipsum, malesuada vitae enim sed, tincidunt pulvinar neque. Integer magna ipsum, lacinia sed orci vel, volutpat luctus nibh. Nulla facilisi. Cras vehicula turpis vel lacus egestas, eu egestas ligula consequat. Integer nulla justo, commodo ut tellus et, fermentum varius turpis. Aenean in urna neque. 
+
+	<h2>Titel h2</h2>
+	<h3>Titel h3</h3>
+	<h4>Titel h4</h4>
+	<h5>Titel h5</h5>
+
+	<p>
+		Paragraf block
+	</p>
+
+	<p class="intro-text">
+		Donec pharetra feugiat pulvinar. Nullam maximus pellentesque blandit. Pellentesque nec ligula feugiat, varius eros nec, sagittis sem. Phasellus lectus lorem, semper ac ipsum id, vulputate rhoncus leo. Sed nisi turpis, elementum quis laoreet in, dapibus id risus.
+	</p>
+
+	<p class="body-text">
+		Sed id interdum elit. Nam sit amet fermentum mi, sit amet finibus lorem. Fusce purus ipsum, malesuada vitae enim sed, tincidunt pulvinar neque. Integer magna ipsum, lacinia sed orci vel, volutpat luctus nibh. Nulla facilisi. Cras vehicula turpis vel lacus egestas, eu egestas ligula consequat. Integer nulla justo, commodo ut tellus et, fermentum varius turpis. Aenean in urna neque. 
+		<a href="/pages/product-list" class="link-with-arrow">Hoi ik ben een speciale link</a> Nulla facilisi. Cras vehicula turpis vel lacus egestas, eu egestas ligula consequat. Integer nulla justo, commodo ut tellus et, fermentum varius turpis. Aenean in urna neque. 
+	</p>
+
+	<p class="annotation">
+		Annotation paragraph
+	</p>
+
+	<ul>
+		<li>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		</li>
+		<li>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at massa id felis rutrum iaculis. Nulla at molestie justo. Aliquam vitae nulla ac felis elementum euismod vitae mattis nulla. 
+		</li>
+		<li>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at massa id felis rutrum iaculis. Nulla at molestie justo. Aliquam vitae nulla ac felis elementum euismod vitae mattis nulla.
+		</li>
+		<li>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		</li>
+	</ul>	
+
+	<a class="button-black-transparent-border" href="http://www.facebook.com">Button 1</a>
+	<a class="button-black-transparent" href="http://www.facebook.com">Button 2</a>
+	<a class="button-black" href="http://www.facebook.com">Button 3</a>
+	<a class="button-green-dark" href="http://www.facebook.com">Button 4</a>
+	<a class="button-green" href="http://www.facebook.com">Button 5</a>
+	<a class="button-green-light" href="http://www.facebook.com">Button 6</a>
+	<a class="button-transparent-border" href="http://www.facebook.com">Button 7</a>
+	<a class="button-white-border" href="http://www.facebook.com">Button 8</a>	
+	<hr />
+</div>

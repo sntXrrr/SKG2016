@@ -1,0 +1,59 @@
+{% if site.data.global.calendar.background %}
+	{% capture backgroundStyle %}style="background-image: url({{site.data.global.calendar.background}})"{% endcapture %}
+{% endif %}
+<div class="event container" id="event-container_{{ site.data.global.calendar.id }}" modifier="{{ site.data.global.calendar.modifiers }}" {{backgroundStyle}}>
+
+  <div class="custom-dropdown-wrap wow fadeInUp">
+    <div class="custom-dropdown month" tabindex="-1">
+        <div class="custom-dropdown__active-item">{{site.data.global.calendar.activeitemMonth}}</div>
+
+        <div class="custom-dropdown-options-wrap">
+          <ul class="custom-dropdown-options">
+            {% for month in site.data.global.calendar.months %}
+              <li class="custom-dropdown-options__option" data-value="{{month.key}}">{{month.title}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+
+	{% if site.data.global.calendar.showtagfilter == true %}
+    <div class="custom-dropdown tags wow fadeInUp" tabindex="-1">
+      <div class="custom-dropdown__active-item">{{site.data.global.calendar.activeitemTag}}</div>
+
+      <div class="custom-dropdown-options-wrap">
+        <ul class="custom-dropdown-options">
+          {% for tag in site.data.global.calendar.tags %}
+          <li class="custom-dropdown-options__option" data-value="{{tag.key}}">{{tag.title}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+	{% endif %}
+	
+	{% if site.data.global.calendar.showlocationfilter == true %}
+	<div class="custom-dropdown locations wow fadeInUp" tabindex="-1">
+      <div class="custom-dropdown__active-item" data-label="Location">{{site.data.global.calendar.activeitemLocation}}</div>
+
+      <div class="custom-dropdown-options-wrap">
+        <ul class="custom-dropdown-options">
+        {% for location in site.data.global.calendar.locations %}
+          <li class="custom-dropdown-options__option" data-value="{{location.key}}">{{location.title}}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+	{% endif %}
+
+  </div>
+  
+  {% if site.data.global.calendar.showtagfilter == true %}
+	<ul class="tag-container wow fadeInUp"></ul>
+  {% endif %}	
+  
+  <div class="calendar calendar-slider slider center wow fadeInUp">
+	{% for event in site.data.global.calendar.events %}
+		  {% include calendar/parts/event/default.liquid %}
+	{% endfor %}
+  </div>
+
+</div>

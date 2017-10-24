@@ -1,0 +1,22 @@
+<div class="product container">
+	<div class="product-head">
+		{% for item in site.data.pages.product-list.menu %}
+			{% capture includepath %}product-list/parts/{{item.path}}{% endcapture %}
+			{% include {{includepath}}.liquid %}
+		{% endfor %}
+	</div>
+
+	{% for item in site.data.pages.product-list.content %}
+		{% capture includepath %}product-list/parts/{{item.path}}{% endcapture %}
+		{% include {{includepath}}.liquid %}
+	{% endfor %}
+	
+	{% for item in site.data.pages.product-list.info %}
+		<div class="product-more-info unit" state="hidden">
+			{% include product-list/parts/socials/default.liquid %}
+
+			<div class="background-transparent"></div>
+		</div>	
+		{% include product-list/parts/more-info/default.liquid %}
+	{% endfor %}
+</div>

@@ -1,0 +1,53 @@
+<div class="custom-form container">
+   <div class="custom-form unit title" modifier="center">
+      <h2 class="title">
+         Submit your score
+      </h2>
+   </div>
+   <div class="custom-form unit">
+      <div class="form container">
+         <form action="/mockapi/quiz/submit" class="form" method="post" name="06422121-545d-48dc-8ead-766fd8cd70d0|en" novalidate="novalidate" variant="full-form">
+            <input name="__RequestVerificationToken" type="hidden" value="plao3drUQ_GFlSzOyPwml739klkvuBBO4pBQju7i43A816kwWsN8KAPP7BvA6RGsfEh7-s_pcAPXDiRKa3Vr5V517h4lsjtGoQyBtQjjmvo1">
+            <div class="form unit wow fadeInUp">
+               <div class="content container">
+                  <div class="content unit">
+                     <div class="inputfield container">
+                        <div class="inputfield unit">
+                           <input class="input" variant="text" type="text" name="Name" placeholder="Full Name*" data-pattern="^[a-zA-Z\s]*$" data-required="true">
+                        </div>
+                     </div>
+                     <div class="inputfield container">
+                        <div class="inputfield unit">
+                           <input class="input" variant="text" type="text" name="Email" placeholder="E-mail address*" data-pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" data-required="true">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <input type="hidden" name="answered-questions" class="answered-questions">
+            <div class="form unit wow fadeInUp" variant="error-message" state="hidden">
+               <div class="content container">
+                  <div class="content unit text">
+                     <p>Something is wrong with the provided data. Please check all fields carefully!</p>
+                     <div class="validationmessages">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="form unit wow fadeInUp">
+                <div class="content container">
+                    <div class="content unit">
+                        <div class="button container">
+                            <div class="button unit">
+                                <button class="submit-button shared-button" modifiers="color4 size1">
+                                    <span class="multiplelines">Submit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

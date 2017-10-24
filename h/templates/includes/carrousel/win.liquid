@@ -1,0 +1,19 @@
+<div class="carrousel-bg background" variant="default"></div>
+<div class="carrousel carrousel--win container" data-id="1" data-animation-state="intro">
+
+	{% include carrousel/parts/intro/win.liquid %}
+
+  <div class="carrousel-carousel slider center slider-1">
+	{% for slide in site.data.global.win.slides %}
+		  {% include carrousel/parts/slide/win.liquid %}
+	{% endfor %}
+  </div>
+
+  <div class="carrousel-carousel-nav slider center nav-1">
+	{% for slide in site.data.global.win.slides %}
+		  {% include carrousel/parts/slidenav/win.liquid %}
+	{% endfor %}
+  </div>
+
+</div>
+ 

@@ -1,0 +1,14 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit image-image" variant="box1" modifier="" {{backgroundStyle}}>
+	<div class="image-block">
+		<img src="http://placehold.it/1600x900" title="" alt="">
+	</div>
+	<div class="image-block">
+		<img src="http://placehold.it/1600x900" title="" alt="">
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="event-item-outer" data-startdate="{{event.startdate}}" {% if event.enddate %}data-enddate="{{event.enddate}}"{% endif %} data-id="{{event.id}}" data-tags="{{event.tags}}" data-location="{{event.locationid}}">
+	<a href="/pages/full-viewport-event.html">
+	  <div class="event-item">
+		<div class="event-item__img-wrap">
+		  <img class="event-item__img" 
+			src="{{event.image}}" 
+			srcset="{{ event.image }} 198w, {{ event.image }} 420w"
+		 	sizes="(max-width: 750px) 33vw, (min-width: 751px) 198px"
+			alt="">
+		</div>
+		<span class="event-item-date">
+		{% if event.enddate %}
+			{% if event.startmonthstring == event.endmonthstring %}
+				<span class="event-item-date__day-number">{{event.startdaynumber}}</span>
+				<span class="event-item-date__separator">-</span>
+				<span class="event-item-date__day-number">{{event.enddaynumber}}</span>
+				<span class="event-item-date__month-string">{{event.startmonthstring}}</span>
+			{% else %}
+				<span class="event-item-date__day-number">{{event.startdaynumber}}</span>
+				<span class="event-item-date__month-string">{{event.startmonthstring}}</span>
+				<span class="event-item-date__separator">-</span>
+				<span class="event-item-date__day-number">{{event.enddaynumber}}</span>
+				<span class="event-item-date__month-string">{{event.endmonthstring}}</span>
+			{% endif %}
+		{% else %}
+		  <span class="event-item-date__day-number">{{event.startdaynumber}}</span>
+		  <span class="event-item-date__month-string">{{event.startmonthstring}}</span>
+		{% endif %}
+		</span>
+		<div class="event-item-summary-wrap">
+		  <h4 class="event-item__title">{{event.title}}</h4>
+		  <div class="event-item-summary">
+			<p class="event-item-summary__description" style="display:-webkit-inline-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;">{{event.description}}</p>
+			<p class="event-item-summary__date"><strong>{{event.location}}</strong></p>
+		  </div>
+		</div>
+	  </div>
+	</a>
+</div>

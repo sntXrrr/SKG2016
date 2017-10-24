@@ -1,0 +1,7 @@
+<div class="event-detail__share">
+	{% for _social in item.data.socials.data %}
+		<a class="social-link" target="_blank" href="{{ _social.href }}">
+			{% include {{_social.icon}}.liquid %}
+		</a>
+	{% endfor %}
+</div>

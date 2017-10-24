@@ -1,0 +1,8 @@
+{% comment %} get files in /pages/ {% endcomment %}
+<ul class="menu" variant="vertical sub">
+
+	{% for item in site.data.global.sitepages %}
+		{% include nav/parts/menu/parts/item/default.liquid %}
+	{% endfor %}
+
+</ul>

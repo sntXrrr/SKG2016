@@ -1,0 +1,38 @@
+{
+	"debug": false,
+	"lintScripts": true,
+	"preprocessorLocations": [
+		"browser-resources/"
+	],
+	"preprocessorScriptOutput": "browser-resources/scripts",
+	"preprocessorStyleOutput": "browser-resources/css",
+	"autoPrefixer": {
+		"active": true,
+		"sourceMap": false,
+		"browsers": [
+		"last 1 version", 
+		"> 1%", 
+		"ie 8", 
+		"ie 7"
+		]
+	},
+	"projectName": "Heineken",
+	"projectDescription": "Heineken FE in Mixture",
+	"publishedId": null,
+	"serverHostname": null,
+	"serverPort": null,
+	"templateDirectory": "templates",
+	"templateDefaultLayout": "default",
+	"templateDefaultPage": "pages/home",
+	"type": "mixture",
+	"useCompass": false,
+	"followLeader": false,
+	"simpleModePartnerServer": null,
+	"modelSource": null,
+	"sitemap": true,
+	"domain": null,
+	"remoteDebugPort": 8081,
+	"convertHtml": {
+		"relativePaths": false
+	}
+}

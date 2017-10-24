@@ -1,0 +1,8 @@
+<div class="languages unit">
+	{% for _region in item.regions %}
+		<div class="region">
+			{% include overlay/parts/languages/parts/region/parts/title/default.liquid %}
+			{% include overlay/parts/languages/parts/region/parts/list/default.liquid %}
+		</div>
+	{% endfor %}
+</div>

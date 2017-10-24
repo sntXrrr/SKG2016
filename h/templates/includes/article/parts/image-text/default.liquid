@@ -1,0 +1,18 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit image-text" variant="box1" modifier="{{item.data.modifiers}}" {{backgroundStyle}}>
+	<div class="flexbox text-block rtf">	
+		<h2>{{item.data.textblock.title}}</h2>
+		<hr />
+		<p>{{item.data.textblock.text}}</p>
+		<a class="{{item.data.textblock.button.class}}" href="{{item.data.textblock.button.href}}" >{{item.data.textblock.button.title}}</a>
+	</div>
+
+	<div class="flexbox image-block">
+		<img src="{{item.data.image.src}}" title="" alt="" />
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<form class="form" variant="connect">
+	<label class="label wow fadeInUp">Or use Facebook connect</label>
+
+	<div class="content wow fadeInUp">
+		{% for _button in site.data.pages.gateway.buttons %}
+			{% include gateway/parts/button/connect.liquid %}
+		{% endfor %}
+	</div>
+</form>

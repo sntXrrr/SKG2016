@@ -1,0 +1,18 @@
+<div class="gateway-message container" variant="full-view">
+	{% for item in site.data.global.gateway-messages %}
+		<div class="gateway-message unit">
+			{% include gateway-message/parts/logo/default.liquid %}
+			{% include gateway-message/parts/title/default.liquid %}
+
+			{% for text in item.texts %}
+				{% include gateway-message/parts/text/default.liquid %}
+			{% endfor %}
+
+			{% for button in item.buttons %}
+				{% include gateway-message/parts/button/default.liquid %}
+			{% endfor %}
+		</div>
+
+	{% endfor %}
+	
+</div>

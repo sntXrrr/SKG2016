@@ -1,0 +1,24 @@
+{
+	"intro": {
+		"title": "Win stuff, yeah baby!",
+		"imageMobile350": "/dummy-resources/img/craas/win-craas-mobile-750x508.jpg",
+		"imageMobile700": "/dummy-resources/img/craas/win-craas-mobile-750x508.jpg",
+		"imageDesktop800": "/dummy-resources/img/craas/win-craas-1100x460.jpg",
+		"imageDesktop1100": "/dummy-resources/img/craas/win-craas-1100x460.jpg",
+		"imageTxt": "Let's DO this!"
+	},
+	"header": {
+		"title": "Enter your code",
+		"text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."
+	},
+	"form": {
+		"path": "home",
+		"label": "You can find the code under the bottlecap",
+		"graphic": "/dummy-resources/img/craas/under-the-bottlecap.png",
+		"graphicTxt": "look under the bottlecap (350x100px)",
+		"placeholder": "XXX-XXX-XXX",
+		"pattern": "^\\s*([a-zA-Z0-9]{3})[-./ ]*([a-zA-Z0-9]{3})[-./ ]*([a-zA-Z0-9]{3})\\s*$",
+		"validationTxt": "Please enter a valid code",
+		"buttonTxt": "Submit"
+	}
+}

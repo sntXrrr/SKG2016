@@ -1,0 +1,29 @@
+{% if site.data.global.media-gallery.background %}
+	{% capture backgroundStyle %}style="background-image: url({{site.data.global.media-gallery.background}})"{% endcapture %}
+{% endif %}
+<div class="media-gallery container" variant="" modifier="{{ site.data.global.media-gallery.modifiers }}" {{backgroundStyle}}>
+
+	<div class="media-gallery unit carousel">
+		{% for pattern in site.data.global.media-gallery.2slides.patterns %}
+			<div class="media container" variant="{{pattern.name}}">
+				{% for item in pattern.items %}		
+					{% capture includepath %}media-gallery/parts/item/{{item.type}}{% endcapture %}
+					{% include {{includepath}}.liquid %}
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+	<div class="tool container left">
+		<a class="tool unit button" href="#!left">
+			{% include media-gallery/parts/icon/arrow.liquid %}
+		</a>
+	</div>
+	<div class="tool container right">
+		<a class="tool unit button wow fadeInRight" href="#!right">
+			{% include media-gallery/parts/icon/arrow.liquid %}
+		</a>
+		<span class="tool unit counter wow fadeInRight">
+			<span output="index">1</span> {% include media-gallery/parts/icon/seperator.liquid %} {{ site.data.global.media-gallery.2slides.patterns | size }}
+		</span>
+	</div>		
+</div>

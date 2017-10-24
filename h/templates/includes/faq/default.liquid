@@ -1,0 +1,37 @@
+<div class="faq container" variant="default">
+	<div class="faq unit">
+		<div class="head">
+			<h1 class="title wow fadeInUp">{{site.data.pages.faq.title}}</h1>
+			
+			<div class="form wow fadeInUp" >
+				<input class="input" type="text" placeholder="Search for answers" />
+				<button class="button" type="button">
+					{% include faq/parts/icon/search.liquid %}
+				</button>
+			</div>
+		</div>
+
+		<div class="body">
+
+			<div class="resultnumber container" state="hidden" data-result-txt="{{site.data.pages.faq.messages.number-of-results}}, {{site.data.pages.faq.messages.no-number-of-results}}">
+				<div class="content"></div>
+			</div>
+			<div class="menu container wow fadeInUp" variant="result">
+				<a class="menu unit" variant="all" href="#!*" state="active"><div class="text">Active</div></a>
+
+				{% for section in site.data.global.faq.categories %}
+					<a class="menu unit" variant="{{section.id}}" href="#!{{section.id}}"><div class="text">{{section.title}}</div></a>
+				{% endfor %}
+			</div>
+
+			{% include faq/parts/list/default.liquid %}
+
+			<div class="bottomtext" state="active">{{site.data.pages.faq.messages.bottomtext}}</div>
+			<div class="no-result container" variant="result">
+				<div class="content">
+					{{site.data.pages.faq.messages.no-result}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

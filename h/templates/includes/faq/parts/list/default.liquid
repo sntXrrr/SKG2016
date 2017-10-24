@@ -1,0 +1,22 @@
+{% for section in site.data.global.faq.categories %}
+	<div class="list container" variant="{{ section.id }}" state="{{  }}">
+
+		{% include faq/parts/list/parts/title/level1.liquid %}
+
+		{% for section in section.subsections %}
+			{% include faq/parts/list/parts/title/level2.liquid %}
+			{% for item in section.content %}
+				{% include faq/parts/list/parts/item/default.liquid %}
+			{% endfor %}
+
+			{% for section in section.subsections %}
+				{% include faq/parts/list/parts/title/level3.liquid %}
+				{% for item in section.content %}
+					{% include faq/parts/list/parts/item/default.liquid %}
+				{% endfor %}
+			{% endfor %}
+
+		{% endfor %}
+ 
+	</div>
+{% endfor %}

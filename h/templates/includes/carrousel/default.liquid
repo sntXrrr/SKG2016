@@ -1,0 +1,28 @@
+{% if site.data.pages.carrousel.default.background %}
+	{% capture backgroundStyle %}style="background-image: url({{site.data.pages.carrousel.default.background}})"{% endcapture %}
+{% endif %}
+<div class="carrousel-bg background" variant="default"></div>
+<div class="carrousel container" data-id="1" modifier="{{site.data.pages.carrousel.default.modifiers}}" {{backgroundStyle}}>
+	{% if site.data.pages.carrousel.default.navPosition == 'top' %}
+		<div class="carrousel-carousel-nav slider center wow fadeInUp nav-1">
+		{% for slide in site.data.pages.carrousel.default.slides %}
+				{% include carrousel/parts/slidenav/default.liquid %}
+		{% endfor %}
+		</div>
+	{% endif %}
+
+  <div class="carrousel-carousel slider center wow fadeInUp slider-1">
+	{% for slide in site.data.pages.carrousel.default.slides %}
+		  {% include carrousel/parts/slide/default.liquid %}
+	{% endfor %}
+  </div>
+
+	{% if site.data.pages.carrousel.default.navPosition != 'top' %}
+		<div class="carrousel-carousel-nav slider center wow fadeInUp nav-1">
+		{% for slide in site.data.pages.carrousel.default.slides %}
+				{% include carrousel/parts/slidenav/default.liquid %}
+		{% endfor %}
+		</div>
+	{% endif %}
+  
+</div>

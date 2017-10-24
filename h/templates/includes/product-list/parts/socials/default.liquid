@@ -1,0 +1,7 @@
+<div class="product-list-socials">
+	{% for _social in item.data.socials.data %}
+		<a class="social-link" href="{{ _social.href }}">
+			{% include {{_social.icon}}.liquid %}
+		</a>
+	{% endfor %}
+</div>

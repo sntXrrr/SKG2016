@@ -1,0 +1,22 @@
+<div class="hero container" variant="default" modifier="{{arg}}">
+	<div class="hero unit">
+		<div class="content">
+			<div class="placeholder" variant="tl">
+				{% include hero/parts/logo/logo.liquid img="/dummy-resources/img/hero/F1-logo.png" alt="Formula 1" %}
+			</div>
+			<div class="placeholder" variant="cc">
+				{% include hero/parts/title/default.liquid default="This hero" %}
+				{% include hero/parts/title/default.liquid default="is amazing" %}
+				{% comment %}{% include hero/parts/play/default default="color2" %}{% endcomment %}
+				{% include hero/parts/button/default.liquid default="size3 color4" %}
+			</div>
+			<div class="placeholder" variant="br">
+				{% include hero/parts/logo/logo.liquid img="/dummy-resources/img/hero/F1-logo.png" alt="Formula 1" %}
+				{% include hero/parts/logo/logo.liquid img="/dummy-resources/img/hero/Microsoft-logo.png" alt="Microsoft" %}
+			</div>
+		</div>
+
+		{% include hero/parts/background/video.liquid %}
+
+	</div>
+</div>

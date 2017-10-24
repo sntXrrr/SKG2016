@@ -1,0 +1,82 @@
+<div class="slide-item-outer" data-id="{{slide.id}}" data-youtube-id="{{slide.youtube-id}}" data-youtube-autoplay="{{slide.youtube-autoplay}}">
+	{% if slide.url %}
+	<a href={{slide.url}}>
+	{% endif %}
+	  <div class="slide-item">
+			<div class="slide-item__img-wrap">
+				{% if slide.youtube-id %}			
+				<div class="slide-item__youtube-wrap">
+					<div class="slide-item__iframe-container">
+						<span class="slide-item__youtube-holder" id="youtube-holder-{{slide.id}}-{{slide.youtube-id}}"></span>
+					</div>
+				</div>
+				{% endif %}
+			
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="{{slide.image-port-bg}} 230w, {{slide.image-port-bg}} 460w"
+					>
+					<img
+						class="slide-item__img-bg"
+						src="{{slide.image-bg}}"
+						sizes="80vw,(min-width: 1220px) 800px"
+						srcset="{{slide.image-bg}} 400w, {{slide.image-bg}} 800w"
+						alt=""
+					>
+					
+				</picture>
+				{% if slide.image-fg != empty && slide.image-port-fg != empty %}
+				<picture>
+					<source
+						media="(max-width: 750px) and (orientation: portrait)"
+						sizes="80vw"
+						srcset="{{slide.image-port-fg}} 250w, {{slide.image-port-fg}} 500w"
+					>
+					<img
+						class="slide-item__img-fg"
+						src="{{slide.image-fg}}"
+						sizes="80vw, (min-width: 1220px) 840px"
+						srcset="{{slide.image-fg}} 420w, {{slide.image-fg}} 840w"
+						alt=""
+					>
+				</picture>
+				{% endif %}
+				{% if slide.youtube-id %}
+					<div class="slide-item__trigger trigger">
+						{% capture includepath %}carrousel/parts/icon/play.liquid{% endcapture %}
+						{% include {{ includepath }} %}
+					</div>
+				{% endif %}
+			</div>
+			<h4 class="slide-item__description">
+				{% if slide.line1 %}
+				<div class="slide-item__line slide-item__line--first">
+					<span>{{slide.line1}}</span>
+				</div>
+				{% endif %}
+
+				{% if slide.line2 %}
+				<div class="slide-item__line slide-item__line--second">
+					<span>{{slide.line2}}</span>
+				</div>
+				{% endif %}
+
+				{% if slide.line3 %}
+				<div class="slide-item__line slide-item__line--third">
+					<span>{{slide.line3}}</span>
+				</div>
+				{% endif %}
+			</h4>
+		</div>
+		{% if slide.summary %}
+			<div class="slide-item__summary">
+				{{slide.summary}}
+			</div>
+		{% endif %}
+	{% if slide.url %}	
+	</a>
+	{% endif %}
+	<span class="slide-item__typograph">{{slide.title}}</span>
+</div>

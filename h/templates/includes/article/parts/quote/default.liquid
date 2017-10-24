@@ -1,0 +1,17 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit quote" variant="{{ item.variant }}" modifier="align-center" {{backgroundStyle}}>	
+	<div class="quote-block">
+		<div class="quote-text">
+			<p>{{ item.data.text }}</p>
+		</div>
+		<div class="information">
+			<span class="text-name">{{ item.data.name }}</span> 
+			<span class="text-job">{{ item.data.job }}</span>
+		</div>
+	</div>
+</div>

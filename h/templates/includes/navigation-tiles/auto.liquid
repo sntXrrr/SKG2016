@@ -1,0 +1,14 @@
+{% if site.data.global.navigation-tiles.background %}
+	{% capture backgroundStyle %}style="background-image: url({{site.data.global.navigation-tiles.background}})"{% endcapture %}
+{% endif %}
+<div class="navigation-tiles container" variant="auto" {{backgroundStyle}} modifier="{{ site.data.global.navigation-tiles.modifiers }}">
+	<div class="navigation-tiles unit">
+		<div class="media container">
+			{% for item in site.data.global.navigation-tiles.tiles-a %}
+				{% capture includepath %}navigation-tiles/parts/item/{{item.size}}.liquid{% endcapture %}
+				{% include {{includepath}} %}
+			{% endfor %}
+			<div class="masonry-sizer"></div>
+		</div>
+	</div>
+</div>

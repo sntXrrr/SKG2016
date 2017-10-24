@@ -1,0 +1,18 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit list list-simple" variant="{{ item.variant }}" {{backgroundStyle}}>	
+	{% include article/parts/list/parts/title/default.liquid %}
+	<div class="text-block">
+		<div class="body-text rtf">
+			<ul>
+				{% for _list in item.data.items %}
+					{% include article/parts/list/parts/list/simple.liquid %}
+				{% endfor %}
+			<ul>
+		</div>
+	</div>	
+</div>

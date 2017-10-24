@@ -1,0 +1,5 @@
+{% for _button in item.data %}
+	<a href="{{_button.href}}" class="{{_button.class}}" modifiers="{{_button.modifiers | join:' '}}">
+		<span class="multiplelines">{{_button.title}}</span>
+	</a>
+{% endfor %}

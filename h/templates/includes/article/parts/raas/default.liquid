@@ -1,0 +1,23 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+	{% if item.background.fixed %}
+		{% capture modifier %}article__background--fixed{% endcapture %}
+	{% endif %}
+{% endif %}
+
+<div class="article unit rtf" {{backgroundStyle}}>	
+   <nav class="shared-button buy-now-button" modifiers="color1 size1" role="menu">
+        <span class="multiplelines">Shop Now</span>
+
+        <ul class="slide-button-list">
+        {% for link in item.data.raas %}
+            <li class="slide-button">
+                <a href="{{link.url}}" target="_blank">
+                    <span class="slide-button__title">{{link.label}}</span>
+                    <img class="slide-button__img" src="{{link.image}}" />
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </nav>
+</div>

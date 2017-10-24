@@ -1,0 +1,9 @@
+{% comment %} Is called privacy settings in backend {% endcomment %}
+<div class="cookies container" state="active">
+	<div class="cookies unit">
+		{% for item in site.data.global.cookies %}
+			{% capture includepath %}cookies/parts/{{item.path}}{% endcapture %}
+			{% include {{includepath}}.liquid %}
+		{% endfor %}
+	</div>
+</div>

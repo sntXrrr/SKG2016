@@ -1,0 +1,10 @@
+{
+  "title" : "Frequently asked questions",
+
+  "messages":{
+    "no-result": "There are no FAQ available for your search. Please try a different search or browse our FAQ. Sure your question is not here? Contact us and we will do our best to help.",
+    "number-of-results": "results for ",
+    "no-number-of-results": "no results for ",
+    "bottomtext":"Text can be added here. Is you question not listed? Contact us here"
+  } 		
+}

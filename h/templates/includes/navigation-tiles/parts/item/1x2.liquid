@@ -1,0 +1,45 @@
+{% if item.image %}
+	{% capture imageUrl %}{{item.image}}{% endcapture %}
+{% else %}
+	{% capture imageUrl %}{{ 'http://placehold.it/314x739' }}{% endcapture %}
+{% endif %}
+
+{% comment %} replace dynamic image for sake of seeing image sizes for now 
+	{ capture imageUrl }{{ 'http://placehold.it/314x739' }}{ endcapture }
+{% endcomment %}
+
+{% if item.raas-links.size > 0 %}
+<div class="media unit wow fadeInUp unit--with-buttons" href="{{ item.location }}" variant="1x2">
+{% else %}
+<a class="media unit wow fadeInUp" href="{{ item.location }}" variant="1x2">
+{% endif %}
+
+	<div class="head"> 
+		<h1 class="title">{{ item.title }} {{item.raas-links.size}}</h1>
+	</div>
+	<div class="content">
+		<img src="{{imageUrl}}" 
+		srcset="{{imageUrl}} 130w, {{imageUrl}} 260w"
+			sizes="(max-width: 750px) 47vw,
+				   (min-width: 751px) 25vw"
+			alt=""
+		/>
+		{% if item.raas-links.size > 0 %}
+			<ul class="unit__button-list">
+			{% for link in item.raas-links %}
+				<li class="slide-button">
+					<a href="{{link.url}}" target="_blank">
+						<span class="slide-button__title">{{link.title}}</span>
+						<img class="slide-button__img" src="{{link.logo}}" />
+					</a>
+				</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
+
+{% if item.raas-links.size > 0 %}
+</div>
+{% else %}
+</a>
+{% endif %}

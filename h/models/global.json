@@ -1,0 +1,1510 @@
+{
+	"brand"	: "Heineken",
+	"page"	: "Prototype",
+	"description": "by Norbert de langen",
+
+	"language": "en",
+
+
+	"overlay": {
+		"state": "",
+		"active": "",
+		"buttons": [
+			{
+				"color": "color1",
+				"icon": "overlay/parts/icon/facebook",
+				"title": "facebook 1"
+			},
+			{
+				"color": "color1",
+				"icon": "overlay/parts/icon/facebook",
+				"title": "facebook 2"
+			},
+			{
+				"color": "color1",
+				"icon": "overlay/parts/icon/facebook",
+				"title": "facebook 3"
+			},
+			{
+				"color": "color2",
+				"icon": "overlay/parts/icon/twitter",
+				"title": "twitter"
+			},
+			{
+				"color": "color3",
+				"icon": "overlay/parts/icon/youtube",
+				"title": "youtube"
+			}
+		],
+
+		"languages": {
+		    "title": "Select your country",
+			"content": [
+				{
+		            "path": "region/default",
+		            "regions": [
+		                {
+		                    "title": "Europe",
+		                    "countries": [
+		                    	{
+		                    		"country": "Belgie - frans",
+		                    		"href": "#",
+		                            "state": ""
+		                    	},
+		                    	{
+		                    		"country": "Nederland",
+		                    		"href": "#",
+		                            "state": "is-active"
+		                    	},
+		                    	{
+		                    		"country": "Belgium (dutch)",
+		                    		"href": "#",
+		                            "state": ""
+		                    	},
+		                    	{
+		                    		"country": "Belgium (french)",
+		                    		"href": "#",
+		                            "state": "is-active"
+		                    	}
+		                    ]
+		                },
+		                {
+		                    "title": "Asia-Pacific",
+		                    "countries": [
+		                        {
+		                            "country": "Malaysia",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Philippines",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Thailand",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Japan",
+		                            "href": "#",
+		                            "state": ""
+		                        }
+		                    ]
+		                },
+		                {
+		                    "title": "Asia-Pacific",
+		                    "countries": [
+		                        {
+		                            "country": "Malaysia",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Philippines",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Thailand",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Japan",
+		                            "href": "#",
+		                            "state": ""
+		                        }
+		                    ]
+		                },
+		                {
+		                    "title": "Asia-Pacific",
+		                    "countries": [
+		                        {
+		                            "country": "Malaysia",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Philippines",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Thailand",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Japan",
+		                            "href": "#",
+		                            "state": ""
+		                        }
+		                    ]
+		                },
+		                {
+		                    "title": "Asia-Pacific",
+		                    "countries": [
+		                        {
+		                            "country": "Malaysia",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Philippines",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Thailand",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Japan",
+		                            "href": "#",
+		                            "state": ""
+		                        }
+		                    ]
+		                },
+		                {
+		                    "title": "Asia-Pacific",
+		                    "countries": [
+		                        {
+		                            "country": "Malaysia",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Philippines",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Thailand",
+		                            "href": "#",
+		                            "state": ""
+		                        },
+		                        {
+		                            "country": "Japan",
+		                            "href": "#",
+		                            "state": ""
+		                        }
+		                    ]
+		                }
+		            ]
+		        }
+			]
+		}
+	},
+
+	"footer": {
+		"navs": [
+			{"url": "#!", "image": "/browser-resources/img/2340.png"},
+			{"url": "/pages/faq.html", "name": "FAQ"},
+			{"url": "/pages/faq.html#be90885d-a734-4a94-a1c2-fc305a71fafe", "name": "FAQ Beertender subsection" },
+			{"url": "/pages/faq.html#0e5e5099-e344-4ad3-baaf-e568f0b59e1d", "name": "FAQ Bottled subsection"},
+			{"url": "/pages/faq.html#8e7c1e82aae54c25a9dfe5d84825ae1a", "name": "FAQ Info"},
+			{"url": "https://www.google.com", "name": "Google search"}
+		]
+	},
+
+	"sitepages": [
+		{
+			"name": "Article",
+			"url": "/pages/article.html"
+		},
+		{
+			"name": "Submenu",
+			"url": "/pages/anchor-navigation.html",
+			"pages": [
+				{
+					"name": "Anchor navigation",
+					"url": "/pages/anchor-navigation.html"
+				},
+				{
+					"name": "Hero with a small description",
+					"url": "/pages/hero-small.html"
+				},
+				{
+					"name": "Weerlegging geruchten over honden gevechten",
+					"url": "/pages/calendar.html"
+				}
+			]
+		},
+		{
+			"name": "Carrousel",
+			"url": "/pages/carrousel.html"
+		},
+		{
+			"name": "Craas",
+			"url": "/pages/craas.html"
+		},
+		{
+			"name": "Faq",
+			"url": "/pages/faq.html"
+		},
+		{
+			"name": "Freehtml",
+			"url": "/pages/freehtml.html"
+		},
+		{
+			"name": "Full viewport event",
+			"url": "/pages/full-viewport-event.html"
+		},
+		{
+			"name": "Full viewport form succes",
+			"url": "/pages/full-viewport-form-succes.html"
+		},
+		{
+			"name": "Full viewport image",
+			"url": "/pages/full-viewport-image.html"
+		},
+		{
+			"name": "Full viewport page",
+			"url": "/pages/full-viewport-page.html"
+		},
+		{
+			"name": "Full viewport video",
+			"url": "/pages/full-viewport-video.html"
+		},
+		{
+			"name": "Gateway",
+			"url": "/pages/gateway.html"
+		},
+		{
+			"name": "Gateway message",
+			"url": "/pages/gateway-message.html"
+		},
+		{
+			"name": "Hero small",
+			"url": "/pages/hero-small.html"
+		},
+		{
+			"key": "hex",
+			"name": "Hex",
+			"url": "/pages/hex.html"
+		},
+		{
+			"name": "Media gallery",
+			"url": "/pages/media-gallery.html"
+		},
+		{
+			"name": "Product list",
+			"url": "/pages/product-list.html"
+		},
+		{
+			"name": "Submenu",
+			"url": "/pages/submenu.html"
+		},
+		{
+			"name": "Trigger",
+			"url": "/pages/trigger.html"
+		},
+		{
+			"name": "Win",
+			"url": "/pages/win.html"
+		},
+		{
+			"name": "X buttons",
+			"url": "/pages/x_buttons.html"
+		},
+		{
+			"name": "X error",
+			"url": "/pages/x_error.html"
+		},
+		{
+			"name": "X form error",
+			"url": "/pages/x_form_error.html"
+		},
+		{
+			"name": "X form succes",
+			"url": "/pages/x_form_succes.html"
+		},
+		{
+			"name": "X iframe",
+			"url": "/pages/x_iframe.html"
+		}
+	],
+
+	"pagesWithSubnav": [
+		{"url": "/pages/product-list.html", "name": "Our Bears"},
+		{"url": "/pages/trigger.html", "name": "Triggers"},
+		{"url": "/pages/submenu.html", "name": "Subnav"}
+	],
+	
+	"pagesWithAnchorSubnav": [
+		{"url": "#wij-zijn-heineken", "name": "Wij zijn Heineken"},
+		{"url": "#heineken-experience", "name": "Heineken Experience"},
+		{"url": "#lots-of-beer", "name": "Lots of beer"}
+	],
+
+	"media-gallery": {
+		"modifiers": "full-width",
+		"all": {
+			"patterns": [
+				{
+					"name": "pattern1",
+					"sizes": [
+						"small",
+						"small",
+						"small",
+						"small"
+					]
+				},
+				{
+					"name": "pattern2",
+					"sizes": [
+						"medium",
+						"small",
+						"small"
+					]
+				},
+				{
+					"name": "pattern3",
+					"sizes": [
+						"small",
+						"small",
+						"medium"
+					]
+				},
+				{
+					"name": "pattern4",
+					"sizes": [
+						"medium",
+						"medium"
+					]
+				},
+				{
+					"name": "pattern5",
+					"sizes": [
+						"large"
+					]
+				},
+				{
+					"name": "pattern6",
+					"sizes": [
+						"wide",
+						"small",
+						"small"
+					]
+				},
+				{
+					"name": "pattern7",
+					"sizes": [
+						"small",
+						"small",
+						"wide"
+					]
+				},
+				{
+					"name": "pattern8",
+					"sizes": [
+						"wide",
+						"wide"
+					]
+				}
+			]
+		},
+		"2slides" : {
+			"patterns": [
+				{
+					"name": "pattern1",
+					"items": [						
+						{ 
+							"size": "small", 
+							"url": "/pages/full-viewport-image.html",
+							"type": "image",
+							"title": "A Title"
+						},
+						{
+							"size": "small", 
+							"type": "video",
+							"title": "A Title"
+						},
+						{
+							"size": "small",
+							"url": "/pages/full-viewport-image.html",
+							"type": "image",
+							"title": "A Title"
+						},
+						{	"size": "small",
+							"type": "article",
+							"title": "Crack the case"
+						}
+					]
+				},
+				{
+					"name": "pattern2",
+					"items": [
+						{
+							"size": "medium",
+							"type": "image",
+							"title": "A Title"
+						},
+						{
+							"size": "small", 
+							"type": "video",
+							"url": "/pages/full-viewport-video.html",
+							"title": "A Title"
+						},
+						{
+							"size": "small", 
+							"url": "/pages/full-viewport-page.html",
+							"type": "article",
+							"title": "Crack the case"
+						}
+					]
+				}
+			]
+		}
+	},
+
+	"navigation-tiles": {
+		"tiles-a": [
+			{
+				"title": "Full viewport video",
+				"size": "1x1",
+				"location": "/pages/full-viewport-video",
+				"image": "/dummy-resources/img/tiles/terrible.jpg",
+				"data": {
+					"response": "overlay"
+				},
+				"raas-links": [
+					{
+						"title": "AH",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Hoogvliet",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					}
+				]
+			},
+			{
+				"title": "Full viewport image",
+				"size": "1x1",
+				"location": "/pages/full-viewport-image",
+				"image": "/dummy-resources/img/tiles/orange.jpg",
+				"data": {
+					"response": "overlay"
+				}
+			},
+			{
+				"title": "Full viewport pageee",
+				"size": "1x2",
+				"location": "/pages/full-viewport-page",
+				"image": "/dummy-resources/img/tiles/champion-the-match.jpg",
+				"data": {
+					"response": "overlay"
+				},
+				"raas-links": [
+					{
+						"title": "AH",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Hoogvliet",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					}
+				]
+
+			},
+			{
+				"title": "Detail page",
+				"size": "1x1",
+				"location": "/pages/submenu",
+				"image": "/dummy-resources/img/tiles/blue.jpg",
+				"data": {
+					"response": "overlay"
+				},
+				"raas-links": null
+			},
+			{
+				"title": "External Link",
+				"size": "2x1",
+				"location": "https://example.com",
+				"image": null,
+				"data": {
+					"response": ""
+				},
+				"raas-links": [
+					{
+						"title": "AH",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Hoogvliet",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					},
+					{
+						"title": "Jumbo",
+						"logo": "/dummy-resources/img/tiles/ah.png",
+						"url": "http://ah.nl"
+					}
+				]
+			},
+			{
+				"title": "Our beer",
+				"size": "1x1",
+				"location": "/pages/product-list",
+				"image": null,
+				"data": {
+					"response": ""
+				},
+				"raas-links": null
+			}
+		],
+
+		"tiles-b": [
+			{
+				"title": "Theses tiles",
+				"size": "1x1"
+			},
+			{
+				"title": "used to be called",
+				"size": "1x1"
+			},
+			{
+				"title": "to navigation tiles",
+				"size": "1x2"
+			},
+			{
+				"title": "secondary triggers",
+				"size": "1x1"
+			}
+		],
+
+		"tiles-c": [
+			{
+				"title": "Theses tiles",
+				"size": "1x1"
+			},
+			{
+				"title": "used to be called",
+				"size": "1x1"
+			},
+			{
+				"title": "to navigation tiles",
+				"size": "1x2"
+			},
+			{
+				"title": "secondary triggers",
+				"size": "1x1"
+			},
+			{
+				"title": "but we changed it",
+				"size": "2x1"
+			},
+			{
+				"title": "pretty sweet name, right?",
+				"size": "2x2"
+			},
+			{
+				"title": "but we changed it",
+				"size": "2x1"
+			},
+			{
+				"title": "to navigation tiles",
+				"size": "1x2"
+			},
+			{
+				"title": "Theses tiles",
+				"size": "1x1"
+			},
+			{
+				"title": "used to be called",
+				"size": "1x1"
+			},
+			{
+				"title": "secondary triggers",
+				"size": "1x1"
+			},
+			{
+				"title": "pretty sweet name, right?",
+				"size": "1x1"
+			}
+		],
+
+		"BAD_tiles": [
+			{
+				"title": "Theses tiles",
+				"size": "1x1"
+			},
+			{
+				"title": "used to be called",
+				"size": "1x1"
+			},
+			{
+				"title": "to navigation tiles",
+				"size": "1x2"
+			},
+			{
+				"title": "secondary triggers",
+				"size": "1x1"
+			},
+			{
+				"title": "but we changed it",
+				"size": "2x1"
+			},
+			{
+				"title": "pretty sweet name, right?",
+				"size": "1x1"
+			}
+		]
+	},
+
+	"faq": {
+
+		"categories":[
+			{
+				"id": "1ab5f72def7a40679ca07177b922f33a",
+				"title": "beer",
+				"name": "filter1",
+				"content": [
+					{
+						"id": "9ab70360460f458f93fc76d51047ade4",
+						"title": "How come things happen when stuff is done?",
+						"content": "Things are bound to happen, stuff happening doesn't influence things happening.",
+						"button": "This is a button"
+					},
+					{
+						"id": "6d49420a10004865bcf685a9726503d1",
+						"title": "How can stuff be done?",
+						"content": "Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are."
+					},
+					{
+						"id": "7f99c2649f2646a99f70724d8f63f3bc",
+						"title": "I need things to happen!",
+						"content": "That is not question."
+					},
+					{
+						"id": "4cc168463f0945c1aedadffa770b462f",
+						"title": "Where does stuff come from?",
+						"content": "Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff."
+					},
+					{
+						"id": "4fda4dd506454ecb853e35cc97420df8",
+						"title": "Are things bad for me?",
+						"content": "Things can be bad for you when you use all the things at once."
+					}
+				],
+				"subsections": [
+					{
+						"id": "4589a0fe6bf84430beda37d43cd44efe",
+						"title": "Bottled",
+						"content": [
+							{
+								"id": "0e5e5099-e344-4ad3-baaf-e568f0b59e1d",
+								"title": "How come things happen when stuff is done?",
+								"content": "Things are bound to happen, stuff happening doesn't influence things happening.",
+								"button": "This is a button",
+								"link":"#thisisalink"
+							},
+							{
+								"id": "a1813060-22c5-4d7d-b5ab-9ab48edd3d3e",
+								"title": "How can stuff be done?",
+								"content": "Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are."
+							}
+						],
+						"subsections": [
+							{
+								"id": "07a089ec34b34937863bf3a31b1b30cf",
+								"title": "Zebrawater",
+								"content": [
+									{
+										"id": "74b57b8d-eb1a-4755-962e-f384306d20ae",
+										"title": "How come things happen when stuff is done?",
+										"content": "Things are bound to happen, stuff happening doesn't influence things happening."
+									},
+									{
+										"title": "How can stuff be done?",
+										"content": "Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are."
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "1a3c69425aa747b88aff83279a8d3f6d",
+						"title": "In cans",
+						"content": [
+							{
+								"id": "28cdc5a039304f22b79348e9faacc480",
+								"title": "How come things happen when stuff is done?",
+								"content": "Things are bound to happen, stuff happening doesn't influence things happening."
+							},
+							{
+								"id": "069d7e5085e543f6bd3a5666d0443f26",
+								"title": "How can stuff be done?",
+								"content": "Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are."
+							}
+						],
+						"subsections": [
+							{
+								"id": "dfe2b4201a7248dfafcfd49ceda34aa1",
+								"title": "water in blik",
+								"content": [
+									{
+										"id": "b474349c4a1d4288a6610cfcc876db78",
+										"title": "How come things happen when stuff is done?",
+										"content": "Things are bound to happen, stuff happening doesn't influence things happening."
+									},
+									{
+										"id": "384b7a4ca76c4ec08b01fd764a0bb46d",
+										"title": "How can stuff be done?",
+										"content": "Stuff can be done in 10 easy steps. But we've yet to work out exactly what those steps are."
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "8e7c1e82aae54c25a9dfe5d84825ae1a",
+				"title": "info",
+				"name": "filter2",
+				"subsections": [
+					{
+						"id": "be90885d-a734-4a94-a1c2-fc305a71fafe",
+						"title": "Info subsection",
+						"content": [
+							{
+								"id": "d996fd77-d924-45d2-ab13-0f19ad809398",
+								"title": "I need things to happen!Items 2",
+								"content": "That is not question."
+							},
+							{
+								"id": "4b768ca2-2e17-434f-908a-2b46834cee0a",
+								"title": "Where does stuff come from?Items 2",
+								"content": "Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff."
+							},
+							{
+								"id": "6fe404cc-602e-46bc-8f9f-5df7d8d4eeb9",
+								"title": "Are things bad for me?Items 2",
+								"content": "Things can be bad for you when you use all the things at once."
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "8abe1956-8b59-46f8-904d-3897136573e1",
+				"title": "beertender",
+				"name": "filter3",
+				"subsections": [
+					{
+						"id": "be90885d-a734-4a94-a1c2-fc305a71fafe",
+						"title": "beertender subsection",
+						"content": [
+							{
+								"id": "f7b6e0ef-b8b7-417c-aff8-4d9cd6dd7539",
+								"title": "Where does stuff come from? Items 3",
+								"content": "Stuff comes from the West Viginia, there's a little stuff-factory there, supplying the world with stuff."
+							},
+							{
+								"id": "2a58ecfd-ef86-4298-8bb5-e09a151222e4",
+								"title": "Are things bad for me?Items 3",
+								"content": "Things can be bad for you when you use all the things at once."
+							}
+						]
+					}
+				]		
+			}
+		]
+	},
+
+	"gateway-messages": [
+		{
+			"title": "Computer says no...",
+			"texts": ["You might think this site is all for you, but you're wrong. In fact this is is NOT for you at all. We've detected vibes and they tell us you should not enter, because the vibes are bad. Bad vibes could cause stuff to happen, and if there's one thing nobody wants it's stuff happening. So, there you have it, an not-allowed screen. I hope you enjoy not-allowed screens because that's all you'll be getting today."],
+			"buttons": [
+				{
+					"variant": "negative",
+					"text": "Well, that's just sad then"
+				},
+				{
+					"variant": "",
+					"text": "I give up"
+				},
+				{
+					"variant": "positive",
+					"text": "Sounds good to me"
+				}
+			]
+		}
+	],
+
+	"triggers": [
+		{
+			"variant": "cc video",
+			"text": "hide-text",
+			"modifiers": [],
+			"icon": "play",
+			"hasIcon": true,
+			"content": [
+				{
+	                "type": "icon",
+	                "variant": "play",
+					"modifiers": ["color1"]
+
+				},
+				{
+					"type": "title",
+					"variant": "text",
+					"text": "This should play a video"
+				}
+			],
+			"background": {
+				"type": "video",
+				"src": ""
+			},
+			"video": {
+				"youtube-id": "hxxqzaEAtjs"
+			},
+			"href": "#!play"
+		},
+		{
+			"variant": "cc",
+			"text": "hide-text",
+			"modifiers": ["full-width"],
+			"icon": "play",
+			"hasIcon": true,
+			"content": [
+				{
+	                "type": "icon",
+	                "variant": "play",
+					"modifiers": ["color1"]
+				},
+				{
+					"type": "title",
+					"variant": "text",
+					"text": "spooky!",
+					"modifiers": ["color2", "size1"]
+				},
+				{
+					"type": "text",
+					"variant": "hidden",
+					"text": "Curabitur ut convallis nisl. Aenean tempus vehicula euismod. Vivamus euismod purus eu ex pharetra accumsan. Cras interdum urna non sem fermentum, ut vulputate dui ornare."
+				}
+			],
+			"background": {
+				"type": "image",
+				"src": ""
+			},
+			"href": "/pages/full-viewport-image.html",
+			"hasHiddenText": true
+		},
+		{
+			"variant": "tl",
+			"cssBackground": "/dummy-resources/img/calendar/large-background.jpg",
+			"modifiers": ["fixed-background"],
+			"content": [
+				{
+					"type": "title",
+					"variant": "text-icon",
+					"modifiers": ["size1"],
+					"text": "This trigger",
+					"icon": {
+						"variant": "window",
+						"modifiers": ["color6"]
+					}
+				},
+				{
+					"type": "title",
+					"variant": "text",
+					"modifiers": ["size4"],
+					"text": "is the best thing in the world, just try it!"
+				}
+			],
+			"background": {
+				"type": "image",
+				"src": ""
+			},
+			"href": "/pages/full-viewport-image.html"
+		},
+		{
+			"variant": "br",
+			"modifiers": [],
+			"content": [
+				{
+					"type": "title",
+					"variant": "icon-text",
+					"text": "This trigger is great",
+					"icon": {
+						"variant": "expand",
+						"modifiers": ["color1"]
+					}
+				},
+				{
+					"type": "text",
+					"variant": "default",
+					"text": "Curabitur ut convallis nisl. Aenean tempus vehicula euismod. Vivamus euismod purus eu ex pharetra accumsan. Cras interdum urna non sem fermentum, ut vulputate dui ornare."
+				}
+			],
+			"background": {
+				"type": "image",
+				"src": ""
+			},
+			"href": "#!this"
+		},
+		{
+			"variant": "cc",
+			"text": "hide-text",
+			"modifiers": ["full-width"],
+			"icon": "play",
+			"hasIcon": true,
+			"content": [
+				{
+	                "type": "icon",
+	                "variant": "play",
+					"modifiers": ["color1"]
+
+				},
+				{
+					"type": "title",
+					"variant": "text",
+					"text": "This trigger"
+				},
+				{
+					"type": "title",
+					"variant": "text",
+					"modifiers": ["size2"],
+					"text": "has a play button and.."
+				},
+				{
+					"type": "title",
+					"variant": "text",
+					"modifiers": ["size1"],
+					"text": "is full-width!"
+				}
+			],
+			"background": {
+				"type": "image",
+				"src": ""
+			},
+			"href": "#!this"
+		},
+		{
+			"variant": "cl",
+			"text": "hide-text",
+			"modifiers": [],
+			"icon": "play",
+			"hasIcon": true,
+			"content": [
+				{
+					"type": "title",
+					"variant": "text",
+					"text": "spooky!",
+					"modifiers": ["color2", "size1"],
+					"icon": {
+						"variant": "expand",
+						"modifiers": ["color1", "size1"]
+					}
+				},
+				{
+					"type": "text",
+					"variant": "hidden",
+					"text": "Curabitur ut convallis nisl. Aenean tempus vehicula euismod. Vivamus euismod purus eu ex pharetra accumsan. Cras interdum urna non sem fermentum, ut vulputate dui ornare."
+				}
+			],
+			"background": {
+				"type": "image",
+				"src": ""
+			},
+			"href": "/pages/full-viewport-image.html",
+			"hasHiddenText": true
+		}
+	],
+	"cookies": [
+		{
+			"path": "policy/default",
+			"data": {
+				"title": "Cookie policy",
+				"text": "We use cookies to ensure that we give you the best experience on our website. We also use cookies to ensure we show you [third part profiling] that is relevant to you.",
+				"policytext":"Cookie policy",
+				"href":"google",
+				"changetext":"Change settings",
+				"button": {
+					"variant": "",
+					"href": "#",
+					"title": "Accept Cookies"
+				}
+			}
+		},
+		{
+			"path": "settings/default",
+			"data": {
+				"title": "Cookie Settings",
+				"text": "I agree to the use of the following cookies on the Heineken.com website:",
+				"checkbox1":"Only use strictly necessary cookies",
+				"checkbox2":"I agree on the usage of tracking and third-party cookies send to check anonimous analytical performance",
+				"button": {
+					"variant": "",
+					"href": "#",
+					"title": "Save and accept"
+				}
+			}
+		}
+	],
+	"calendar": {
+		"activeitemMonth" : "Month",
+		"activeitemTag" : "Tags",
+		"activeitemLocation" : "Location",
+		"showtagfilter" : true,
+		"showlocationfilter" : true,
+		"modifiers": "no-background-transition",
+		"id": "09cfe4c6-177c-4a03-8d5b-d741e41c194f",
+		"months": [
+			{
+				"key" : "201605",
+				"title" : "mei 2016"
+			},
+			{
+				"key": "201606",
+				"title" : "juni 2016"
+			},
+			{
+				"key": "201607",
+				"title" : "juli 2016"
+			},
+			{
+				"key": "201608",
+				"title" : "augustus 2016"
+			},
+			{
+				"key": "201609",
+				"title" : "september 2016"
+			},
+			{
+				"key": "201610",
+				"title" : "oktober 2016"
+			},
+			{
+				"key": "201611",
+				"title" : "november 2016"
+			},
+			{
+				"key": "201612",
+				"title" : "december 2016"
+			},
+			{
+				"key": "201701",
+				"title" : "januari 2017"
+			},
+			{
+				"key": "201702",
+				"title" : "februari 2017"
+			},
+			{
+				"key": "201703",
+				"title" : "maart 2017"
+			},
+			{
+				"key": "201704",
+				"title" : "april 2017"
+			},
+			{
+				"key": "201705",
+				"title" : "mei 2017"
+			},
+			{
+				"key": "201706",
+				"title" : "juni 2017"
+			},
+			{
+				"key": "201707",
+				"title" : "juli 2017"
+			},
+			{
+				"key": "201708",
+				"title" : "augustus 2017"
+			},
+			{
+				"key": "201709",
+				"title" : "september 2017"
+			},
+			{
+				"key": "201710",
+				"title" : "oktober 2017"
+			},
+			{
+				"key": "201711",
+				"title" : "november 2017"
+			},
+			{
+				"key": "201712",
+				"title" : "december 2017"
+			},
+			{
+				"key": "201801",
+				"title" : "januari 2018"
+			},
+			{
+				"key": "201802",
+				"title" : "februari 2018"
+			},
+			{
+				"key": "201803",
+				"title" : "maart 2018"
+			},
+			{
+				"key": "201804",
+				"title" : "april 2018"
+			}
+		],
+		"tags": [
+			{
+				"key": "amsterdam",
+				"title" : "Amsterdam"
+			},
+			{
+				"key": "barcelona",
+				"title" : "Barcelona"
+			},
+			{
+				"key": "music",
+				"title" : "Music"
+			},
+			{
+				"key": "champions_league",
+				"title" : "Champions League"
+			},
+			{
+				"key": "sculptures",
+				"title" : "Sculptures"
+			},
+			{
+				"key": "formula_1",
+				"title" : "Formula 1"
+			},
+			{
+				"key": "festival",
+				"title" : "Festival"
+			},
+			{
+				"key": "concerts",
+				"title" : "Concerts"
+			},
+			{
+				"key": "cities",
+				"title" : "Cities"
+			},
+			{
+				"key": "madrid",
+				"title" : "Madrid"
+			}
+		],
+		"locations" : [
+			{
+				"key": "amsterdam",
+				"title" : "Amsterdam"
+			},
+			{
+				"key": "barcelona",
+				"title" : "Barcelona"
+			},
+			{
+				"key": "madrid",
+				"title" : "Madrid"
+			}
+		],
+		"events": [
+			{
+				"startdate" : "20160508",
+				"enddate" : "20160511",
+				"id" : "1",
+				"tags" : "amsterdam,music,cities",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "08",
+				"startdaystring" : "THU",
+				"startmonthstring": "MAY",
+				"enddaynumber" : "11",
+				"enddaystring" : "SUN",
+				"endmonthstring": "MAY",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"location" : "Amstelveense bos",
+				"locationid" : "amsterdam"
+			},
+			{
+				"startdate" : "20160612",
+				"id" : "2",
+				"tags" : "formula_1",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "12",
+				"startdaystring" : "THU",
+				"startmonthstring": "JUN",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"location" : "Amstelveense bos 8PM - 11PM",
+				"locationid" : "madrid"
+			},
+			{
+				"startdate" : "20160622",
+				"id" : "3",
+				"tags" : "sculptures,champions_league",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "22",
+				"startdaystring" : "THU",
+				"startmonthstring": "JUN",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+				"location" : "Amstelveense bos 8PM - 11PM",
+				"locationid" : "madrid"
+			},
+			{
+				"startdate" : "20160630",
+				"enddate" : "20160701",
+				"id" : "4",
+				"tags" : "cities",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "30",
+				"startdaystring" : "WED",
+				"startmonthstring": "JUN",
+				"enddaynumber" : "01",
+				"enddaystring" : "THU",
+				"endmonthstring": "JUL",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet.",
+				"location" : "Amstelveense bos 8PM - 11PM",
+				"locationid" : "amsterdam"
+			},
+			{
+				"startdate" : "20160728",
+				"enddate" : "20160729",
+				"id" : "5",
+				"tags" : "",
+				"image" : "/dummy-resources/img/calendar/thumbnail-2.jpg",
+				"startdaynumber" : "28",
+				"startdaystring" : "THU",
+				"startmonthstring": "JUL",
+				"enddaynumber" : "29",
+				"enddaystring" : "FRI",
+				"endmonthstring": "JUL",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+				"location" : "Amstelveense bos 8PM - 11PM",
+				"locationid" : "amsterdam"
+			},
+			{
+				"startdate" : "20160918",
+				"id" : "6",
+				"tags" : "",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "18",
+				"startdaystring" : "THU",
+				"startmonthstring": "SEP",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"location" : "Amstelveense bos 8PM - 11PM"	,
+				"locationid" : "amsterdam"
+			},
+			{
+				"startdate" : "20161027",
+				"enddate" : "20161104",
+				"id" : "7",
+				"tags" : "champions_league",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "27",
+				"startdaystring" : "WED",
+				"startmonthstring": "OCT",
+				"enddaynumber" : "04",
+				"enddaystring" : "THU",
+				"endmonthstring": "NOV",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"location" : "Amstelveense bosch 12AM - 9PM",
+				"locationid" : "barcelona"
+			},
+			{
+				"startdate" : "20161231",
+				"id" : "8",
+				"tags" : "music",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "31",
+				"startdaystring" : "THU",
+				"startmonthstring": "DEC",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+				"location" : "Amstelveense bos 8PM - 11PM"	,
+				"locationid" : "barcelona"
+			},
+			{
+				"startdate" : "20170201",
+				"id" : "9",
+				"tags" : "cities,barcelona",
+				"image" : "/dummy-resources/img/calendar/thumbnail-2.jpg",
+				"startdaynumber" : "01",
+				"startdaystring" : "SAT",
+				"startmonthstring": "FEB",
+				"title" : "PSV VS Bayern",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+				"location" : "Amstelveense bos 8PM - 11PM",
+				"locationid" : "barcelona"
+			},
+			{
+				"startdate" : "20170924",
+				"enddate" : "20180302",
+				"id" : "10",
+				"tags" : "rotterdam,barcelona",
+				"image" : "/dummy-resources/img/calendar/thumbnail.jpg",
+				"startdaynumber" : "24",
+				"startdaystring" : "MON",
+				"startmonthstring": "sep",
+				"enddaynumber" : "02",
+				"enddaystring" : "TUE",
+				"endmonthstring": "MAR",
+				"title" : "Ajax-Ado",
+				"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+				"location" : "Rotterdamse bos 2AM - 5AM",
+				"locationid" : "rotterdam"
+			}
+		]
+	},
+	"video": {
+		"title": "Crack the case",
+		"text": "Dolorem ipsum quia dolor sit amette adipis velit, sed quia non numquam eius modi tempora incidunt ut labore et",
+		"replayVideo": {
+			"replay": "true",
+			"text": "Speel opnieuw"
+		},
+		"more-info": {
+			"title" : "James Bond: Crack the case"
+		},
+		"button": {
+			"href": "#",
+			"title": "Watch the highlights"
+		},
+		"video": {
+			"id": "tV6gygNPetU",
+			"autoplay": {
+				"desktop": false,
+				"mobile": false
+			},
+			"autoHideControllers": 1,
+			"allowFullscreen": 1
+		},
+		"socials": {
+			"data": [
+				{
+					"icon": "/full-viewport-video/parts/socials/parts/icons/facebook",
+					"href": "http://www.facebook.com/share.php?u=http://www-tst-heineken.macawhosting.net/We-are-heineken/Heineken-Story"
+				},
+				{
+					"icon": "/full-viewport-video/parts/socials/parts/icons/twitter",
+					"href": "https://twitter.com/intent/tweet"
+				}
+			]
+		}
+	},
+	"win": {
+		"introtext": "cheers, you’re a winner!",
+		"introsvg" : "/browser-resources/img/icons/trophy-animate.svg",
+		"slides": [
+			{
+				"id" : "1",
+				"url" : "http://www.macaw.nl",
+				"image-bg" : "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg" : "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg" : "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg" : "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1" : "Champions",
+				"line2" : "League",
+				"text" : "Whatever, very clever text can appear here, certainly.",
+				"title" : "Champions League"
+			},
+			{
+				"id" : "2",
+				"url" : "http://www.macaw.nl",
+				"image-bg" : "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg" : "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg" : "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg" : "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1" : "Lorum ipsum",
+				"line2" : "Dolor sit",
+				"text" : "Whatever, very clever text can appear here, certainly.",
+				"title" : "James Bond"
+			},
+			{
+				"id" : "3",
+				"url" : "http://www.macaw.nl",
+				"image-bg" : "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg" : "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg" : "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg" : "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1" : "To infinity",
+				"line2" : "And beyond",
+				"text" : "Whatever, very clever text can appear here, certainly.",
+				"title" : "Formula 1"
+			}
+		]
+	},
+	"craas": {
+		"modifiers": "no-background-transition",
+		"intro": {
+			"title": "Win stuff, yeah baby!",
+			"imageMobile350": "/dummy-resources/img/craas/win-craas-mobile-750x508.jpg",
+			"imageMobile700": "/dummy-resources/img/craas/win-craas-mobile-750x508.jpg",
+			"imageDesktop800": "/dummy-resources/img/craas/win-craas-1100x460.jpg",
+			"imageDesktop1100": "/dummy-resources/img/craas/win-craas-1100x460.jpg",
+			"imageTxt": "Let's DO this!"
+		},
+		"header": {
+			"title": "Enter your code",
+			"text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."
+		},
+		"form": {
+			"path": "/mockapi/form/success",
+			"label": "You can find the code under the bottlecap",
+			"graphic": "/dummy-resources/img/craas/under-the-bottlecap.png",
+			"graphicTxt": "look under the bottlecap (350x100px)",
+			"placeholder": "XXX-XXX-XXX",
+			"pattern": "^[a-zA-Z0-9]+$",
+			"validationTxt": "Please enter a valid code",
+			"buttonTxt": "Submit",
+			"recaptcha": {
+				"enabled": true,
+				"type": "invisible"
+			}
+		}
+	}
+}

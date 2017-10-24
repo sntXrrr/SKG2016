@@ -1,0 +1,42 @@
+{% if item.cssBackground %}
+	{% capture backgroundStyle %}style="background-image: url({{item.cssBackground}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+<div class="trigger container" variant="default {{ item.variant }}" modifier="{{ item.modifiers | join: ' ' }}" {{backgroundStyle}}>
+	<div class="trigger unit wow fadeInUp">
+
+		{% capture includepath %}trigger/parts/background/{{ item.background.type }}.liquid{% endcapture %}
+		{% include {{ includepath }} %}
+		
+		{% if item.hasHiddenText %}
+			<div class="switch">
+				<a href="#!switch">
+					{% include trigger/parts/icon/plus.liquid %}
+				</a>
+			</div>
+		{% endif %}
+
+		{% if item.hasIcon %}
+			<div class="button">
+				{% assign content = item.content[0] %}
+				{% capture includepath %}trigger/parts/icon/{{ item.icon }}.liquid{% endcapture %}
+				{% include {{ includepath }} %}
+			</div>
+		{% endif %}
+
+		<div class="content">
+			{% for content in item.content %}
+				{% capture includepath %}trigger/parts/{{ content.type }}/{{ content.variant }}.liquid{% endcapture %}
+				{% include {{ includepath }} %}
+			{% endfor %}
+		</div>
+
+		{% if item.video %}
+			{% include trigger/parts/video/default.liquid %}
+		{% endif %}
+
+		<a class="link" href="{{ item.href }}">Go to this page</a>
+
+	</div>
+</div>

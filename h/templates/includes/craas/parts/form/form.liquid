@@ -1,0 +1,61 @@
+<div class="form container custom-form">
+	<form class="craas__form" variant="craas" name="craas-form" action="{{site.data.global.craas.form.path}}"
+		data-show-error-on-focus-out
+		data-submit-once
+		data-navigate-target=".viewport .background img"
+		>
+
+		<input type="hidden" name="craas-hidden" value="by45e6tw4564wftd">
+
+		<label class="label wow fadeInUp">{{site.data.global.craas.form.label}}</label>
+
+		<img class="graphic wow fadeInUp" src="{{site.data.global.craas.form.graphic}}" alt="{{site.data.global.craas.form.graphicTxt}}">
+
+		<input
+			type="text"
+			class="input unit wow fadeInUp"
+			id="craas-code"
+			name="craas-code"
+			pattern="{{site.data.global.craas.form.pattern}}"
+			data-pattern="{{site.data.global.craas.form.pattern}}"
+			placeholder="{{site.data.global.craas.form.placeholder}}"
+			state="initial"
+			data-required="true">
+
+		{% if site.data.global.craas.form.recaptcha.enabled and site.data.global.craas.form.recaptcha.type != 'invisible' %}
+		<div class="wow fadeInUp captcha-wrap">
+			<div
+				id="craas-recaptcha"
+				class="g-recaptcha"
+				data-size="normal"
+				data-callback="recaptchaCallback"
+				data-sitekey="6Lci7BcUAAAAAGcGwSkGdpFTd8yags99bt7aRejS"				
+			></div>
+		</div>
+		{% endif %}
+		
+		<div class="form unit error" variant="error-message" state="hidden">
+			<p>{{site.data.global.craas.form.validationTxt}}</p>
+		</div>
+
+		{% include spinner/default.liquid modifiers="color2" %}
+
+		<button id="craas-submit" type="submit" class="submit-button shared-button wow fadeInUp" modifiers="color7">
+			<span class="multiplelines">
+				{{site.data.global.craas.form.buttonTxt}}
+			</span>
+		</button>
+
+		{% if site.data.global.craas.form.recaptcha.enabled and site.data.global.craas.form.recaptcha.type == 'invisible' %}
+		<div class="wow fadeInUp">
+			<div class="g-recaptcha"
+				id="craas-invisible-recaptcha"
+				data-sitekey="6Lf-eB8UAAAAAG87IafpBAGawUyY_5ADfqXSOQAK"
+				data-callback="recaptchaCallback"
+				data-size="invisible">
+			</div>
+		</div>
+		{% endif %}
+
+	</form>
+</div>

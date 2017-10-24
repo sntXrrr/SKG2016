@@ -1,0 +1,16 @@
+{% if site.data.pages.article.background %}
+	{% capture backgroundStyle %}style="background-image: url({{site.data.pages.article.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div class="article container wow fadeInUp" {{backgroundStyle}}>
+	{% include article/navigation.liquid %}
+	{% for item in site.data.pages.article.content %}
+		{% capture includepath %}article/parts/{{item.path}}.liquid{% endcapture %}
+		
+		{%include {{includepath}} %}
+	{% endfor %}
+
+</div>
+{% include scroll-top-button/default.liquid %}

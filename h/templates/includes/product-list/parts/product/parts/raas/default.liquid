@@ -1,0 +1,20 @@
+{% if _product.raas-links.size > 0 %}
+    <div class="button-block button-block--flex-width" state="hidden">	
+        
+        <button href="#" class="shared-button" modifiers="color1 size1">
+            <span class="multiplelines">Shop Now</span>
+
+            <ul class="slide-button-list">
+            {% for link in _product.raas-links %}
+                <li class="slide-button">
+                    <a href="{{link.url}}" target="_blank">
+                        <span class="slide-button__title">{{link.title}}</span>
+                        <img class="slide-button__img" src="{{link.logo}}" />
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </button>
+    </div>
+{% endif %}
+

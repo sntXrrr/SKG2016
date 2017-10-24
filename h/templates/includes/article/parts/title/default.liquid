@@ -1,0 +1,11 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+<div id="art_{{ item.id }}" class="article unit title" variant="" modifier="" {{backgroundStyle}}>
+	<span class="pre-title">PRE TITLE</span>
+	<h2 class="title">
+		TITLE
+	</h2>
+</div>

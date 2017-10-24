@@ -1,0 +1,22 @@
+<div class="media-gallery container" variant="editing" modifier="full-width">
+	<div class="media-gallery unit">
+		{% for pattern in global.media-gallery.patterns %}
+			<div class="media container" variant="{{pattern.name}}">
+				<div class="sitecore-div">
+					<span class="sitecore-span"></span>
+					{% for item in pattern.items %}
+						{% include "media-gallery/parts/item/editing" %}
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="tool container">
+		<a class="tool unit button" href="#!right">
+			{% include "media-gallery/parts/icon/arrow" with "right" %}
+		</a>
+		<span class="tool unit counter">
+			<span output="index">1</span> {% include "media-gallery/parts/icon/seperator" %} {{ global.media-gallery.patterns | size }}
+		</span>
+	</div>
+</div>

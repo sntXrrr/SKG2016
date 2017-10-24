@@ -1,0 +1,7 @@
+{% if _product.button %}
+<div class="button-block" state="hidden">	
+	<a href="{{_product.button.href}}" class="shared-button" modifiers="{{_product.button.modifiers}}">
+		<span class="multiplelines">{{_product.button.title}}</span>
+	</a>
+</div>
+{% endif %}

@@ -1,0 +1,21 @@
+<div class="highscore container rtf">
+    <h2>Top 10</h2>
+    
+    <ol class="highscore-list">
+        {% for highscoreItem in site.data.pages.quiz.default.highscore %}
+            <li class="highscore-list-item" {% if highscoreItem.position %} value="{{highscoreItem.position}}" {% endif %}>
+                <div class="highscore-list-item__wrap">
+                    <span class="highscore-list-item__name">{{highscoreItem.name}}</span>
+                    <span class="highscore-list-item__score">{{highscoreItem.score}}</span>
+                </div>
+            </li>
+        {% endfor %}
+            
+    
+    </ol>
+
+    <a class="submit-button shared-button" modifiers="color7 size1" href="/pages/quiz.html">
+        <span class="multiplelines">Play again</span>
+    </a>
+
+</div>

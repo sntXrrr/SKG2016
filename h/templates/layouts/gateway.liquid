@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+	<head>
+		{% comment %} Viewport settings {% endcomment %}
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+
+		{% comment %} Metadata {% endcomment %}
+		<title>{{title}}</title>
+		<meta name="description" content="{{ site.data.global.description }}" />
+		<meta name="geo.country" content="gb">
+		{% comment %} Main assets references {% endcomment %}
+		<link rel="stylesheet" type="text/css" media="all" href="/browser-resources/css/gateway.css" />
+
+		<link rel='stylesheet' type='text/css' media="all" 
+			href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,greek-ext,greek,devanagari,vietnamese,latin-ext,cyrillic' />
+		
+		{% comment %} Prefetch assets references {% endcomment %}
+		<link rel="prefetch" href="/browser-resources/css/main.css" />
+		<link rel="prefetch" href="/browser-resources/scripts/gateway.js" />
+		{% comment %} <!-- Google Tag Manager: test account Paul Test --> 
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WCBSH7Z');</script>
+		<!-- End Google Tag Manager --> {% endcomment %}
+	</head>
+	<body lang="{{ site.data.global.language }}" bgcolor="073416">
+		{% comment %} <!-- Google Tag Manager: test account Paul Test (noscript) --> 
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCBSH7Z"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) --> {% endcomment %}
+		<!--[if IE 8]><script src="/browser-resources/scripts/gateway-oldie.js"></script><![endif]-->
+		<!--[if gte IE 9]><!--><script src="/browser-resources/scripts/gateway.js"></script><!--<![endif]-->
+		<script>document.body.classList.add('loading');</script>
+
+		<div class="viewport" variant="live">
+			{% for viewportblock in page.viewport %}
+				{% include {{viewportblock}} %}
+			{% endfor %}
+		</div>
+
+        {% if page.showLegal %}
+            {% include legal/default.liquid %}
+        {% endif %}
+
+		{% if page.showCookies %}
+			{% include cookies/default.liquid %}
+		{% endif %}
+	</body>
+</html>

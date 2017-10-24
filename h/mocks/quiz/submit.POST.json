@@ -1,0 +1,11 @@
+{
+    "formName": "quiz-form",
+    "action": "#",
+    "errorData" : false,
+    "succesData": {
+        "name": "quiz guy",
+        "page": "highscore.html"
+    }
+
+
+}

@@ -1,0 +1,13 @@
+{% if item.background %}
+	{% capture backgroundStyle %}style="background-image: url({{item.background}})"{% endcapture %}
+{% else %}
+	{% capture backgroundStyle %}{% endcapture %}
+{% endif %}
+
+<div id="art_{{ item.id }}" class="article unit image" variant="{{ item.variant }}" modifier="{{ item.modifiers }}" {{backgroundStyle}}>	
+	<img src="{{ item.data.src}}" 
+	title="{{ item.data.title}}"
+	srcset="{{ item.data.src }} 750w, {{ item.data.src }} 1600w"
+	sizes="100vw"
+	alt="{{ item.data.alt}}" />
+</div>

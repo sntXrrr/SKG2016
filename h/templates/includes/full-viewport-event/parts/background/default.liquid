@@ -1,0 +1,33 @@
+<div class="event-detail__bg loop-video-container" data-youtube-id="{{ site.data.global.video.video.id }}" data-start-loop="10" data-end-loop="15">
+  <img src="/dummy-resources/img/calendar/large-background.jpg" alt="" />
+  <div class="loop-video" id="loop-video"></div>
+  {% if site.data.global.video.video.id %}
+  <div class="loop-video-play-button">
+    <div class="button" toggle="overlay" name="video">
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" modifier="color1" width="72" height="72" viewBox="0 0 90 90" overflow="visible" preserveAspectRatio="xMidYMid meet">
+	      <path class="text" fill-rule="evenodd" clip-rule="evenodd" d="M40 53.27c0 1.61 1.11 2.21 2.47 1.34l12.5-8.02c1.36-.87 1.36-2.3 0-3.17l-12.5-8.02c-1.36-.87-2.47-.27-2.47 1.34v16.53z"></path>
+      </svg>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="overlay unit to-be-copied" state="" name="video">
+
+    <div class="full-viewport container" modifier="top">
+    
+        <div class="full-viewport unit" variant="video">
+            <div class="youtube-player-placeholder" data-youtube="{{ site.data.global.video.video.id }}" data-allowfullscreen="1" data-autohidecontrols="1" data-autoplaydesktop="true" data-autoplaymobile="true"></div>
+        </div>
+ 
+        <div class="close-second-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" variant="negative" width="55" height="55" viewBox="0 0 55 55" overflow="visible">
+                <path class="background" fill-rule="evenodd" clip-rule="evenodd" d="M27.5 0c15.19 0 27.5 12.31 27.5 27.5s-12.31 27.5-27.5 27.5-27.5-12.31-27.5-27.5 12.31-27.5 27.5-27.5z"></path>
+                <path class="text cross" fill-rule="evenodd" clip-rule="evenodd" d="M35.5 33.32l-2.18 2.18-5.82-5.82-5.82 5.82-2.18-2.18 5.82-5.82-5.82-5.82 2.18-2.18 5.82 5.82 5.82-5.82 2.18 2.18-5.82 5.82 5.82 5.82z"></path>
+                <foreignObject display="none">
+                    <span>CLOSE</span>
+                </foreignObject>
+            </svg>
+        </div>
+    </div>
+</div>

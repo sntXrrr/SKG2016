@@ -1,0 +1,23 @@
+<div class="media unit">
+	<div class="preview">
+		{% if item.size == "1x1" %}
+			<img src="{{ "250x250" | placeholder:'999999','000000' }}" alt="" />
+		{% else if item.size == "1x2"%}
+			<img src="{{ "250x500" | placeholder:'999999','000000' }}" alt="" />
+		{% else if item.size == "2x1"%}
+			<img src="{{ "500x250" | placeholder:'999999','000000' }}" alt="" />
+		{% else if item.size == "2x2"%}
+			<img src="{{ "500x500" | placeholder:'999999','000000' }}" alt="" />
+		{% endif %}
+	</div>
+	<div class="info"> 
+		<div>
+			Title: 
+			<h1 class="title">{{ item.title }}</h1>
+		</div>
+		<div>
+			Link destination:
+			<div class="location">{{ item.location }}</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+{
+	"title" : "Welcome to heineken",
+	"rememberme-size": "m",
+	"buttons" : [
+		{
+			"color": "color1",
+			"icon": "overlay/parts/icon/facebook",
+			"title": {
+				"default": "Facebook connect",
+				"busy": "connecting...",
+				"failed": "could not retrieve birthdate",
+				"done": "submitting..."
+			}
+			
+		}
+	],
+	"content": [
+		{
+            "path": "policy/default",
+            "data": {
+                "title": "Cookie policy",
+                "text": "We use cookies to ensure that we give you the best experience on our website. We also use cookies to ensure we show you [third part profiling] that is relevant to you.",
+               	"policytext":"Cookie policy",
+                "href":"google",
+               	"changetext":"Change settings",
+                "button": {
+                	"variant": "",
+                	"href": "#",
+					"title": "Accept Cookies"
+                }
+            }
+        },
+        {
+            "path": "settings/default",
+            "data": {
+                "title": "Cookie Settings",
+                "text": "I agree to the use of the following cookies on the Heineken.com website:",
+               	"checkbox1":"Only use strictly necessary cookies",
+               	"checkbox2":"I agree on the usage of tracking and third-party cookies send to check anonimous analytical performance",
+                "button": {
+                	"variant": "",
+                	"href": "#",
+					"title": "Save and accept"
+                }
+            }
+        }
+	]
+}

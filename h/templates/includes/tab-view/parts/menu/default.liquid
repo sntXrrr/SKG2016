@@ -1,0 +1,9 @@
+<div class="tab-menu container">
+	<div class="tab-menu unit">
+	    <ul>
+            {% for menuItem in item.data.tab %}
+                {% include "tab-view/parts/menu/parts/title/default" %}
+            {% endfor %}
+        </ul>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+{% if page.showLegal %}
+	{% assign variant = 'haslegal' %}
+{% else %}
+	{% assign variant = '' %}
+{% endif %}
+
+<div class="full-viewport container dark" modifier="{{variant}}">
+
+  <div class="full-viewport-info unit" variant="page">
+    {% include full-viewport-event/parts/page/default.liquid %}
+  </div>
+
+	<div class="scroll-top-button container">
+		<div class="scroll-top-button unit" variant="button2" state="active"></div>
+	</div>
+
+  {% include full-viewport-event/parts/close-button/default.liquid %}
+</div>

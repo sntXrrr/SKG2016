@@ -1,0 +1,8 @@
+{% capture _state %}{% if site.data.global.overlay.active == "languages" %}active{% endif %}{% endcapture %}
+
+<div class="overlay unit" state="{{_state}}" name="languages" modifiers="allow-scrolling haslegal">
+	<div class="country container">
+		{% include overlay/parts/title/default.liquid title=global.overlay.languages.title %}
+		{% include overlay/parts/languages/default.liquid %}
+	</div>
+</div>

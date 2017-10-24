@@ -1,0 +1,9 @@
+<div class="article unit navigation" variant="{{ item.variant }}">
+	<ul class="navigation">
+	{% for item in site.data.pages.article.content %}
+		{% if item.id %}
+			{% include article/parts/navigation-items/default.liquid %}
+		{% endif %}
+	{% endfor %}
+	</ul>	
+</div>

@@ -1,0 +1,151 @@
+{
+	"default": {
+		"modifiers": "fixed-background no-background-transition",
+		"navPosition": "bottom",
+		"slides": [
+			{
+				"id": "fsdf1aa",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "Champions",
+				"line2": "League",
+				"title": "Champions League",
+				"youtube-id": "dKVn5z8U3ZU",
+				"youtube-autoplay": true
+			},
+			{
+				"id": "ccc4sad",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg-test.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/background/test.jpg",
+				"line1": "[{Championses}]®",
+				"line2": "[{Lea,©/gue]}™",
+				"title": "Bief"
+		
+			},
+			{
+				"id": "reweqtee6",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "Lorum ipsum",
+				"line2": "Dolor sit",
+				"title": "James Bond",
+				"youtube-id": "hxxqzaEAtjs",
+				"youtube-autoplay": false
+			},
+			{
+				"id": "akrgkkjhs",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "To infinity",
+				"line2": "And beyond",
+				"title": "Formula 1",
+				"youtube-id": "hxxqzaEAtjs",
+				"youtube-autoplay": true
+			},
+			{
+				"id": "askjdsf8976",
+				"url": "/pages/full-viewport-page.html",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "",
+				"line1": "Open your",
+				"line2": "World",
+				"title": "Open your world"
+			},
+			{
+				"id": "2389dfkjh89",
+				"url": "/pages/full-viewport-page.html",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "Championai",
+				"line2": "League",
+				"title": "Baf"
+			}
+		]
+	},
+	"imagesonly": {
+		"navPosition": "top",
+		"slides": [
+			{
+				"id": "11",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "Champions",
+				"line2": "League",
+				"line3": "live on tv",
+				"title": "Champions League",
+				"summary": "<ul><li> visit 3 major attractions in one!</li><li>The Heineken Experience</li><li>The A'DAM tower</li><li>Canal cruise, 45 min. with a Heineken Experience guide</li><li>With 2 perfectly chilled beers at our 'Dam bar</li><li>Free city map with Amsterdam's best hidden gems</li></ul>"
+			},
+			{
+				"id": "12",
+				"url": "/pages/full-viewport-page.html",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "Lorum ipsum",
+				"line3": "ipsum lorem",
+				"title": "James Bond",
+				"summary": "<ul class=\"no-columns\"><li>visit 3 major attractions in one!</li><li>The Heineken Experience</li><li>The A'DAM tower</li></ul>"
+			},
+			{
+				"id": "13",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "To infinity",
+				"line2": "And beyond",
+				"title": "Formula 1",
+				"summary": "<ol><li>visit 3 major attractions in one!</li><li>Canal cruise, 45 min. with a Heineken Experience guide</li><li>With 2 perfectly chilled beers at our 'Dam bar</li><li>Free city map with Amsterdam's best hidden gems</li></ol>"
+			},
+			{
+				"id": "14",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg-test.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/background/test.jpg",
+				"line1": "[{Championses}]",
+				"line2": "[{Lea,/gue]}",
+				"title": "Bief",
+				"summary": "<p>Also buttons are allowed!</p><p><a class=\"shared-button\" modifiers=\"color4 size1\" href=\"#\"><span class=\"multiplelines\">Button</span></a></p>"
+			},
+			{
+				"id": "15",
+				"url": "/pages/full-viewport-page.html",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "",
+				"line3": "open up",
+				"title": "Open your world",
+				"summary": "<h5>Titles are allowed, but stick to small titles (h4 & h5)!</h5>"
+			},
+			{
+				"id": "16",
+				"url": "/pages/full-viewport-page.html",
+				"image-bg": "/dummy-resources/img/carousel/carousel-img-1-bg.jpg",
+				"image-fg": "/dummy-resources/img/carousel/carousel-img-1-fg.png",
+				"image-port-bg": "/dummy-resources/img/carousel/carousel-img-1-port-bg.jpg",
+				"image-port-fg": "/dummy-resources/img/carousel/carousel-img-1-port-fg.png",
+				"line1": "Championai",
+				"line2": "League",
+				"title": "Baf",
+				"summary": "<h4>Titles are allowed, but stick to small titles!</h4>"
+			}
+		]
+	}
+}

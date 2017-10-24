@@ -1,0 +1,12 @@
+<form class="form" variant="age" action="/pages/home">
+	<label class="label wow fadeInUp">Please fill in your details to enter</label>
+
+	<div class="content">
+	
+		{% include gateway/parts/form/parts/country/default.liquid %}
+		{% include gateway/parts/form/parts/age/dd-mm-yy.liquid %}
+		<button id="input-date-submit" class="button" type="submit">OK</button>
+	</div>
+	
+	{% include gateway/parts/form/parts/checkbox/default.liquid %}
+</form>

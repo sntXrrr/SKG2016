@@ -1,0 +1,11 @@
+<div class="carousel mobile wow fadeInUp">
+	{% for _list in item.data.items %}
+		{% include product-list/parts/menu/parts/list/list.liquid %}
+	{% endfor %}
+</div>
+
+<div class="carousel desktop wow fadeInUp">
+		{% for _list in item.data.items %}
+				{% include product-list/parts/menu/parts/list/list.liquid %}
+		{% endfor %}
+</div>

@@ -1,0 +1,16 @@
+{% if item.url %}
+<a class="media unit wow fadeInUp " href="{{item.url}}">
+{% else %} 
+<div class="media media--no-hover unit wow fadeInUp ">
+{% endif %}
+	{% include media-gallery/parts/item/parts/head/default.liquid %}
+	<div class="content">
+		{% capture includepath %}media-gallery/parts/item/parts/content-img/{{item.size}}{% endcapture %}
+		{% include {{includepath}}.liquid %}
+	</div>
+	{% include media-gallery/parts/item/parts/info/default.liquid %}
+{% if item.url %}
+</a>
+{% else %} 
+</div>
+{% endif %}
